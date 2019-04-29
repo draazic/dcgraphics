@@ -1,0 +1,134 @@
+<div class='back'>
+
+<div class="container" style='padding-top: 10%;'>
+  <h1 style="text-align:center">Contact </h1>
+  <form  #contact="ngForm" role="form" (ngSubmit)="contact.form.valid && onSubmit(contact.value)">
+      <div class="form-group">
+          <label for="civilite">Civility</label>
+          <select id="civiliteId" [(ngModel)]="civiliteId" 
+           [ngClass]="{'invalid-data': civiliteIde.invalid && contact.submitted, 'valid-data': civiliteIde.valid && contact.submitted}" 
+           required name="civiliteId" #civiliteIde="ngModel" class="form-control" >
+              <option [ngValue]="null">Select</option> 
+              <option *ngFor="let civilite of civilites" [value]="civilite.id">{{civilite.type}}</option>
+          </select>
+          <div *ngIf="civiliteIde.invalid && contact.submitted">
+            <span style="color: red;">Please Select Civility.</span>
+          </div>
+      </div>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text"  id="name"
+      [(ngModel)]="name"   maxlength="25" [pattern]="namePattern" [ngClass]="{'invalid-data': fname.invalid && contact.submitted, 'valid-data': fname.valid && contact.submitted}" 
+      required name="name" #fname="ngModel" class="form-control">
+      
+        <div *ngIf="fname.invalid && contact.submitted">
+          <span style="color: red;">Please Enter Name.</span>
+        </div>
+        <div *ngIf="fname.errors?.pattern"> 
+          <span style="color: red;">Name not valid.</span>
+       </div>  
+    </div>
+
+    <div class="form-group">
+      <label for="forname">Forname</label>
+      <input type="text"  id="Forname"
+      [(ngModel)]="forname" maxlength="25" [pattern]="namePattern" [ngClass]="{'invalid-data': fforname.invalid && contact.submitted, 'valid-data': fforname.valid && contact.submitted}" 
+      required name="forname" #fforname="ngModel" class="form-control">
+
+      <div *ngIf="fforname.invalid && contact.submitted">
+        <span style="color: red;">Please Enter Forname.</span>
+      </div> 
+      <div *ngIf="fforname.errors?.pattern"> 
+        <span style="color: red;">Forname not valid.</span>
+     </div> 
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="phone" 
+      [(ngModel)]="phone" maxlength="10" [pattern]="phonePattern" [ngClass]="{'invalid-data': fphone.invalid && contact.submitted, 'valid-data': fphone.valid && contact.submitted}" 
+      required name="phone" #fphone="ngModel" class="form-control">
+
+      <div *ngIf="fphone.invalid && contact.submitted">
+        <span style="color: red;">Please Enter Phone.</span>
+      </div>
+      <div *ngIf="fphone.errors?.pattern"> 
+        <span style="color: red;">Phone not valid.</span>
+     </div>   
+    </div>
+
+    <div class="form-group">
+      <label for="mail">Mail</label>
+      <input type="text"  id="mail"
+      [(ngModel)]="mail" maxlength="25" [pattern]="emailPattern" [ngClass]="{'invalid-data': fmail.invalid && contact.submitted, 'valid-data': fmail.valid && contact.submitted}" 
+      required name="mail" #fmail="ngModel" class="form-control">
+    
+      <div *ngIf="fmail.invalid && contact.submitted">
+        <span style="color: red;">Please Enter Mail.</span>
+      </div>
+      <div *ngIf="fmail.errors?.pattern"> 
+        <span style="color: red;">Mail not valid.</span>
+     </div>   
+    </div>
+
+    <div class="form-group">
+      <label for="enterprise">Enterprise</label>
+      <input type="text" id="enterprise"
+      [(ngModel)]="enterprise" maxlength="25" [pattern]="entPattern" [ngClass]="{'invalid-data': fenterprise.invalid && contact.submitted, 'valid-data': fenterprise.valid && contact.submitted}" 
+      required name="enterprise" #fenterprise="ngModel" class="form-control" >
+
+      <div *ngIf="fenterprise.invalid && contact.submitted">
+        <span style="color: red;">Please Enter Enterprise.</span>
+      </div> 
+      <div *ngIf="fenterprise.errors?.pattern"> 
+        <span style="color: red;">Mail not valid.</span>
+     </div>  
+
+    </div>
+
+    <div class="form-group">
+        <label for="objet">Objet</label>
+        <select  id="objet" [(ngModel)]="objetId"  [ngClass]="{'invalid-data': objetIde.invalid && contact.submitted, 'valid-data': objetIde.valid && contact.submitted}" 
+        required name="objetId" #objetIde="ngModel" class="form-control">
+          <option [ngValue]="null">Select</option>
+          <option *ngFor="let objet of objets" [value]="objet.id">{{objet.choix}}</option>
+        </select>
+
+        <div *ngIf="objetIde.invalid && contact.submitted">
+          <span style="color: red;">Please Select Objet.</span>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+      <label for="text">Comment</label>
+      <textarea  id="text" 
+      [(ngModel)]="text" maxlength="250" [ngClass]="{'invalid-data': ftext.invalid && contact.submitted, 'valid-data': ftext.valid && contact.submitted}" 
+       required name="text" #ftext="ngModel" class="form-control">
+    </textarea>
+    <div *ngIf="text?.length > 0">
+      <span style="color: rgb(255, 255, 255); font-size: 12px">{{ text?.length }}/250</span>
+    </div>
+
+    <div *ngIf="ftext.invalid && contact.submitted">
+      <span style="color: red;">Please Select Text.</span>
+    </div>
+    
+
+
+    </div>
+
+    <button type="submit" class="btn btn-success"  style="margin-right: 10px;">Submit</button>
+    <button type="reset" class="btn btn-danger">Reset</button>
+    
+  </form>
+</div>
+
+
+
+</div>
+
+
+
+

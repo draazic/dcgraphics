@@ -1,0 +1,225 @@
+
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 500px;
+    }
+}
+.back{
+    position: absolute;
+    margin:0;
+    padding-bottom:10%;
+    background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+    //height: 100%;
+    width: 100%;
+}
+
+label{
+    color: rgb(255, 255, 255)
+}
+h1{
+    color: rgb(255, 255, 255);
+}
+
+
+.ng-valid[required], .ng-valid.required  {
+    border: 1px solid #42A948; /* green */
+  }
+  
+
+  @media (width: 320px){
+   
+    .back{
+        position: absolute;
+        margin:0;
+        padding-top:10%;
+        padding-bottom:10%;
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        //height: 100%;
+        width: 100%;
+    }
+ }
+
+ @media (width: 411px){
+   
+    .back{
+        position: absolute;
+        margin:0;
+        padding-top:10%;
+        padding-bottom:10%;
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        //height: 100%;
+        width: 100%;
+    }
+ }
+@media (width: 360px){
+   
+    .back{
+        position: absolute;
+        margin:0;
+        padding-top:10%;
+        padding-bottom:10%;
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        //height: 100%;
+        width: 100%;
+    }
+}
+@media (width: 375px){
+   
+    .back{
+        position: absolute;
+        margin:0;
+        padding-top:10%;
+        padding-bottom:10%;
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        //-webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        //background-size: cover;
+        //height: 100%;
+        width: 100%;
+    }
+}
+@media (width: 414px){
+   
+    .back{
+        position: absolute;
+        margin:0;
+        padding-top:10%;
+        padding-bottom:10%;
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        //height: 100%;
+        width: 100%;
+    }
+}
+
+@media (width: 768px){
+  
+    .back{
+        position: absolute;
+        margin:0;
+        
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (width: 600px){
+  
+    .back{
+        position: absolute;
+        margin:0;
+        
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+@media (width: 834px){
+  
+    .back{
+        position: absolute;
+        margin:0;
+        
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (width: 800px){
+  
+    .back{
+        position: absolute;
+        margin:0;
+        
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (width: 1024px){
+   
+    .back{
+        position: absolute;
+        margin:0;
+        
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+@media (width: 2560px){
+   
+    .back{
+        position: absolute;
+        margin:0;
+        
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+@media (width: 1920px){
+   
+    .back{
+        position: absolute;
+        margin:0;
+        
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1025px) {
+    /* styles for browsers larger than 1440px; */
+    .back{
+        position: absolute;
+        margin:0;
+        
+        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        //height: 100%;
+        width: 100%;
+    }
+}
+// @media only screen and (min-width: 320px) {
+//     /* styles for browsers larger than 1440px; */
+//     .back{
+//         position: absolute;
+//         margin:0;
+        
+//         background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+//         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+//         background-size: cover;
+//         //height: 100%;
+//         width: 100%;
+//     }
+// }

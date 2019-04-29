@@ -1,0 +1,26 @@
+{
+  "name": "nodedcg",
+  "version": "1.0.0",
+  "description": "server api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "de carvalho",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.2",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
+    "node-pre-gyp": "^0.12.0",
+    "sequelize": "^5.7.6"
+  }
+}
