@@ -4,7 +4,7 @@ import {Client }  from './client.interface';
 @Injectable()
 export class FormService {
 
-  baseUrl:string ="http://localhost:3000/contact";
+  baseUrl:string ="http://localhost:3000/api";
 
   constructor(private http: HttpClient) { }
 
