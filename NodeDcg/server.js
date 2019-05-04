@@ -19,7 +19,7 @@ server.get('/', function (req, res) {
     res.status(200).send('<h1>Bonjour</>');
 });
 server.use(cors());
-server.use('/contact/',apiRouter);
+server.use('/api/',apiRouter);
 //launch 
 server.listen(3000, function(){
     console.log('Server en ecoute');
