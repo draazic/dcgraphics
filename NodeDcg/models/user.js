@@ -9,6 +9,11 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   user.associate = function(models) {
     // associations can be defined here
+    models.user.hasMany(models.portfolio, { foreignKey: 'idUser', foreignKeyConstraint:true })
   };
+  // sequelize.sync({ force: true })
+  // .then(() => {
+  //   console.log(`Database & tables created!`)
+  // })
   return user;
 };
