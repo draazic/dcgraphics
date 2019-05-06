@@ -4,8 +4,8 @@ var models   = require('../models');
 var jwtUtils = require('../utils/jwt.utils');
 var asyncLib =  require('async');
 
-const EMAIL_REGEX=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-const PASSWORD_REGEX=/^(?=.*\d).{4,8}$/;
+const EMAIL_REGEX=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const PASSWORD_REGEX=/^(?=.*\d).{4,9}$/;
 
 module.exports = {
     register: function(req, res){
@@ -14,6 +14,8 @@ module.exports = {
         var password = req.body.password;
         var bio = req.body.bio;
         var isAdmin = req.body.isAdmin;
+
+        console.log(password)
         
         
 
@@ -29,7 +31,7 @@ module.exports = {
     }
 
     if(!PASSWORD_REGEX.test(password)){
-        return res.status(400).json({'error':'password is invalid must be length 4 - 8'});
+        return res.status(400).json({'error':'password is invalid must be length 4 - 9'});
     }
 
     // asyncLib.waterfall([
@@ -96,17 +98,18 @@ module.exports = {
     login: function(req, res){
             var email = req.body.email;
             var password =req.body.password;
-
+            //console.log(password);
             if (email=='' || password == '' ){
                 return res.status(400).json({'error':'missing paramater'});
             }
             models.user.findOne({
-                attributes:['email'],
+                //attributes:['email'],
                 where:{email: email}})
 
             .then(function(userFound)
             {
                 if(userFound){
+                    console.log(userFound.password);
                     bcrypt.compare(password, userFound.password, function(errBycrypt, resBycrypt){
                         if(resBycrypt){
                             return res.status(200).json({
