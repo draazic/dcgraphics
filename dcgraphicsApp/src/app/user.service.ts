@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
 import {User} from './user.interface';
 
 @Injectable()
@@ -11,11 +12,11 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(){
-    return this.http.get(this.baseUrl + '/users');
+  getUsers():Observable<User[]> {
+    return this.http.get<User[]>(this.baseUrl + '/register');
 }
-  createUser(user:User){
-    return this.http.post(this.baseUrl + '/user',user);
+  createUser(user:User):Observable<Object>{
+    return this.http.post(this.baseUrl + '/register',user);
 }
 
 
