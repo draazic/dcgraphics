@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject, ViewChild  } from '@angular/core';
 import{FormGroup, FormControl, Validators} from '@angular/forms'
 import { Observable, observable} from 'rxjs';
-import {FormService} from '../form.sevices';
+import {FormService} from '../form.service';
 import {Client}    from '../client.interface';
 import {Civilite}    from '../civilite.interface';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from  '@angular/material';
@@ -42,7 +42,7 @@ export class ContactComponent implements OnInit {
       err=>{
       console.log(" not Error..");
       this.formValues.resetForm();
-        },
+        }
      
        
        

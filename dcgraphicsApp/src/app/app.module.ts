@@ -12,12 +12,13 @@ import { ParallaxScrollModule } from 'ng2-parallaxscroll';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { Http, HttpModule } from '@angular/http'; 
 import { HttpClientModule } from '@angular/common/http'
-import {FormService} from './form.sevices';
+import {FormService} from './form.service';
 import { MatButtonModule, MatCardModule,  MatInputModule, MatFormFieldModule,MatDialogModule } from '@angular/material';
 import { UserComponent } from './user/user.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { HomelogComponent } from './homelog/homelog.component';
+import { UserService } from './user.service';
 
 //import { MessageComponent } from './message/message.component';
 //import { FlexLayoutModule } from '@angular/flex-layout';
@@ -62,7 +63,7 @@ import { HomelogComponent } from './homelog/homelog.component';
     
   ],
   entryComponents:[DialogOverviewExampleDialog], 
-  providers: [FormService],
+  providers: [FormService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
