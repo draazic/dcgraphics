@@ -42,11 +42,9 @@ export class ContactComponent implements OnInit {
       err=>{
       console.log(" not Error..");
       this.formValues.resetForm();
-        }
-     
-       
-       
+        } 
       );
+      
       this.dialog.open(DialogOverviewExampleDialog,{ 
         height: '400px',
         width: '600px',
