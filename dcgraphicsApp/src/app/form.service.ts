@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Client }  from './client.interface';
+import { Observable, of } from 'rxjs';
 @Injectable()
 export class FormService {
 
@@ -8,18 +9,18 @@ export class FormService {
 
   constructor(private http: HttpClient) { }
 
-    getClients(){
-        return this.http.get(this.baseUrl + '/clients');
+    getClients():Observable<Client[]> {
+        return this.http.get<Client[]>(this.baseUrl + '/clients');
     }
-    createClient(client:Client){
+    createClient(client:Client):Observable<Object>{
       return this.http.post(this.baseUrl + '/client',client);
     }
 
-    getCivilites(){
-      return this.http.get(this.baseUrl + '/civilites');
+    getCivilites():Observable<any[]>{
+      return this.http.get<any[]>(this.baseUrl + '/civilites');
   }
 
-    getObjets(){
-      return this.http.get(this.baseUrl + '/objets');
+    getObjets():Observable<any[]>{
+      return this.http.get<any[]>(this.baseUrl + '/objets');
   }
 }

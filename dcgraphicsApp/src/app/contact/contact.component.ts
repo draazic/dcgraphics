@@ -36,7 +36,8 @@ export class ContactComponent implements OnInit {
     
     this.formService.createClient(client).subscribe(
       (res)=>{
-      // console.log('success');
+      console.log('success');
+      this.formValues.resetForm();
       console.log(res);
         },
       err=>{
