@@ -12,12 +12,13 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers():Observable<User[]> {
-    return this.http.get<User[]>(this.baseUrl + '/register');
-}
-  createUser(user:User):Observable<Object>{
-    return this.http.post(this.baseUrl + '/register',user);
-}
+    getUsers():Observable<User[]> {
+        return this.http.get<User[]>(this.baseUrl + '/register');
+    }
+    
+    createUser(user:User):Observable<Object>{
+        return this.http.post(this.baseUrl + '/register',user);
+    }
 
 
 }
