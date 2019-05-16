@@ -1,3 +1,35 @@
-<p>
-  sign-in works!
-</p>
+<form #login="ngForm" role="form" (ngSubmit)="login.form.valid && onSubmit(login.value)">
+
+
+  <div class="form-group">
+    <label style="color: black" for="email">Email</label>
+    <input type="text" id="email" [(ngModel)]="email"  [pattern]="mailPattern" [ngClass]="{'invalid-data': femail.invalid && login.submitted, 'valid-data': femail.valid && login.submitted}" 
+    required name="email" #femail="ngModel"   class="form-control" >
+
+    <div *ngIf="femail.invalid && login.submitted">
+        <span style="color: red;">Please Enter Name.</span>
+      </div>
+      <div *ngIf="femail.errors?.pattern"> 
+        <span style="color: red;">Name not valid.</span>
+      </div>  
+  </div>
+
+  <div class="form-group">
+      <label style="color: black" for="password">Password</label>
+      <input type="password" id="password" [(ngModel)]="password" [pattern]="mailPattern" [ngClass]="{'invalid-data': fpassword.invalid && login.submitted, 'valid-data': fpassword.valid && login.submitted}" 
+      required name="password" #fpassword="ngModel"  name="password" class="form-control" >
+
+      <div *ngIf="fpassword.invalid && register.submitted">
+          <span style="color: red;">Please Enter Name.</span>
+        </div>
+        <div *ngIf="fpassword.errors?.pattern"> 
+          <span style="color: red;">Name not valid.</span>
+        </div>  
+  </div>
+
+
+
+  <button type="submit" class="btn btn-success" style="margin-right: 10px;">Login</button>
+  <button type="reset" class="btn btn-danger">Reset</button>
+
+</form>

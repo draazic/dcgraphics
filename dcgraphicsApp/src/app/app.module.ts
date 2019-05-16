@@ -19,9 +19,9 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { HomelogComponent } from './homelog/homelog.component';
 import { UserService } from './user.service';
+import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
 
-//import { MessageComponent } from './message/message.component';
-//import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -40,12 +40,9 @@ import { UserService } from './user.service';
     HomelogComponent
    
     
-   
-    
-    
-    
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     ParallaxScrollModule,
@@ -59,7 +56,13 @@ import { UserService } from './user.service';
     MatCardModule, 
     MatFormFieldModule,
     MatDialogModule,
-    //FlexLayoutModule
+    ToastrModule.forRoot(
+       {
+        positionClass:'toast-center-center',  
+        closeButton: true, }
+      
+    )
+
     
   ],
   entryComponents:[DialogOverviewExampleDialog], 

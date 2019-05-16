@@ -1,21 +1,5 @@
 
 
-<div class="container">
-  <h1 style="text-align:center; margin:10%">Welcome User</h1>
-  <div class="card ">
-    <div class="card-header">
-      <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Registration</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
-        </li>
-        
-      </ul>
-    </div>
-    <div style="padding:5%">
-
       <form #register="ngForm" role="form" (ngSubmit)="register.form.valid && onSubmit(register.value)">
         <div class="form-group">
           <label style="color: black" for="name">Name</label>
@@ -62,6 +46,4 @@
         <button type="reset" class="btn btn-danger">Reset</button>
  
     </form>
-  </div>
-  </div>
-</div>
+ 

@@ -1,3 +1,4 @@
+@import "../node_modules/ngx-toastr/toastr.css";
 
 html, body { height: 100%; }
 
@@ -1925,7 +1926,7 @@ h1{
         background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
         background-size: cover;
-        //height: 100%;
+        height: 100%;
         width: 100%;
     }
 }
