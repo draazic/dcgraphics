@@ -1,0 +1,9 @@
+.container {
+    margin-top: 10%
+}
+input.ng-invalid.ng-dirty{
+    border-color:#e91e63; 
+}
+.ng-valid[required], .ng-valid.required  {
+    border: 1px solid #42A948; /* green */
+  }

@@ -16,12 +16,11 @@ import {
       state('show', style({
         opacity: 1,
         color: "#2B292E"
-        //transform: "translateX(0)"
+        
       })),
       state('hide',   style({
         opacity: 0,
-        //color: "transparent"
-        //transform: "translateX(-100%)"
+        
       })),
       transition('show => hide', animate('700ms ease-out')),
       transition('hide => show', animate('700ms ease-in'))
