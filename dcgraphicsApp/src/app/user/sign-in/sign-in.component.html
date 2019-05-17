@@ -19,7 +19,7 @@
       <input type="password" id="password" [(ngModel)]="password" [pattern]="mailPattern" [ngClass]="{'invalid-data': fpassword.invalid && login.submitted, 'valid-data': fpassword.valid && login.submitted}" 
       required name="password" #fpassword="ngModel"  name="password" class="form-control" >
 
-      <div *ngIf="fpassword.invalid && register.submitted">
+      <div *ngIf="fpassword.invalid && login.submitted">
           <span style="color: red;">Please Enter Name.</span>
         </div>
         <div *ngIf="fpassword.errors?.pattern"> 
