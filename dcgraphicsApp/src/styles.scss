@@ -1749,7 +1749,7 @@ h1{
   }
   
 
-  @media (width: 320px){
+  @media (min-width: 320px) and (max-width: 599px){
    
     .back{
         position: absolute;
@@ -1761,6 +1761,9 @@ h1{
         background-size: cover;
         //height: 100%;
         width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
  }
 
@@ -1776,6 +1779,9 @@ h1{
         background-size: cover;
         //height: 100%;
         width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
  }
 @media (width: 360px){
@@ -1790,6 +1796,9 @@ h1{
         background-size: cover;
         //height: 100%;
         width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
 }
 @media (width: 375px){
@@ -1804,6 +1813,9 @@ h1{
         //background-size: cover;
         //height: 100%;
         width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
 }
 @media (width: 414px){
@@ -1818,6 +1830,9 @@ h1{
         background-size: cover;
         //height: 100%;
         width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
 }
 
@@ -1835,7 +1850,7 @@ h1{
     }
 }
 
-@media (width: 600px){
+@media (min-width: 600px) and (max-width: 799px){
   
     .back{
         position: absolute;
@@ -1846,25 +1861,28 @@ h1{
         background-size: cover;
         //height: 100%;
         width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
 }
 
 
-@media (width: 834px){
+// @media (width: 834px){
   
-    .back{
-        position: absolute;
-        margin:0;
+//     .back{
+//         position: absolute;
+//         margin:0;
         
-        background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
-        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-        background-size: cover;
-        //height: 100%;
-        width: 100%;
-    }
-}
+//         background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+//         -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+//         background-size: cover;
+//         //height: 100%;
+//         width: 100%;
+//     }
+// }
 
-@media (width: 800px){
+@media (min-width: 800px)and (max-width: 1023px){
   
     .back{
         position: absolute;
@@ -1875,6 +1893,9 @@ h1{
         background-size: cover;
         //height: 100%;
         width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
 }
 
@@ -1889,6 +1910,9 @@ h1{
         background-size: cover;
         //height: 100%;
         width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
 }
 @media (width: 2560px){
@@ -1915,6 +1939,9 @@ h1{
         background-size: cover;
         //height: 100%;
         width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
 }
 @media only screen and (min-width: 1025px) {
@@ -1928,6 +1955,9 @@ h1{
         background-size: cover;
         //height: 100%;
         width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
 }
 
@@ -1935,13 +1965,14 @@ h1{
 
 .backSign{
     //background-color:burlywood;
-    //background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
-    position: fixed;
+    background-image: url("src/assets/img/Parallax-Background-Dark-08.jpg");
+    position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    background: rgba(51,51,51,0.7);
+    background-size: cover;
+    //background: rgba(51,51,51,0.7);
     //z-index: 10;
 }
 
