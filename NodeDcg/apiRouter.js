@@ -24,6 +24,7 @@ exports.router=(function(){
     apiRouter.route('/login/').post(userCtrl.login);
 
     apiRouter.route('/me/').get(userCtrl.getUserProfile);
+    apiRouter.route('/me/').put(userCtrl.updateUserProfile);
     
     
     return apiRouter;
