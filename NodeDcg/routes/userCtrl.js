@@ -15,7 +15,7 @@ module.exports = {
         var bio = req.body.bio;
         var isAdmin = req.body.isAdmin;
 
-        console.log(password)
+        //console.log(password)
         
         
 
@@ -34,24 +34,7 @@ module.exports = {
         return res.status(400).json({'error':'password is invalid must be length 4 - 9'});
     }
 
-    // asyncLib.waterfall([
-    //     function(done){
-    //         done(null,'variable1');
-    //     },
-    //     function(var1, done){
-    //         done(null);
-    //     }
-    // ],function(err){
-    //     if(!err){
-    //         return res.status(200).json({
-    //             'msg': 'ok'
-    //         })
-    //     }else{
-    //         return res.status(400).json({
-    //             'error': 'error'
-    //         })
-    //     }
-    // });
+   
 
 
        models.user.findOne({
@@ -96,9 +79,10 @@ module.exports = {
 
     },
     login: function(req, res){
+            console.log(req.body)
             var email = req.body.email;
             var password =req.body.password;
-            //console.log(password);
+            console.log(password);
             if (email=='' || password == '' ){
                 return res.status(400).json({'error':'missing paramater'});
             }
@@ -109,7 +93,7 @@ module.exports = {
             .then(function(userFound)
             {
                 if(userFound){
-                    console.log(userFound.password);
+                    //console.log(userFound.password);
                     bcrypt.compare(password, userFound.password, function(errBycrypt, resBycrypt){
                         if(resBycrypt){
                             return res.status(200).json({
@@ -150,11 +134,66 @@ module.exports = {
             if (user){
                 res.status(201).json(user);
             }else{
-                res.status(404).json({'error':'user not found'});
+                res.status(404).json({'error':'user not found test'});
             }
         }).catch(function(err){
             res.status(500).json({'error':'cannot fetch user'});
         });
+
+
+
+    },
+    updateUserProfile: function(req,res){
+
+        //get auth header
+        var headerAuth = req.headers['authorization'];
+        var userId = jwtUtils.getUserId(headerAuth);
+
+        console.log(headerAuth)
+        console.log(userId)
+        //params
+        var bio = req.body.bio;
+        
+
+        asyncLib.waterfall([
+            function(done){
+                models.user.findOne({
+                    attributes: ['id','bio'],//modif 
+                    where: {id:userId}
+                }).then(function(userFound){
+                    done(null, userFound);
+                })
+                .catch(function(err){
+                    res.status(500).json({'error':'unable to verify user'});
+                });
+            },
+            function(userFound, done){
+                if(userFound){
+                    //console.log(userFound)
+                    userFound.update({
+                        bio: (bio ? bio : userFound.bio)
+                    }).then(function(){
+                        done(userFound);
+                    }).catch(function(err){
+                        res.status(500).json({'error':'cannot update user'});
+                    });
+                }else{
+                    res.status(404).json({'error':'user not found for update'});
+
+                }
+            }
+
+
+        ],function(userFound){
+            if(userFound){
+                return res.status(201).json(userFound);
+            }else{
+                return res.status(500).json({'error':'cannot update user profil'});
+
+            }
+        });
+
+
     }
 
 }

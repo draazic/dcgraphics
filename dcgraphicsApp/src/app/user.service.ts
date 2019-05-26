@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import {User} from './user.interface';
 
@@ -20,5 +20,12 @@ export class UserService {
         return this.http.post(this.baseUrl + '/register',user);
     }
 
+    userAuthentication(user):Observable<Object>{
+        console.log(user)
+        var data = "email="+user.email+"&password="+user.password;
+        //console.log(data)
+        var reqHeader = new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'});
+        return this.http.post(this.baseUrl+'/login', data,{headers: reqHeader})
+    }
 
 }

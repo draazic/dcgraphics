@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'portfolio', component: PortfolioComponent },
-  //{ path: 'homelog', component: HomelogComponent, data:{state:'homelog'}},
+  { path: 'homelog', component: HomelogComponent},
 
   { path: 'signup', component: UserComponent, data:{state:'signup'},
     children:[{path : '',component: SignUpComponent}]},
