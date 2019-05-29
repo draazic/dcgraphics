@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../router.animations';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-homelog',
@@ -8,8 +9,9 @@ import { routerTransition } from '../router.animations';
   animations: [ routerTransition ]
 })
 export class HomelogComponent implements OnInit {
+  user: any;
 
-  constructor() { }
+  constructor(private userService : UserService) { }
 
   getState(o) {
     console.log(o)
@@ -17,6 +19,12 @@ export class HomelogComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.userService.getUser().subscribe((data : any)=>{
+      this.user = data;
+      console.log(data)
+    })
   }
+
+  getUser(){}
 
 }

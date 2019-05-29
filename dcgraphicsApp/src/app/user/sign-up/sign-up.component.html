@@ -16,14 +16,14 @@
  
         <div class="form-group">
           <label style="color: black" for="email">Email</label>
-          <input type="text" id="email" [(ngModel)]="email"  [pattern]="mailPattern" [ngClass]="{'invalid-data': femail.invalid && register.submitted, 'valid-data': femail.valid && register.submitted}" 
+          <input type="text" id="email" [(ngModel)]="email"  [pattern]="emailPattern" [ngClass]="{'invalid-data': femail.invalid && register.submitted, 'valid-data': femail.valid && register.submitted}" 
           required name="email" #femail="ngModel"   class="form-control" >
 
           <div *ngIf="femail.invalid && register.submitted">
               <span style="color: red;">Please Enter Name.</span>
             </div>
             <div *ngIf="femail.errors?.pattern"> 
-              <span style="color: red;">Name not valid.</span>
+              <span style="color: red;">Email not valid.</span>
             </div>  
         </div>
 
@@ -33,10 +33,10 @@
             required name="password" #fpassword="ngModel"  name="password" class="form-control" >
 
             <div *ngIf="fpassword.invalid && register.submitted">
-                <span style="color: red;">Please Enter Name.</span>
+                <span style="color: red;">Please Enter Password.</span>
               </div>
               <div *ngIf="fpassword.errors?.pattern"> 
-                <span style="color: red;">Name not valid.</span>
+                <span style="color: red;">Password not valid.</span>
               </div>  
         </div>
 

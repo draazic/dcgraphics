@@ -6,6 +6,8 @@ import {
   animate,
   transition
 } from '@angular/animations';
+import { UserService } from '../user.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -29,8 +31,9 @@ import {
 })
 export class NavComponent implements OnInit {
   state = 'hide'
+  isLog: Observable<boolean>
 
-  constructor(public el: ElementRef) { }
+  constructor(public el: ElementRef, private userService: UserService) { }
 
   @HostListener('window:scroll', ['$event'])
     checkScroll() {
