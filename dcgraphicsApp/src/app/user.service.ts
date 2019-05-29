@@ -8,7 +8,7 @@ import {User} from './user.interface';
 export class UserService {
 
     baseUrl:string ="http://localhost:3000/api";
-
+    private loggedIn = new BehaviorSubject<boolean>(false);
 
 
   constructor(private http: HttpClient) { }
@@ -26,12 +26,20 @@ export class UserService {
         var data = "email="+user.email+"&password="+user.password;
         //console.log(data)
         
+        // this.loggedIn.next(true);
         var reqHeader = new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'});
         return this.http.post(this.baseUrl+'/login', data,{headers: reqHeader})
+
     }
+
+    get isLoggedIn() {
+        //this.loggedIn.next(true);
+        return this.loggedIn.asObservable(); // {2}
+      }
 
 
     getUser(){
+        this.loggedIn.next(true);
         return this.http.get(this.baseUrl +'/me', 
         {headers: new HttpHeaders({'Authorization':localStorage.getItem('token')})})
 
