@@ -8,6 +8,7 @@ import {
 } from '@angular/animations';
 import { UserService } from '../user.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -31,9 +32,12 @@ import { Observable } from 'rxjs';
 })
 export class NavComponent implements OnInit {
   state = 'hide'
-  isLog: Observable<boolean>
+  //id: string;
+  isLogged: Observable<boolean>;
+  user: any;  
+  
 
-  constructor(public el: ElementRef, private userService: UserService) { }
+  constructor(public el: ElementRef, private userService: UserService, private router: Router) { }
 
   @HostListener('window:scroll', ['$event'])
     checkScroll() {
@@ -54,8 +58,16 @@ export class NavComponent implements OnInit {
     }
 
   ngOnInit() {
-    
-   
+    this.isLogged = this.userService.isLoggedIn;
+     
   }
-
+  Logout(){
+    
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+    window.location.replace('/login');
+    
+  }
+  
+  
 }
