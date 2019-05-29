@@ -1,5 +1,6 @@
 @import "../node_modules/ngx-toastr/toastr.css";
 
+
 html, body { height: 100%; }
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -1747,6 +1748,10 @@ h1{
 .ng-valid[required], .ng-valid.required  {
     border: 1px solid #42A948; /* green */
   }
+
+  input.ng-invalid.ng-dirty{
+    border:1px solid  #e91e63; 
+}
   
 
   @media (min-width: 320px) and (max-width: 599px){

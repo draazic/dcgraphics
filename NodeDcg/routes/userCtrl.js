@@ -82,7 +82,7 @@ module.exports = {
             console.log(req.body)
             var email = req.body.email;
             var password =req.body.password;
-            console.log(password);
+            //console.log(password);
             if (email=='' || password == '' ){
                 return res.status(400).json({'error':'missing paramater'});
             }
@@ -122,7 +122,7 @@ module.exports = {
 
         var headerAuth = req.headers['authorization'];
         var id = jwtUtils.getUserId(headerAuth);
-        //console.log(id);
+        console.log(id);
 
         if(id < 0)
         return res.status(400).json({'error':'wrong token'});
@@ -149,8 +149,8 @@ module.exports = {
         var headerAuth = req.headers['authorization'];
         var userId = jwtUtils.getUserId(headerAuth);
 
-        console.log(headerAuth)
-        console.log(userId)
+        // console.log(headerAuth)
+        // console.log(userId)
         //params
         var bio = req.body.bio;
         

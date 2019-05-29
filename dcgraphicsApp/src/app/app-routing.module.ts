@@ -9,6 +9,7 @@ import { HomelogComponent } from './homelog/homelog.component';
 import { UserComponent } from './user/user.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
+import { AuthGuard } from './auth/auth.guard';
 //import { routerTransition } from './router.animations';
 
 const routes: Routes = [
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'homelog', component: HomelogComponent},
+  { path: 'homelog', component: HomelogComponent,canActivate:[AuthGuard]},
 
   { path: 'signup', component: UserComponent, data:{state:'signup'},
     children:[{path : '',component: SignUpComponent}]},

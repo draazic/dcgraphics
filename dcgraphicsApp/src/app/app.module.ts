@@ -13,7 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Http, HttpModule } from '@angular/http'; 
 import { HttpClientModule } from '@angular/common/http'
 import {FormService} from './form.service';
-import { MatButtonModule, MatCardModule,  MatInputModule, MatFormFieldModule,MatDialogModule } from '@angular/material';
+import { MatButtonModule, MatCardModule,  MatInputModule, MatFormFieldModule,MatDialogModule,MatIconModule } from '@angular/material';
 import { UserComponent } from './user/user.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
@@ -21,7 +21,8 @@ import { HomelogComponent } from './homelog/homelog.component';
 import { UserService } from './user.service';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
-
+import { AuthGuard } from './auth/auth.guard';
+//import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { CommonModule } from '@angular/common';
     
   ],
   imports: [
+    
     CommonModule,
     BrowserModule,
     AppRoutingModule,
@@ -56,9 +58,10 @@ import { CommonModule } from '@angular/common';
     MatCardModule, 
     MatFormFieldModule,
     MatDialogModule,
+    MatIconModule, 
     ToastrModule.forRoot(
        {
-        positionClass:'toast-center-center',  
+        positionClass:'toast-top-right',  
         closeButton: true, }
       
     )
@@ -66,7 +69,7 @@ import { CommonModule } from '@angular/common';
     
   ],
   entryComponents:[DialogOverviewExampleDialog], 
-  providers: [FormService, UserService],
+  providers: [FormService, UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
