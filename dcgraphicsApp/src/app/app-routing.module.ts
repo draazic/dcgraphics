@@ -6,6 +6,8 @@ import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomelogComponent } from './homelog/homelog.component';
+import { MailboxComponent } from './mailbox/mailbox.component';
+import { MygaleryComponent } from './mygalery/mygalery.component';
 import { UserComponent } from './user/user.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
@@ -17,7 +19,16 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'homelog', component: HomelogComponent,canActivate:[AuthGuard]},
+  { path: 'homelog', component: HomelogComponent,canActivate:[AuthGuard]
+        // children:[
+        //   { path: 'mailbox', component: MailboxComponent},
+        //   { path: 'mygalery', component: MygaleryComponent}
+        // ]
+      },
+        
+  { path: 'mailbox', component: MailboxComponent,canActivate:[AuthGuard]},
+  { path: 'mygalery', component: MygaleryComponent,canActivate:[AuthGuard]},
+
 
   { path: 'signup', component: UserComponent, data:{state:'signup'},
     children:[{path : '',component: SignUpComponent}]},

@@ -1,0 +1,97 @@
+<div class="backUser" >
+  
+  <div style="height: 180px"></div>
+   <div class="container">
+
+
+
+      <div class="flip-card" *ngFor="let client of clients.slice().reverse() ">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="header-front-card" style="height: 80px;background-color:blanchedalmond"> </div>
+              <img src="../../assets/icons/letter.png" alt="Avatar" style="width:100px;height:100px;position:absolute;
+              top:25px;right: 96px">
+               <div  style="height: 80px;margin-top: 90px">
+                   <!-- <ul >
+                    <li style='list-style-type: none;'><i class="material-icons md-light">
+                        perm_identity
+                        </i></li>
+                  </ul>  -->
+                  <h2 style="color: blanchedalmond">{{client.forname}} {{client.name}}</h2> 
+                  <h3 style="color: blanchedalmond">{{client.enterprise}}</h3> 
+                </div>
+            </div>
+           
+            <div class="flip-card-back">
+              <h2 style="margin-top: 20px">{{client.forname}} {{client.name}}</h2> 
+              <p>{{client.enterprise}}</p> 
+              <p>{{client.mail}}</p>
+              <div style="margin-top:218px;height: 48px;background-color:rgb(194, 193, 191)">
+                  <button type="button" class="btn btn-info" style="margin:5px">Reply</button>
+                  <button type="button" class="btn btn-danger" style="margin:5px">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card> -->
+
+
+        <!-- <div class="card transition" *ngFor="let client of clients.slice().reverse() ">
+            <h2 class="transition">Awesome Headline</h2>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <div class="cta-container transition"><a href="#" class="cta">Call to action</a></div>
+            <div class="card_circle transition"></div>
+          </div> -->
+
+
+
+
+        
+   <!-- <div class="card-container"  *ngFor="let client of clients.slice().reverse() " >
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="card">
+      <div class="front">
+        <div class="cover"></div>
+        <div class="photo">
+          <img src="https://image.ibb.co/dSrCS5/lame_224x224.jpg">
+        </div>
+      
+      <h3 class="name">{{client.forname}} {{client.name}}</h3>
+        <p class="role">{{client.enterprise}}</p>
+        <div class="supporting_text">
+          <span>{{client.mail}}</span>
+          <span>{{client.phone}}</span>
+        </div>
+        <div class="mdl-card__actions mdl-card--border mdl-typography--text-center">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Reply</button>
+        </div>
+      </div>
+      <div class="backCard">
+        <ul class="icons">
+          <li ><i class="mdi"><span ><span>{{client.text}}</span></span></i></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>  -->
+</div> 
+</div>

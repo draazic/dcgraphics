@@ -26,7 +26,7 @@ export class UserService {
         var data = "email="+user.email+"&password="+user.password;
         //console.log(data)
         
-        // this.loggedIn.next(true);
+        //this.loggedIn.next(true);
         var reqHeader = new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'});
         return this.http.post(this.baseUrl+'/login', data,{headers: reqHeader})
 
@@ -34,6 +34,9 @@ export class UserService {
 
     get isLoggedIn() {
         //this.loggedIn.next(true);
+        if (localStorage.getItem('token') != null){
+            this.loggedIn.next(true);  
+        }
         return this.loggedIn.asObservable(); // {2}
       }
 
@@ -41,7 +44,9 @@ export class UserService {
     getUser(){
         this.loggedIn.next(true);
         return this.http.get(this.baseUrl +'/me', 
-        {headers: new HttpHeaders({'Authorization':localStorage.getItem('token')})})
+        {headers: new HttpHeaders({'Authorization':localStorage.getItem('token')})}
+        )
+        //{'Authorization':localStorage.setItem('token');}
 
     }
 
