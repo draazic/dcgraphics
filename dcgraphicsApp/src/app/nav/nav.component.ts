@@ -59,10 +59,11 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     this.isLogged = this.userService.isLoggedIn;
+    console.log(this.userService.isLoggedIn)
      
   }
   Logout(){
-    
+    //this.isLogged = this.userService.isLoggedIn;
     localStorage.removeItem('token');
     this.router.navigate(['/login']);
     window.location.replace('/login');

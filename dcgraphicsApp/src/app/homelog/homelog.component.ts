@@ -14,10 +14,10 @@ export class HomelogComponent implements OnInit {
 
   constructor(private userService : UserService, private router: Router) { }
 
-  getState(o) {
-    console.log(o)
-    return o.activatedRouteData.state;
-  }
+  // getState(o) {
+  //   console.log(o)
+  //   return o.activatedRouteData.state;
+  // }
 
   ngOnInit() {
     this.userService.getUser().subscribe((data : any)=>{

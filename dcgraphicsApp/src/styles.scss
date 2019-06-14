@@ -2741,4 +2741,26 @@ and (device-width : 812px)
 
 }
 
+//////Home user
+
+.backUser{
+    position: absolute;
+   
+
+    background-size: cover;
+    background: url("src/assets/img/backgroundblue.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    //height: 100%;
+    width: 100%;
+   
+}
+
+// .backUser{
+//     position: absolute;
+//     background-size: cover;
+//     background-image: radial-gradient(red, green, blue);
+//     height: auto;
+
+// }
+
 
