@@ -1,17 +1,16 @@
 <div class="backUser" >
   
-  <div style="height: 180px"></div>
-   <div class="container">
+  <div style="height: 150px"></div>
+   <div class="containerCard">
 
 
 
       <div class="flip-card" *ngFor="let client of clients.slice().reverse() ">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="header-front-card" style="height: 80px;background-color:blanchedalmond"> </div>
-              <img src="../../assets/icons/letter.png" alt="Avatar" style="width:100px;height:100px;position:absolute;
-              top:25px;right: 96px">
-               <div  style="height: 80px;margin-top: 90px">
+              <div class="header-front-card" > </div>
+              <img src="../../assets/icons/letter.png" class="iconCard" alt="Avatar" style="">
+               <div  class="divTxtName" style="">
                    <!-- <ul >
                     <li style='list-style-type: none;'><i class="material-icons md-light">
                         perm_identity
@@ -23,10 +22,12 @@
             </div>
            
             <div class="flip-card-back">
-              <h2 style="margin-top: 20px">{{client.forname}} {{client.name}}</h2> 
-              <p>{{client.enterprise}}</p> 
+              <h2 style="margin-top: 10px">{{client.forname}} {{client.name}}</h2> 
+              <p class='enterprise' style="">{{client.enterprise}}</p> 
               <p>{{client.mail}}</p>
-              <div style="margin-top:218px;height: 48px;background-color:rgb(194, 193, 191)">
+              <p class='message' style="">{{client.text}}</p>
+
+              <div class='divButton' style="">
                   <button type="button" class="btn btn-info" style="margin:5px">Reply</button>
                   <button type="button" class="btn btn-danger" style="margin:5px">Delete</button>
               </div>
