@@ -18,9 +18,14 @@ export class FormService {
 
     getCivilites():Observable<any[]>{
       return this.http.get<any[]>(this.baseUrl + '/civilites');
-  }
+    }
 
     getObjets():Observable<any[]>{
       return this.http.get<any[]>(this.baseUrl + '/objets');
-  }
+    }
+
+    deleteClient(id:number):Observable<Client[]>{
+      return this.http.delete<Client[]>(this.baseUrl + '/clients/'+id);
+
+    }
 }
