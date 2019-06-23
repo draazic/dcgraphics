@@ -29,4 +29,17 @@ export class MailboxComponent implements OnInit {
   });
 
 }
+
+delCard(id){
+  //this.id = this.route.snapshot.params.id;
+  this.formService.deleteClient(id).subscribe((res : any[])=>{
+    //this.images = res;
+    console.log(res);
+    this.formService.getClients().subscribe((res : any[])=>{
+      this.clients = res;
+      console.log(this.clients)
+  });
+});
+}
+
 }

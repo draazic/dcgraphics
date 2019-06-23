@@ -10,6 +10,8 @@ exports.router=(function(){
     apiRouter.route('/client').post(clientsCtrl.create);
     apiRouter.route('/clients').get(clientsCtrl.findAll);
     apiRouter.route('/clients/:id').get(clientsCtrl.findOne);
+    apiRouter.route('/clients/:id').delete(clientsCtrl.deleteById);
+
     
 
     apiRouter.route('/civilite').post(civilitesCtrl.create);

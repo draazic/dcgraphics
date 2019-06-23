@@ -47,7 +47,7 @@ module.exports= {
 
     },
     findOne: function (req, res) {
-        models.Client.findById(req.params.id)
+        models.Client.findByPk(req.params.id)
         .then(client => {
             if(!client){
                 return res.status(404).send({
@@ -68,7 +68,18 @@ module.exports= {
             });
         });
         
-    }
+    },
+    deleteById: function(req, res, next) {
+        console.log(req.params.id)
+
+        models.Client.destroy({
+            where: {
+              id: req.params.id
+            }
+          }).then(function(client) {
+            res.json(client);
+          });
+       },
 
 
 }
