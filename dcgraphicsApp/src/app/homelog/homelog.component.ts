@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../router.animations';
-import { UserService } from '../user.service';
+import { UserService } from '../service/user.service';
 import { Router } from '@angular/router';
 
 @Component({

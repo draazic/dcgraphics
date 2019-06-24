@@ -2,8 +2,8 @@ import { Component, OnInit, Inject, ViewChild  } from '@angular/core';
 import{FormGroup, FormControl, Validators} from '@angular/forms'
 import { Observable, observable} from 'rxjs';
 import {FormService} from '../form.service';
-import {Client}    from '../client.interface';
-import {Civilite}    from '../civilite.interface';
+import {Client}    from '../interface/client.interface';
+import {Civilite}    from '../interface/civilite.interface';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from  '@angular/material';
 
 

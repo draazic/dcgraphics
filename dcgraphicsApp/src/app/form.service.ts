@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Client }  from './client.interface';
+import {Client }  from './interface/client.interface';
 import { Observable, of } from 'rxjs';
 @Injectable()
 export class FormService {

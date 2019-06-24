@@ -1,6 +1,6 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
-import {User} from '../../user.interface';
-import {UserService} from '../../user.service';
+import {User} from '../../interface/user.interface';
+import {UserService} from '../../service/user.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';

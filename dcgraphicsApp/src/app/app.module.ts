@@ -18,7 +18,7 @@ import { UserComponent } from './user/user.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { HomelogComponent } from './homelog/homelog.component';
-import { UserService } from './user.service';
+import { UserService } from './service/user.service';
 //import { MaterialModule } from '@angular/material';
 
 import {RandomService} from './randomImages.service';

@@ -6,7 +6,7 @@ import {
   animate,
   transition
 } from '@angular/animations';
-import { UserService } from '../user.service';
+import { UserService } from '../service/user.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 

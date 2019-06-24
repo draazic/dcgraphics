@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {User} from '../../user.interface';
-import {UserService} from '../../user.service';
+import {User} from '../../interface/user.interface';
+import {UserService} from '../../service/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {trigger,style,transition,animate,keyframes,query,stagger} from '@angular/animations';
