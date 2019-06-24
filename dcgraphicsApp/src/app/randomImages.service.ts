@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {ImageRandom }  from './imageRandom.interface';
+import {ImageRandom }  from './interface/imageRandom.interface';
 import { Observable} from 'rxjs';
 @Injectable()
 export class RandomService{

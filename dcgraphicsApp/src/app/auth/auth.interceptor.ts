@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders,HttpHandler,HttpUserEvent,HttpEvent, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { UserService } from '../user.service';
+//import { UserService } from '../service/user.service';
 import 'rxjs/add/operator/do'
 import { tap } from "rxjs/operators";
 
