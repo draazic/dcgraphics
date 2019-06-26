@@ -3,6 +3,8 @@ var clientsCtrl = require('./routes/clientsCtrl');
 var civilitesCtrl = require('./routes/civilitesCtrl');
 var objetCtrl = require('./routes/objetCtrl');
 var userCtrl = require('./routes/userCtrl');
+var sendformCtrl = require('./routes/sendformCtrl');
+
 
 exports.router=(function(){
     var apiRouter = express.Router();
@@ -27,6 +29,8 @@ exports.router=(function(){
 
     apiRouter.route('/me/').get(userCtrl.getUserProfile);
     apiRouter.route('/me/').put(userCtrl.updateUserProfile);
+
+    apiRouter.route('/mail/').post(sendformCtrl.sendMail)
     
     
     return apiRouter;
