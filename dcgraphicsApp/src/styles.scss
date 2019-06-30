@@ -75,14 +75,29 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     height: 25%; 
     background-color: transparent
 }
-// .iconHome{
-//     width: 12%;
-//     height: auto;
+
+// .packIcon{
+//     margin-left:auto;
+//     margin-right: auto;
+//     width: 41%
 // }
-.packIcon{
-    margin-left:auto;
-    margin-right: auto;
-     width: 41%
+
+@media only screen and (min-width: 1400px) {
+    
+    .packIcon{
+        margin-left:auto;
+        margin-right: auto;
+        width: 1048px
+    }
+}
+
+@media (max-width: 1399px)  and (min-width: 522px) {
+    
+    .packIcon{
+        margin-left:auto;
+        margin-right: auto;
+        width: 550px
+    }
 }
 
 
@@ -155,6 +170,8 @@ and (device-height : 768px)
     
 
 } 
+
+
 
 @media only screen 
 and (device-width : 834px) 
@@ -282,9 +299,10 @@ and (device-height : 1024px)
         
     }
     .packIcon{    
-        //padding-left: 20px;
+        padding-left: 150px;
         margin-right: 150px;
-        width: 1024px
+        width: 1200px;
+        
     }
     .imgCar{
         height: 1024px;
@@ -465,8 +483,8 @@ and (device-height : 900px)
         
     }
     .packIcon{    
-        padding-left: 20px;
-        margin-right: 10px;
+        padding-left: 30px;
+        //margin-right: 10px;
         width: 300px
     }
     .imgCar{
@@ -573,9 +591,9 @@ and (-webkit-device-pixel-ratio : 3) {
         
         }
         .packIcon{    
-           
-            margin-right: 15px;
-            width: 300px
+            padding-left: 60px;
+            //margin-right: 36px;
+            width: 360px
         }
         
         .imgCar{
@@ -950,9 +968,9 @@ and (height : 736px) {
         
         }
         .packIcon{    
-           
-           margin-right: 2px;
-            width: 330px
+            padding-left: 75px;
+            //margin-right: 36px;
+            width: 360px
         }
         .imgCar{
             //margin-top: 40px;
@@ -1012,9 +1030,9 @@ and (height : 667px) {
         
         }
         .packIcon{    
-           
-            margin-right: 15px;
-            width: 300px
+            padding-left: 60px;
+            //margin-right: 36px;
+            width: 360px
         }
         .imgCar{
             //margin-top: 40px;
@@ -1202,9 +1220,9 @@ and (height : 667px) {
         
         }
         .packIcon{    
-            padding-left: 3px;
-            margin-right: 15px;
-            width: 300px
+            padding-left: 45px;
+            // margin-right: 15px;
+            width: 360px
         }
         .imgCar{
             height: 300px;
@@ -1245,64 +1263,64 @@ and (height : 667px) {
             }  
 
     }
-    @media only screen 
-    and (device-width : 640px) 
-    and (device-height : 360px) 
-    {   
-        .homeIcon{
-            width: 20%;
-            height: auto;
+    // @media only screen 
+    // and (device-width : 640px) 
+    // and (device-height : 360px) 
+    // {   
+    //     .homeIcon{
+    //         width: 20%;
+    //         height: auto;
     
-        }
-        .DivIcon{
-            height: 560px; 
-            background-color: transparent
+    //     }
+    //     .DivIcon{
+    //         height: 560px; 
+    //         background-color: transparent
     
-        }
-        .iconHome{    
-            height: auto;
+    //     }
+    //     .iconHome{    
+    //         height: auto;
         
-        }
-        .packIcon{    
-           
-            margin-right: 15px;
-            width: 571px
-        }
+    //     }
+    //     .packIcon{    
+            
+    //         //margin-right: 15px;
+    //         width: 240px
+    //     }
 
-        .imgCar{
-            height: 360px;
-        }
-        #divText{
-            position:absolute;
-            top:19%;
-            z-index: 1;
-            left: 15%;
-            right: 15%
-            }
-        #buttonHead{
-            color: white; 
-            border: 1px solid white;                
-            margin: 2%;
-            position:absolute;
-            top:85%;
-            left: 25%;                
-            right: 50%
-            }
-        #buttonHead2{
-            color: white; 
-            border: 1px solid white;
-            margin: 2%;
-            position:absolute;
-            top:85%;
-            }
-        .contentCard{
-            margin: 5%;
-            margin-top: 2%;
-            margin-left: 2%;
-            margin-right: 2%
-            }  
+    //     .imgCar{
+    //         height: 360px;
+    //     }
+    //     #divText{
+    //         position:absolute;
+    //         top:19%;
+    //         z-index: 1;
+    //         left: 15%;
+    //         right: 15%
+    //         }
+    //     #buttonHead{
+    //         color: white; 
+    //         border: 1px solid white;                
+    //         margin: 2%;
+    //         position:absolute;
+    //         top:85%;
+    //         left: 25%;                
+    //         right: 50%
+    //         }
+    //     #buttonHead2{
+    //         color: white; 
+    //         border: 1px solid white;
+    //         margin: 2%;
+    //         position:absolute;
+    //         top:85%;
+    //         }
+    //     .contentCard{
+    //         margin: 5%;
+    //         margin-top: 2%;
+    //         margin-left: 2%;
+    //         margin-right: 2%
+    //         }  
 
-    }  
+    // }  
 
     @media only screen 
     and (device-width : 740px) 
@@ -1499,9 +1517,9 @@ and (height : 667px) {
         
         }
         .packIcon{    
-            //padding-left: 15px;
-            margin-right: 36px;
-            width: 300px
+            padding-left: 75px;
+            //margin-right: 36px;
+            width: 360px
         }
         .imgCar{
             height: 360px;
@@ -1620,9 +1638,9 @@ and (height : 667px) {
         
         }
         .packIcon{    
-            //padding-left: 15px;
-            margin-right: 36px;
-            width: 300px
+            padding-left: 75px;
+            //margin-right: 36px;
+            width: 360px
         }
         .imgCar{
             height: 360px;
