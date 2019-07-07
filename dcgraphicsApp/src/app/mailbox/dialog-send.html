@@ -1,0 +1,45 @@
+<div mat-dialog-content style="max-height: 100%">
+    <div class="form-group" id="divMain">
+
+        <h1 style="text-align: center;color:black">MailForm</h1>
+        <br>
+        <p style="text-align: center">{{data.forname}} {{data.name}}</p> 
+
+        <form class="form-vertical" #mail="ngForm" role="form" (ngSubmit)="onSubmit(mail.value)">
+            
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input type="email" name="destination" id="destination" class="form-control" value={{data.mail}} placeholder="Adresse mail du destinataire"
+                    
+                    [(ngModel)]="data.mail" 
+                    #fdestination="ngModel"
+                    />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input type="text" name="subject" id="subject" class="form-control" placeholder="L'objet du mail"
+                    [(ngModel)]="subject" 
+                    #fsubject="ngModel"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <textarea rows="6" name="message" id="message" class="form-control" placeholder="Le contenu de votre mail"
+                    [(ngModel)]="message" 
+                    #fmessage="ngModel"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <button type="submit"  class="btn btn-success" >Submit</button>
+                    <button style="margin-left: 10px" type="reset" [mat-dialog-close]  class="btn btn-danger">Reset</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>
+ 
