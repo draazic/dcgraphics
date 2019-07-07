@@ -1,6 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Inject, OnInit } from '@angular/core';
 import {FormService} from '../form.service';
+import {MailService} from '../service/mail.service';
+
 import {RandomService} from '../randomImages.service';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from  '@angular/material';
+import {Client}    from '../interface/client.interface';
+import {Mail}    from '../interface/mail.interface';
+
+
+
 
 
 
@@ -13,7 +21,7 @@ export class MailboxComponent implements OnInit {
   private clients =[];
   private images =[];
 
-  constructor(private formService : FormService, private randomService:RandomService) { }
+  constructor(private formService : FormService, private randomService:RandomService, private  dialog:  MatDialog) { }
 
   
 
@@ -30,16 +38,63 @@ export class MailboxComponent implements OnInit {
 
 }
 
+
+
+ModalSend(client:Client){
+  this.dialog.open(DialogSendMailDialog,{ 
+    height: '520px',
+    width: '600px',
+    
+    data: {
+      mail: client.mail,
+      name: client.name,
+      forname: client.forname
+    }});
+}
+
 delCard(id){
-  //this.id = this.route.snapshot.params.id;
   this.formService.deleteClient(id).subscribe((res : any[])=>{
-    //this.images = res;
     console.log(res);
     this.formService.getClients().subscribe((res : any[])=>{
       this.clients = res;
-      console.log(this.clients)
   });
 });
 }
+
+}
+
+@Component({
+  selector: 'dialog-send',
+  templateUrl: 'dialog-send.html',
+})
+export class DialogSendMailDialog {
+
+  constructor(
+    private mailService : MailService,
+    public dialogRef: MatDialogRef<DialogSendMailDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: Client
+    ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+
+  }
+
+  onSubmit(mail:Mail){
+    
+    this.mailService.createMail(mail).subscribe(
+      (res)=>{
+      console.log('success');
+      console.log(res);
+
+        },
+      err=>{
+      console.log(" not Error..");
+        } 
+      );
+      this.dialogRef.close();
+
+
+  }
 
 }

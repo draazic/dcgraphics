@@ -7,10 +7,9 @@ module.exports = {
         var transporter = nodemailer.createTransport({
             service : 'gmail',
             auth : {
-                //xoauth2: xoauth2.createXOAuth2Generator({ 
                 user: 'decarvalho.karl@gmail.com',
                 pass: 'xtCY7vp6Qu'
-                //})
+                
             }
         });
 

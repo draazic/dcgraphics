@@ -24,16 +24,13 @@ export class UserService {
     userAuthentication(user):Observable<Object>{
         console.log(user)
         var data = "email="+user.email+"&password="+user.password;
-        //console.log(data)
         
-        //this.loggedIn.next(true);
         var reqHeader = new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'});
         return this.http.post(this.baseUrl+'/login', data,{headers: reqHeader})
 
     }
 
     get isLoggedIn() {
-        //this.loggedIn.next(true);
         if (localStorage.getItem('token') != null){
             this.loggedIn.next(true);  
         }
@@ -46,7 +43,6 @@ export class UserService {
         return this.http.get(this.baseUrl +'/me', 
         {headers: new HttpHeaders({'Authorization':localStorage.getItem('token')})}
         )
-        //{'Authorization':localStorage.setItem('token');}
 
     }
 

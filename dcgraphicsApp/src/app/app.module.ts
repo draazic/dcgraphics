@@ -19,6 +19,8 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { HomelogComponent } from './homelog/homelog.component';
 import { UserService } from './service/user.service';
+import { MailService } from './service/mail.service';
+
 //import { MaterialModule } from '@angular/material';
 
 import {RandomService} from './randomImages.service';
@@ -26,8 +28,9 @@ import {RandomService} from './randomImages.service';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { AuthGuard } from './auth/auth.guard';
-import { MailboxComponent } from './mailbox/mailbox.component';
+import { MailboxComponent, DialogSendMailDialog } from './mailbox/mailbox.component';
 import { MygaleryComponent } from './mygalery/mygalery.component';
+import { send } from 'q';
 //import { MatIconModule } from '@angular/material/icon';
 
 
@@ -41,6 +44,7 @@ import { MygaleryComponent } from './mygalery/mygalery.component';
     PortfolioComponent,
     ContactComponent,
     DialogOverviewExampleDialog,
+    DialogSendMailDialog,
     UserComponent,
     SignInComponent,
     SignUpComponent,
@@ -76,8 +80,8 @@ import { MygaleryComponent } from './mygalery/mygalery.component';
 
     
   ],
-  entryComponents:[DialogOverviewExampleDialog], 
-  providers: [FormService, UserService, AuthGuard, RandomService],
+  entryComponents:[DialogOverviewExampleDialog, DialogSendMailDialog], 
+  providers: [FormService, UserService, AuthGuard, RandomService, MailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
