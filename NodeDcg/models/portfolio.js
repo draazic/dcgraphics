@@ -11,9 +11,11 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     models.portfolio.belongsTo(models.user)
   };
+
   // sequelize.sync({ force: true })
   // .then(() => {
   //   console.log(`Database & tables created!`)
   // })
+
   return portfolio;
 };

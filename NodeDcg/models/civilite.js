@@ -8,5 +8,9 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     models.Civilite.hasMany(models.Client, { foreignKey: 'civiliteId', foreignKeyConstraint:true });
   };
+  // sequelize.sync({ force: true })
+  // .then(() => {
+  //   console.log(`Database & tables created!`)
+  // })
   return Civilite;
 };
