@@ -79,7 +79,7 @@ module.exports= {
           }).then(function(client) {
             res.json(client);
           });
-       },
+       }
 
 
 }
