@@ -4,18 +4,23 @@ const fs = require('fs');
 
 // Upload a Multipart-File then saving it to MySQL database
 exports.upload = (req, res) => { 
-    console.log(req.file.filename);
-    console.log(req.body); 
+    console.log(req);
+
+    //console.log(req.body);
+    //console.log(req.body); 
 
 models.portfolio.create({
     //idUser: req.body.idUser,
     titre: req.file.originalname, 
     content: req.body.content,
     likes: req.body.likes,  
-    url: req.file.destination + req.file.filename,
+    //url: req.file.destination + req.file.filename,
+    url: 'http://localhost:3000/uploads/'+ req.file.filename,
+
     userId:  req.body.userId,
     //name: req.file.originalname,
     data: fs.readFileSync(__basedir + '/uploads/' + req.file.filename)
+    
   }).then(image => {
     try{
       fs.writeFileSync(__basedir + '/tmp/' + image.titre, image.url);    

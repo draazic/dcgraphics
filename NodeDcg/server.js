@@ -15,9 +15,9 @@ global.__basedir = __dirname;
 var server = express();
 
 //body parser config
-server.use(bodyParser.json());
-server.use(bodyParser.urlencoded({extended:true}));
-//app.use(bodyParser.json({limit:'50mb'})); 
+//server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({extended:true, limit:'50mb'}));
+server.use(bodyParser.json({limit:'50mb'})); 
 
 //upload params
 
@@ -31,10 +31,13 @@ server.get('/', function (req, res) {
 });
 server.use(cors());
 server.use('/api/',apiRouter);
+
+//var publicDir = require('path').join(__dirname,'/uploads');
+server.use("/uploads",express.static(__dirname + "/uploads"));
+
 //server.use(express.static(path.join(__dirname, 'upload')));
 
 
-//launch 
 server.listen(3000, function(){
     console.log('Server en ecoute');
 })

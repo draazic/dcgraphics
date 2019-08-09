@@ -42,7 +42,7 @@ exports.router=(function(){
     apiRouter.route('/mail/').post(sendformCtrl.sendMail);
 
     apiRouter.route('/uploadfile').post(upload.single("uploadfile"), fileWorker.upload);
-    apiRouter.route('/portfolio').get(uploadCtrl.find);
+    apiRouter.route('/portfolios').get(uploadCtrl.find);
     apiRouter.route('/portfolio/:id').delete(uploadCtrl.deleteById);
     
     
