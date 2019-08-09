@@ -1,5 +1,6 @@
 var models = require('../models');
 const fs = require('fs');
+var path = require("path");
 
 
 // Upload a Multipart-File then saving it to MySQL database
@@ -51,9 +52,14 @@ exports.deleteById = (req, res) =>{
   models.portfolio.findOne({
     where: {id: req.params.id}
     }).then(function(portfolio) {
-      console.log(portfolio);
-
-      fs.unlink(portfolio.url, (err) => {
+      console.log(portfolio.url);
+      let urlStr=portfolio.url;
+      
+      console.log(urlStr)
+      var url=urlStr.substr(22);
+      console.log(url)
+      //fs.unlink(path.join("http://localhost:3000/uploads/uploadfile-1565180459455-blacketwhite.jpg" ), (err) => {
+      fs.unlink(path.join(url), (err) => {
       if (err) throw err;
       res.status(200).send({msg:"deleted"})
 
