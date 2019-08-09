@@ -94,6 +94,15 @@ export class MygaleryComponent implements OnInit {
     this.form.get('uploadfile').setValue(null);
     this.fileInput.nativeElement.value = '';
   }
+
+  delImage(id){
+    this.portfolioService.deletePortfolio(id).subscribe((res : any[])=>{
+      console.log(res);
+      this.portfolioService.getPortfolios().subscribe((res : any[])=>{
+        this.images = res;
+    });
+  });
+  }
   
   
 
