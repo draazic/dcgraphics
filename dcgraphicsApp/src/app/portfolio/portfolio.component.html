@@ -1,3 +1,20 @@
-<p>
-  portfolio works!
-</p>
+<!-- <div style="background-color:#1a1919; margin: auto; height:200px"> -->
+<div class="back" style=" margin: auto; height:150px">
+  <div style="padding-top: 5%">
+    <h1 style="text-align:center;background-color: rgba(0, 0, 0, 0.24);">My portfolio</h1> 
+  </div>
+</div>
+
+<div > 
+  <div style="margin-top:0.05%;width:100%;background-color:#e5e2e2; ">
+    <mat-grid-list [cols]="breakpoint" rowHeight="2:0.5"  (window:resize)="onResize($event)">
+        <mat-grid-tile
+            *ngFor="let image of images"
+            [colspan]="image.cols"
+            [rowspan]="image.rows"
+            [style.background]="image.color">
+          <img src={{image.url}}>
+        </mat-grid-tile>
+      </mat-grid-list>
+  </div>
+</div>

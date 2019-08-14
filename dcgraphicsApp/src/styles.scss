@@ -3,7 +3,7 @@
 
 html, body { height: 100%; }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"; }
 
 ////////NAV
 
@@ -22,8 +22,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 }
 
+///////Home
 
-///////HOME
+  
+///////ABOUT
 
 .some-class {
     height: 50px;
@@ -36,10 +38,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-left: 20%;
     margin-right: 20%
 }
+.containerCardHome{
+    //margin-top: 180px
+    margin:auto;
+   max-width: 1350px;
+}
 
 #divText{
     position:absolute;
-    top:40%;
+    top:35%;
     z-index: 1;
     left: 25%;
     right: 25%
@@ -1740,7 +1747,7 @@ and (height : 667px) {
 
 
 @media (min-width: 1200px){
-    .container {
+.container {
         max-width: 500px;
     }
 }
@@ -1770,6 +1777,30 @@ h1{
   input.ng-invalid.ng-dirty{
     border:1px solid  #e91e63; 
 }
+  
+
+// @media (min-width: 963px) and (max-width: 1178px){
+//     .packIcon{
+//         width: 600px;
+//         margin-left: 28%;
+//         padding-left:0px
+//     }
+//     .contentCard{
+//         padding-top: 10%
+//     }
+
+// }
+// @media (min-width: 650px) and (max-width: 962px){
+//     .packIcon{
+//         width: 600px;
+//         margin-left: 22%;
+//         padding-left:0px
+//     }
+//     .contentCard{
+//         padding-top: 10%
+//     }
+
+// }
   
 
   @media (min-width: 320px) and (max-width: 599px){
