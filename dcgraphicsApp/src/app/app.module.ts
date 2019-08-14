@@ -14,7 +14,7 @@ import { Http, HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'
 import {FormService} from './form.service';
 import {PortfolioService} from './service/portfolio.service';
-import { MatButtonModule, MatCardModule,  MatInputModule, MatFormFieldModule,MatDialogModule,MatIconModule } from '@angular/material';
+import { MatButtonModule, MatCardModule,  MatInputModule, MatFormFieldModule,MatDialogModule,MatIconModule, MatGridListModule } from '@angular/material';
 import { UserComponent } from './user/user.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
@@ -67,7 +67,8 @@ import { send } from 'q';
     BrowserAnimationsModule,
     MatInputModule, 
     MatButtonModule, 
-    MatCardModule, 
+    MatCardModule,
+    MatGridListModule, 
     MatFormFieldModule,
     MatDialogModule,
     MatIconModule, 

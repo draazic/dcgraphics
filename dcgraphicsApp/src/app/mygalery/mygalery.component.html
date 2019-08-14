@@ -2,84 +2,20 @@
   <div class="container" style ="margin-top: 10%">
       <h1 style="text-align:center">My galery </h1>
 
-<!-- 
-  <form  [formGroup]="form"  (ngSubmit)="image.form.valid && onSubmit(image.value)">
-
-
-    <div class="form-group">
-          <label for="uploadfile">Uploadfile</label>  
-      <div class="input-group">         
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-          </div>
-          <div class="custom-file">
-            <input  type="image" class="custom-file-input" name="profile" (change)="onFileSelect($event)" >
-            <label class="custom-file-label" for="inputGroupFile01" >Choose file</label>
-          </div>
-      </div>
-    </div>
-
-
-    <div class="form-group">
-      <label for="name">Title</label>
-      <input type="text"  id="name"
-      [(ngModel)]="name"   maxlength="25" [pattern]="namePattern" [ngClass]="{'invalid-data': fname.invalid && image.submitted, 'valid-data': fname.valid && image.submitted}" 
-      required name="name" #fname="ngModel" class="form-control">
-      
-        <div *ngIf="fname.invalid && image.submitted">
-          <span style="color: red;">Please Enter Name.</span>
-        </div>
-        <div *ngIf="fname.errors?.pattern"> 
-          <span style="color: red;">Name not valid.</span>
-       </div>  
-    </div>
-
-
-    <div class="form-group">
-      <label for="text">Content</label>
-      <textarea  id="text" 
-        [(ngModel)]="text" maxlength="250" [ngClass]="{'invalid-data': ftext.invalid && image.submitted, 'valid-data': ftext.valid && image.submitted}" 
-        required name="text" #ftext="ngModel" class="form-control">
-      </textarea>
-      <div *ngIf="text?.length > 0">
-        <span style="color: rgb(255, 255, 255); font-size: 12px">{{ text?.length }}/250</span>
-      </div>
-
-    <div *ngIf="ftext.invalid && image.submitted">
-        <span style="color: red;">Please Select Text.</span>
-    </div> 
-    
-
-
-    </div>
-
-    <button type="submit" class="btn btn-success"  style="margin-right: 10px;">Submit</button>
-    <button type="reset" class="btn btn-danger">Reset</button>
-    
-  </form> -->
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+          <label for="avatar">File</label>
+          <input type="file" id="avatar" (change)="onFileChange($event)" #fileInput>
+          <button type="button" class="btn btn-sm btn-default" (click)="clearFile()">clear file</button>
+    </div>
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" class="form-control" id="name" placeholder="Title" formControlName="name">
       <label for="content">Content</label>
       <input type="text" class="form-control" id="content" placeholder="Content" formControlName="content">
     </div>
-    <div class="form-group">
-      <label for="avatar">File</label>
-      <input type="file" id="avatar" (change)="onFileChange($event)" #fileInput>
-      <button type="button" class="btn btn-sm btn-default" (click)="clearFile()">clear file</button>
-    </div>
-
   
-
-
-    
- 
-    
- 
-  
-
     <button type="submit" [disabled]="form.invalid || loading" class="btn btn-success">Submit <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
   </form>
 
