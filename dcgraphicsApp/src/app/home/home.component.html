@@ -73,154 +73,58 @@
   </div>
 </div>
 
+
+
+<div style="height: 500px;width: 100%;background-color: rgb(61, 61, 61)" >
+
+  
+    <div  class="containerCardHome">
+      <div style="margin-left: 95px">
+          <div >
+              <label>    
+                  <div  class="player" [class.voted]="flipped">
+                      <div class="front card img-hover-zoom--slowmo" ngbButton (click)="flipIt()">
+                        <!-- <img [src]="imgSrc"> -->
+                      </div>
+                      <div class="backF" ngbButton (click)="flipIt()">Back</div>
+                  </div>
+                </label>
+          </div>
+    
+          <div >
+              <label>    
+                  <div id="player" class="player" [class.voted]="flipped1">
+                      <div class="front card img-hover-zoom--slowmo" ngbButton (click)="flipIt1()">
+                        <!-- <img [src]="imgSrc"> -->
+                      </div>
+                      <div class="backF" ngbButton (click)="flipIt1()">Back</div>
+                  </div>
+                </label>
+          </div>
+    
+          <div >
+              <label>    
+                  <div id="player" class="player" [class.voted]="flipped2">
+                      <div class="front card img-hover-zoom--slowmo" ngbButton (click)="flipIt2()">
+                        <!-- <img [src]="imgSrc"> -->
+                      </div>
+                      <div class="backF" ngbButton (click)="flipIt2()">Back</div>
+                  </div>
+                </label>
+          </div>      
+      </div>     
+    </div>
 </div>
 
 
 
-<!-- 
 
-<div class="card-columns contentCard">
-    <div class="card">
-      <img class="card-img-top" src="/assets/img/msp_1410_6260.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Expression du besoin</h5>
-        <p class="card-text">Je suis à votre écoute et me tiens à votre entière disposition pour tous vos besoins en matière de design graphique, de la construction complète de votre identité visuelle à la réalisation de tous vos supports de communication et de commercialisation.</p>
-      </div>
-    </div>
-    <div class="card p-3">
-      <blockquote class="blockquote mb-0 card-body">
-        <p>Passionné par « l’image » sous toutes ses formes, je mets un point d’honneur à expérimenter de nouvelles choses et à me renouveler en puisant l’inspiration partout où elle se trouve, afin d’apporter à ma clientèle un savoir-faire d’actualité et un travail qualitatif et efficace.</p>
-        <footer class="blockquote-footer">
-          <small class="text-muted">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </small>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="/assets/img/tumblr_o6nnyriAcM1tubinno1_1280.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Les qualités</h5>
-        <p class="card-text">Je vous apporte toute ma créativité et dynamisme.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <div class="card bg-secondary text-white text-center p-3">
-      <blockquote class="blockquote mb-0">
-        <p>J’interviens à deux niveaux afin de vous aider à acquérir une image professionnelle et vous démarquer de vos concurrents .</p>
-        <footer class="blockquote-footer">
-          <small>
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </small>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">La personne qui vous faut</h5>
-        <p class="card-text">Vous recherchez un Illustrateur / illustratrice freelance graphiste indépendant et/ou un infographiste ? 
-            Je vous propose la création d'illustrations et graphisme pour la presse, l'édition, la publicité et la communication (création de personnages, mascottes, character design). 
-            Support : web et print. Je travaille également comme illustrateur jeunesse : presse et édition pour enfants, projets pédagogiques...</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img" src="/assets/img/crayons-pencils-flatlay_925x.jpg" alt="Card image">
-    </div>
-    <div class="card p-3 text-right">
-      <blockquote class="blockquote mb-0">
-        <p>En utilisant quotidiennement les logiciels de la suite Adobe, je me suis rapidement intéressé à l’animation. Faire vivre mes illustrations permet d’apporter du mouvement à mes dessins. Avec mon expérience d’illustrateur jeunesse, je suis capable de produire un rendu ludique en vous offrant une animation de personnages ou de mascottes de qualité.
-            Introduction pour votre site internet, bannière flash, motion design de mascottes ou mini film explicatif (actions simples) sont des missions que je suis habitué à réaliser.</p>
-        <footer class="blockquote-footer">
-          <small class="text-muted">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </small>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Art technologies </h5>
-        <p class="card-text">En apportant de l’animation et du mouvement à votre campagne de communication, vous pourrez attirer le regard de vos clients ou prospects. Généralement, ces animations sont destinés aux réseaux sociaux ou aux sites web pour créer un visuel enrichi et dynamique.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div> -->
-
-
-  <div>
-      <div class="containerCardHome">
-
-      <div class="card darth">
-          <div class="face front">
-            <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/261096/Star_Wars_Logo.svg" />
-            <h2><small>Darth</small><br/>Vader</h2>
-            <cite>
-              <a href="http://6kart.deviantart.com/art/Darth-Vader-415281288" target="_blank">Vader Image by 6Kart</a>
-            </cite>
-          </div>
-          <div class="face back">
-            <img src="http://img.lum.dolimg.com/v1/images/Darth-Vader_6bda9114.jpeg?region=0%2C23%2C1400%2C785&width=768" alt="Image of Darth Vader" />
-            <div class="description">Once a heroic Jedi Knight, <b>Darth Vader</b> was seduced by the dark side of the Force, became a Sith Lord, and led the Empire’s eradication of the Jedi Order. He remained in service of the Emperor -- the evil Darth Sidious -- for decades, enforcing
-              his Master’s will and seeking to crush the fledgling Rebel Alliance. But there was still good in him…</div>
-            <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/261096/Star_Wars_Logo.svg" />
-          </div>
-        </div>
-        <div class="card luke">
-          <div class="face front">
-            <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/261096/Star_Wars_Logo.svg" />
-            <h2><small>Luke</small><br/>Skywalker</h2>
-            <cite>
-              <a href="http://salvadortrakal.deviantart.com/art/Luke-Skywalker-352420315" target="_blank">Luke Image by SalvadorTrakal</a>
-            </cite>
-          </div>
-          <div class="face back">
-            <img src="http://img.lum.dolimg.com/v1/images/Luke-Skywalker_dd9c9f9b.jpeg?region=0%2C0%2C1536%2C864&width=768" alt="Image of luke skywalker" />
-            <div class="description">
-              <b>Luke Skywalker</b> was a Tatooine farmboy who rose from humble beginnings to become one of the greatest Jedi the galaxy has ever known. Along with his friends Princess Leia and Han Solo, Luke battled the evil Empire, discovered the truth of his
-              parentage, and ended the tyranny of the Sith.</div>
-            <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/261096/Star_Wars_Logo.svg" />
-          </div>
-        </div>
-        <div class="card luke">
-            <div class="face front">
-              <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/261096/Star_Wars_Logo.svg" />
-              <h2><small>Luke</small><br/>Skywalker</h2>
-              <cite>
-                <a href="http://salvadortrakal.deviantart.com/art/Luke-Skywalker-352420315" target="_blank">Luke Image by SalvadorTrakal</a>
-              </cite>
-            </div>
-            <div class="face back">
-              <img src="http://img.lum.dolimg.com/v1/images/Luke-Skywalker_dd9c9f9b.jpeg?region=0%2C0%2C1536%2C864&width=768" alt="Image of luke skywalker" />
-              <div class="description">
-                <b>Luke Skywalker</b> was a Tatooine farmboy who rose from humble beginnings to become one of the greatest Jedi the galaxy has ever known. Along with his friends Princess Leia and Han Solo, Luke battled the evil Empire, discovered the truth of his
-                parentage, and ended the tyranny of the Sith.</div>
-              <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/261096/Star_Wars_Logo.svg" />
-            </div>
-          </div>
-          <div class="card luke">
-              <div class="face front">
-                <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/261096/Star_Wars_Logo.svg" />
-                <h2><small>Luke</small><br/>Skywalker</h2>
-                <cite>
-                  <a href="http://salvadortrakal.deviantart.com/art/Luke-Skywalker-352420315" target="_blank">Luke Image by SalvadorTrakal</a>
-                </cite>
-              </div>
-              <div class="face back">
-                <img src="http://img.lum.dolimg.com/v1/images/Luke-Skywalker_dd9c9f9b.jpeg?region=0%2C0%2C1536%2C864&width=768" alt="Image of luke skywalker" />
-                <div class="description">
-                  <b>Luke Skywalker</b> was a Tatooine farmboy who rose from humble beginnings to become one of the greatest Jedi the galaxy has ever known. Along with his friends Princess Leia and Han Solo, Luke battled the evil Empire, discovered the truth of his
-                  parentage, and ended the tyranny of the Sith.</div>
-                <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/261096/Star_Wars_Logo.svg" />
-              </div>
-            </div>
-          
-        </div>   
-  </div>  
 <div style="height: 300px;width: 100%;background-color: rgb(169, 188, 189)">
-
-
+  
 </div>
+
+
+
 
       
     

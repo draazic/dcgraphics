@@ -1,172 +1,93 @@
-@mixin flip($speed: 0.5s, $direction: "y") {
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform $speed;
-    &.flip {
-      @if $direction == "x" {
-        transform: rotateX(180deg);
-      } 
-      @if $direction == "y" {
-        transform: rotateY(180deg);
-      } 
-      @if $direction == "z" {
-        transform: rotateZ(180deg);
-      } 
-      transition: transform $speed;
-    }
-    .face {
-      // setup the face of the card to match the size of the card;
+
+
+label {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: block;
+  width: 310px;
+  height: 400px;
+  //position: absolute;
+  float:left;
+  margin: 2%;
+  //left: 50%;
+  //top: 50%;
+  //-webkit-transform: translate(-50%, -50%);
+  //transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.player {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+  //backface-visibility: hidden;
+
+  
+}
+
+  .player div {
       position: absolute;
-      top: 0px; left: 0px;
-      bottom: 0px; right: 0px;
+      height: 100%;
+      width: 100%;
+      background: #FFF;
+      text-align: center;
+      line-height: 200px;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
       backface-visibility: hidden;
-      transform: translateZ(0.1px); // fix for safari.
-    }
-    .back {
-      // flip the back
-      @if $direction == "x" {
-        transform: rotateX(180deg);
-      } 
-      @if $direction == "y" {
-        transform: rotateY(180deg);
-      } 
-      @if $direction == "z" {
-        transform: rotateZ(180deg);
-      }   
-    }
+      border-radius: 1%;
   }
-  
-  html {margin:0; padding:0;}
-  
-//   body {
-//     font-family:  Arial, Sans-Serif; 
-//       perspective: 1500px;
-//       perspective-origin: 50% 50%;
-//       background-color: hsl(250, 40%, 8%);
-//       text-align: center;
-//     margin:0; padding:0;
-//       width: 900px;
-//       margin: 0 auto;
-//   }
-  
-  // Ok, lets style the card.
-  // lets set some good basics going.
-  .card {
-   text-align:left;
-    @include flip(); // include the flip feature.
-    user-select: none; // disable selections
-    cursor: pointer;  // give the user a hand so they know to click
-    font-family:  Arial, Sans-Serif; 
-    width: 300px;
-    height: 450px;
-    color: white;
-    display: inline-block; // stack em!
-    margin: 10px;
-    .face { // styles that will be applied to each face of the card.
-      border-radius: 5px; 
-    }
-    .front { // front side styles.
-      color: #ffffff;
-      background-color: #101010;
-      .logo {
-        width: 100px; 
-        padding: 10px;
+  .player img {
+    border-radius: 50%
+ 
+  }
+ 
+
+  .img-hover-zoom--slowmo {
+    height: 300px; /* [1.1] Set it as per your need */
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  }
+
+  .img-hover-zoom--slowmo img {
+    transform-origin: 50% 65%;
+    transition: transform 5s, filter 3s ease-in-out;
       }
-    }
-    .back { // back side styles
-      font-size: 10px;
-      line-height: 1.4em;
-      background: url(http://imagesci.com/img/2013/12/space-stars-background-3245-hd-wallpapers.jpg) hsl(0, 0%, 20%);
-      background-size: cover;
-      color: #FFE81F;
-      img {
-        width: 100%; 
-        border-top-left-radius: 5px; 
-        border-top-right-radius: 5px;
-        border-bottom: 3px double #FFE81F;
-      }
-      .description {padding: 15px;}
-      
-      .logo {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        width: 100px; 
-        padding: 10px;
-        border: none;
-      }
-      
-    }
-//    h2 {
-//   text-transform: uppercase;
-//     font-size: 25px;
-//     position: absolute;
-//     bottom: 70px;
-//     margin:0;
-//     line-height: 0.7em;
-//     padding: 10px;
-//     small {
-//       font-size: 20px;
-//     }
-  //}
   
-  cite {
-    position:absolute; 
-    left: 0px; 
-    bottom: 0px; 
-    font-size: 10px; 
-    text-transform: uppercase; 
-    padding: 20px;
-    a {
-        color: white;
-      &:visited { text-decoration: none; color: #aaaaaa; }
-    }
+  /* The Transformation */
+  .img-hover-zoom--slowmo:hover img {
+    transform: scale(3);
   }
+
+  .player .backF {
+      background: #222;
+      color: #FFF;
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      border-radius: 1%; 
+    position: absolute;
+
   }
   
-  // Vader specific styles
-  .darth {
-    // h2 {
-    //   font-size: 28px;
-    //   line-height: 0.55em;
-    //   bottom: 80px;
-    // }
-      .front {
-      background-image: url(http://orig05.deviantart.net/a70d/f/2013/326/0/c/darth_vader_by_6kart-d6v8x3c.jpg);
-        background-size: 130%;
-        background-position: 50% 50%;
-      transition: background 0.3s;
-      &:hover{
-        background-size: 200%;
-        background-position: 20% 30%;
-          transition: background 0.5s;
-      }
-    }
-  }
-  // luke specific styles
-  .luke {
-      .front {
-      background-image: url(http://pre07.deviantart.net/8aae/th/pre/i/2013/035/a/1/luke_skywalker_by_saturnoarg-d5ttl97.jpg);
-      background-size: 200%;
-      background-position: 25% 20%;
-      transition: background 0.3s;
-      &:hover{
-        background-size: 300%;
-        background-position: 50% 10%;
-          transition: background 0.5s;
-      }
-    }
-  }
+
   
-  .mememe {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 10px;
-    
-    a {color: #eeff44;}
-    a:visited {
-      color: #eeff44;
-    }
-    
-  }
+
+input {
+  display: none;
+}
+
+.player.voted {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   
+  
+}
+
+
+
