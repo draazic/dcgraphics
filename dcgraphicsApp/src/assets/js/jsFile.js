@@ -1,6 +1,7 @@
 function mymethod(){
-    $(".card").click(function(e){
-        $(e.currentTarget).toggleClass("flip");
-      });
+  console.log("passe")
+  $('.containerFlip').on('click', function () {
+    $('.cardHomeFlip').toggleClass('flipped');
+  });
  
 }

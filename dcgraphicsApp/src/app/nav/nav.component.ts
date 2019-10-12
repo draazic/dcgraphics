@@ -20,6 +20,7 @@ import { Router } from '@angular/router';
         opacity: 1,
         color: "#2B292E"
         
+        
       })),
       state('hide',   style({
         opacity: 0,
