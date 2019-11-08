@@ -29,6 +29,12 @@ import { AuthGuard } from './auth/auth.guard';
 import { MailboxComponent, DialogSendMailDialog } from './mailbox/mailbox.component';
 import { MygaleryComponent } from './mygalery/mygalery.component';
 import { send } from 'q';
+import { FooterComponent } from './footer/footer.component';
+import { DatePipe } from '@angular/common';
+import { WeatherService } from './service/weather.service';
+import { LocationService } from './service/location.service';
+
+
 
 
 
@@ -50,6 +56,7 @@ import { send } from 'q';
     MailboxComponent,
     MygaleryComponent,
     FileSelectDirective,
+    FooterComponent,
     
    
     
@@ -89,6 +96,9 @@ import { send } from 'q';
     RandomService, 
     MailService,
     PortfolioService,
+    DatePipe,
+    WeatherService,
+    LocationService
    
   ],
   bootstrap: [AppComponent]

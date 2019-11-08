@@ -17,14 +17,9 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
     //this.breakpoint = (window.innerWidth >= 851) ? 4 : null;
-
     //this.breakpoint = (window.innerWidth <= 850) ? 2 : 4;
     this.breakpoint = (window.innerWidth <= 400) ? 1 : 4;
-
-
-
-  
-    
+   
     this.portfolioService.getPortfolios().subscribe((res : any[])=>{
       this.images = res;
       console.log(this.images);
@@ -43,14 +38,11 @@ export class PortfolioComponent implements OnInit {
   
   }
   onResize(event) {
+    console.log("coucou")
     //this.breakpoint = (event.target.innerWidth >= 851) ? 4 : null;
-
     //this.breakpoint = (event.target.innerWidth <= 850) ? 2 : 4;
     this.breakpoint = (event.target.innerWidth <= 420) ? 1 : 4;
 
   }
-  
- 
-  
 
 }

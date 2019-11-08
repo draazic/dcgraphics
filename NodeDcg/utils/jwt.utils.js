@@ -11,7 +11,8 @@ module.exports = {
     JWT_SIGN_SECRET, {
         
         expiresIn: '1h'
-      })  
+      }) 
+
     },
     parseAuthorization: function(authorization){
         return (authorization != null) ? authorization.replace('Bearer ',''):null;
@@ -23,10 +24,10 @@ module.exports = {
         console.log(token)
         if(token != null){
             
-            try{
-                
+            try{                
                 var jwtToken = jwt.verify(token, JWT_SIGN_SECRET);
-               
+                //console.log(JWT_SIGN_SECRET)
+                
                 if(jwtToken != null)
                     id=jwtToken.id
                     console.log(jwtToken.id)

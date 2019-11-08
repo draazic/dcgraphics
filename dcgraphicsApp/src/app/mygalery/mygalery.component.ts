@@ -46,12 +46,7 @@ export class MygaleryComponent implements OnInit {
     if(event.target.files.length > 0) {
       let file = event.target.files[0];
       console.log(file.name);
-      this.form.get('uploadfile').setValue(file);
-
-     // this.form.controls['uploadfile'].setValue(file ? file.name : '');
-   
-
-   
+      this.form.get('uploadfile').setValue(file);  
     }
   }
  
@@ -65,8 +60,6 @@ export class MygaleryComponent implements OnInit {
 
   onSubmit() {
     const formModel = this.prepareSave();
-    
-
     this.loading = true;
     
     this.portfolioService.createPortfolio(formModel).subscribe((res)=>{
@@ -94,6 +87,9 @@ export class MygaleryComponent implements OnInit {
     this.form.get('uploadfile').setValue(null);
     this.fileInput.nativeElement.value = '';
   }
+
+
+
 
   delImage(id){
     this.portfolioService.deletePortfolio(id).subscribe((res : any[])=>{
