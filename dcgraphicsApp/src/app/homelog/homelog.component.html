@@ -25,13 +25,20 @@
   
       <div class = "dashUnit">
           <span class = "title">Mail</span>
-
- 
+          <div style="margin-left:105px; height: 160px;">
+              <span class="fontCountMail"   [countUp]="newNum" [reanimateOnClick]="false"
+              [options]="option">
+              </span>
+          </div> 
+          <div style="margin-left:110px">
+              <span style="font-size: 300%;"class="fontCountMail" >Mails
+              </span>
+          </div> 
       </div>
 
         <div class = "dashUnit">
-        <span class = "title">Customers</span>
-
+        <span class = "title">Map</span>
+          <app-map></app-map>  
    
         </div>
       
@@ -59,7 +66,7 @@
         <div class = "dashUnitBig">
         <span class = "title"> My portfolio</span>
 
-        <div style="margin: 5px;">
+        <div style="margin: 5px;margin-right: 10%;margin-left: 10%;">
              <form [formGroup]="form" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                       <label for="avatar">File</label>

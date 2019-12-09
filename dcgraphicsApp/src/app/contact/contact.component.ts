@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
   private objets =[];
   addcontact:Client;
 
-  @ViewChild('contact') formValues; // Added this
+  @ViewChild('contact', {static: false}) formValues; // Added this
   
   namePattern = "^[a-zA-Z éèàç]+$"; 
   phonePattern = "^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9 ]*$";

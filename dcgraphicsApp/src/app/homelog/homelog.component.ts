@@ -5,6 +5,14 @@ import { WeatherService } from '../service/weather.service';
 import { LocationService } from '../service/location.service';
 import{FormGroup, FormControl, Validators,FormBuilder,} from '@angular/forms'
 import {PortfolioService} from '../service/portfolio.service';
+import {MailService} from '../service/mail.service';
+import {FormService} from '../form.service';
+import {Position} from '../interface/position.interface';
+import {DataCurrentService} from '../service/dataCurrent.service';
+
+
+
+
 
 
 import { Router } from '@angular/router';
@@ -12,7 +20,6 @@ import * as moment from 'moment';
 import { DatePipe } from '@angular/common';
 import { ConditionalExpr } from '@angular/compiler';
 import { LayoutModule } from '@angular/cdk/layout';
-import { getOrCreateCurrentQueries } from '@angular/core/src/render3/state';
 
 
 
@@ -46,8 +53,8 @@ export class HomelogComponent implements OnInit {
   myDate = new Date();
   date:any;
   weather:any;
-  public longitude;
-  public latitude;
+  position: Position;
+  
 
   form: FormGroup;
   file:any
@@ -55,13 +62,30 @@ export class HomelogComponent implements OnInit {
   private images =[];
   fileToUpload: File = null;
 
+  num : number = 0;
+  newNum : number
+  option = {
+    startVal: this.num,
+    useEasing: true,
+    duration: 3,
+    //decimalPlaces: 1,
+  };
+  interval: any;
+  currentView: string;
+  private clients =[];
+  int:number;
 
-  @ViewChild('fileInput') fileInput: ElementRef;
+
+
+
+  @ViewChild('fileInput', {static: false}) fileInput: ElementRef;
 
 
 
 
-  constructor(private userService : UserService, 
+  constructor(private userService : UserService,
+    private formService : FormService,
+    private dataCurrentService : DataCurrentService, 
     private weatherService : WeatherService,
     private router: Router,
     private datePipe: DatePipe,
@@ -70,6 +94,8 @@ export class HomelogComponent implements OnInit {
       this.createForm();
 
   }
+
+  
 
   createForm() {
     this.form = this.fb.group({
@@ -100,12 +126,8 @@ export class HomelogComponent implements OnInit {
     this.loading = true;
     
     this.portfolioService.createPortfolio(formModel).subscribe((res)=>{
-      console.log('success');
-      //this.formValues.resetForm();
-      console.log(res);
       this.portfolioService.getPortfolios().subscribe((res : any[])=>{
         this.images = res;
-        console.log(this.images)
       });
         },
       err=>{
@@ -126,6 +148,28 @@ export class HomelogComponent implements OnInit {
   }
 
 
+  //Mail Count
+  changeView(view) {
+    if (view !== this.currentView) {
+      this.option = {
+        startVal: this.num,
+        useEasing: true,
+        duration: 3,
+        //decimalPlaces: 1,
+      };
+      if (this.interval)
+      clearInterval(this.interval);
+      if (view === 'view1') {
+        this.formService.getClients().subscribe((res : any[])=>{
+          this.clients = res;
+          this.newNum = this.clients.length;
+          this.num = this.newNum;
+        });
+      }
+    }
+  }
+
+
   ngOnInit() {
    
     //Date current
@@ -134,31 +178,31 @@ export class HomelogComponent implements OnInit {
   };
     this.date=event.toLocaleDateString('fr-FR', options)
 
-    //weather;
-    
-   
+
+    //weather;   
     this.locationService.getPosition().then(pos=>
       {
-         console.log(`Positon: ${pos.lng} ${pos.lat}`);
-         
-         this.weatherService.getData(pos.lat ,pos.lng).subscribe((data : any)=>{
+          this.weatherService.getData(pos.lat ,pos.lng).subscribe((data : any)=>{
           this.weather=data;
+          
+          this.position = {
+            lat : this.weather.city_info.latitude,
+            long : this.weather.city_info.longitude
+          };
+          this.dataCurrentService.setPosition(this.position)
+          
+          //console.log(this.position);
 
-    
         })
       });
 
     this.userService.getUser().subscribe((data : any)=>{
       this.user = data;
-      console.log(this.user)
-    
     });
 
-       
+
+    //mail Count
+    this.changeView('view1');
 
   }
-  
-
-
-
 }

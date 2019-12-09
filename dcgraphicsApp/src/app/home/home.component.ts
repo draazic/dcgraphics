@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     mymethod();
 
   }
+  
 
   flipped = false;
   flipped1 = false;

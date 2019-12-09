@@ -22,7 +22,7 @@ export class SignUpComponent implements OnInit {
   animationState = 'in';
   divName:string
 
-  @ViewChild('register') registerValues;
+  @ViewChild('register', {static: false}) registerValues;
 
   namePattern = "^[a-zA-Z éèàç]+$"; 
   emailPattern = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Zéèàç]{2,4}$";
