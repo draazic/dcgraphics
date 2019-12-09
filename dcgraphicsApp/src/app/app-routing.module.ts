@@ -15,10 +15,10 @@ import { AuthGuard } from './auth/auth.guard';
 //import { routerTransition } from './router.animations';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'portfolio', component: PortfolioComponent },
+  { path: '', component: HomeComponent, data:{state:'home'} },
+  { path: 'about', component: AboutComponent, data:{state:'about'} },
+  { path: 'contact', component: ContactComponent,data:{state:'contact'} },
+  { path: 'portfolio', component: PortfolioComponent, data:{state:'portfolio'} },
   { path: 'homelog', component: HomelogComponent,canActivate:[AuthGuard]
         // children:[
         //   { path: 'mailbox', component: MailboxComponent},

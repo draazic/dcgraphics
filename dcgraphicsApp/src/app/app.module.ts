@@ -22,19 +22,22 @@ import { HomelogComponent } from './homelog/homelog.component';
 import { UserService } from './service/user.service';
 import { MailService } from './service/mail.service';
 import { FileSelectDirective } from 'ng2-file-upload';
-import {RandomService} from './randomImages.service';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { AuthGuard } from './auth/auth.guard';
 import { MailboxComponent, DialogSendMailDialog } from './mailbox/mailbox.component';
 import { MygaleryComponent } from './mygalery/mygalery.component';
-import { send } from 'q';
 import { FooterComponent } from './footer/footer.component';
 import { DatePipe } from '@angular/common';
 import { WeatherService } from './service/weather.service';
 import { LocationService } from './service/location.service';
+import { DataCurrentService } from './service/dataCurrent.service';
 
-
+import { CountUpModule } from 'countup.js-angular2';
+import { AngularFireModule, FirebaseOptionsToken} from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { MapComponent } from './homelog/map/map.component';
+//import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 
@@ -57,13 +60,17 @@ import { LocationService } from './service/location.service';
     MygaleryComponent,
     FileSelectDirective,
     FooterComponent,
-    
+    MapComponent,
    
+     
     
   ],
+  
   imports: [
-    //MaterialModule.forRoot(),
     CommonModule,
+    AngularFireModule,
+    AngularFireDatabaseModule,
+    CountUpModule,
     BrowserModule,
     AppRoutingModule,
     ParallaxScrollModule,
@@ -78,27 +85,24 @@ import { LocationService } from './service/location.service';
     MatGridListModule, 
     MatFormFieldModule,
     MatDialogModule,
-    MatIconModule, 
+    MatIconModule,
     ToastrModule.forRoot(
        {
         positionClass:'toast-top-right',  
-        closeButton: true, }
-      
-    )
+        closeButton: true, }   
+    )],
 
-    
-  ],
   entryComponents:[DialogOverviewExampleDialog, DialogSendMailDialog], 
   providers: [
     FormService, 
     UserService, 
     AuthGuard, 
-    RandomService, 
     MailService,
     PortfolioService,
     DatePipe,
     WeatherService,
-    LocationService
+    LocationService,
+    DataCurrentService
    
   ],
   bootstrap: [AppComponent]

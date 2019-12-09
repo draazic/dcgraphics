@@ -2,7 +2,7 @@ import { Component,Inject, OnInit } from '@angular/core';
 import {FormService} from '../form.service';
 import {MailService} from '../service/mail.service';
 
-import {RandomService} from '../randomImages.service';
+//import {RandomService} from '../randomImages.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from  '@angular/material';
 import {Client}    from '../interface/client.interface';
 import {Mail}    from '../interface/mail.interface';
@@ -21,7 +21,7 @@ export class MailboxComponent implements OnInit {
   private clients =[];
   private images =[];
 
-  constructor(private formService : FormService, private randomService:RandomService, private  dialog:  MatDialog) { }
+  constructor(private formService : FormService, private  dialog:  MatDialog) { }
 
   
 
@@ -31,10 +31,7 @@ export class MailboxComponent implements OnInit {
       console.log(this.clients)
   });
 
-    this.randomService.getImages().subscribe((res : any[])=>{
-      this.images = res;
-      console.log(this.images)
-  });
+
 
 }
 

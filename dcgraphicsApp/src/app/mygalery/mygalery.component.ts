@@ -28,7 +28,7 @@ export class MygaleryComponent implements OnInit {
   fileToUpload: File = null;
   
 
-  @ViewChild('fileInput') fileInput: ElementRef;
+  @ViewChild('fileInput', {static: false}) fileInput: ElementRef;
 
   constructor(private portfolioService : PortfolioService, private fb: FormBuilder) {
     this.createForm();

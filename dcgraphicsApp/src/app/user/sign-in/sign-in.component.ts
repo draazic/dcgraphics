@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class SignInComponent implements OnInit {
 
-  @ViewChild('login') loginValues;
+  @ViewChild('login', {static: false}) loginValues;
 
 
   emailPattern = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Zéèàç]{2,4}$";
