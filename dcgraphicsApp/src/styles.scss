@@ -2,6 +2,8 @@
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 @import "~leaflet/dist/leaflet.css";
 
+//////New config CSS for repomsive
+//HOME
 
 
 
@@ -38,8 +40,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
     right: 0;
     bottom: 0;
     margin: 5px;
-    width: 340px;
-    height: 250px;
+    width: 97%;
+    height: 90%;
   }
   
   .map-frame {
@@ -49,6 +51,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
   
   #frugalmap {
     height: 100%;
+
    
   }
 
@@ -76,425 +79,5963 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
 }
 
-////FOOTER
-.footer{
-    background-color: #2B292E;
-    //position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 300px;
-    //background-color: red;
-    color: white;
-    text-align: center;
 
+
+@media only screen and (min-width: 1440px) {
+
+
+    //////Home user
+
+.backUser{
+    position: absolute;  
+    background-color:#202020;
+    background-size: cover;
+    //background: url("./assets/img/backgroundblue.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    //height: 100%;
+    width: 100%;
+   
+}
+
+.containerDash{
+    //@at-rootmargin: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+// .cardDash{
+//     color: rgb(51, 51, 51);
+//     display: block;
+//     float: left;
+//     font-family: "Open Sans", sans-serif;
+//     font-size: 14px;
+//     height: 320px;
+//     line-height: 20px;
+//     min-height: 1px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     position: relative;
+//     
+// }
+
+.dashUnit{
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 22%;
+    float: left;
+}
+
+
+.packIconDash{
+    margin: auto;
+    width: 100px;
+}
+.countMail{
+    margin: auto;
+    width: 130px;
+}
+
+.dashUnitSmall{
+
+    margin: 1%;
+
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 129px;
+    width: 22%;
+    float: left;
 
 
 }
-@media (min-width: 576px){
+
+.dashUnitBig{
+
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 46%;
+    float: left;
+
+
+}
+.cardDashbig{
+    color: rgb(51, 51, 51);
+    display: block;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    height: 320px;
+    line-height: 20px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 585px;
+    float: left;
+
+}
+.title{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 8px;
+    padding: 0px;
+    height: inherit;
+}
+.userImg{
+    width: 220px;
+    height: 100px;
+    background-image: url("./assets/img/robo.jpg");
+    margin: auto;
+    margin-top: 5%;
+
+}
+.fontCountMail{
+    font-size: 850%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    //margin: auto;
+}
+.nameMail{
+    font-size: 300%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+
+}
+.contTextMail{
+    width: 100%;
+    margin: auto;
+    }
+
+/////HOME
+
+.inHeadCard{
+    position: absolute;
+    top: 5%;
+    left:5%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color:white;
+}
+.inContentCard{
+    position: absolute;
+    top: 25%;
+    left:10%;
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color:white;
+    width: 15%;
+}
+
+#divText{
+    position:absolute;
+    top:35%;
+    z-index: 1;
+    left: 25%;
+    right: 25%
+}
+.backHom{
+    width: 100%;
+    height:700px;
+    background-color: rgb(61, 61, 61) 
+}
+.centered{
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+.contentCard{
+    margin: 2%;
+    margin-top: 2%;
+    //margin-left: 20%;
+    //margin-right: 20%
+    padding-top: 5%;
+}
+
+.contentCardHome{
+    margin: 5%;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%
+}
+.cardHome{
+    width: 100%;
+    height: 100%;
+
+}
+.cardContainer{
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+}
+
+.image-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  }
+  
+  .image-card img {
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+  }
+  
+  .zoom-effect-container:hover .image-card img {
+    -webkit-transform: scale(1.18);
+    transform: scale(1.18);
+  }
+  .zoom-effect-container {
+    float: left;
+    position: relative;
+    width: 24%;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin: 6px;
+    border-radius: 4px;
+}
+
+
+///////ABOUT
+
+.backAbout{
+
+    margin:0;
+    padding-bottom:10%;
+    //background-image: url("./assets/img/ninja.jpg");
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+    max-height: 1480px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0px;
+
+}
+
+.fakeNav{
+    height: 55px;
+    background-color: #000;
+    margin-bottom: 50%;
+}
+
+////FOOTER
+    .footer{
+        background-color: #2B292E;
+        //position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+        //background-color: red;
+        color: white;
+        text-align: center;
+    
+    
+    
+    }
+    @media (min-width: 576px){
+        .container {
+            max-width: 100%; 
+        }
+    
+    }
+    
+    .containerIconFooter{
+        height: 70px;
+    }
+    .hFootText{
+        color:white;
+    }
+    .pFootText{
+        color:white;
+    
+    }
+    .hrFoot{
+        color:white;
+    
+    }
+    .footColum{
+        margin-right: 10%;
+        margin-left: 10%;
+    
+    }
+    .lastFooter{
+        background-color: #2B292E;   
+    }
+    
+    
+    
+    a.btn-social,
+    .btn-social
+    {
+        border-radius: 50%;
+        color: #ffffff !important;
+        display: inline-block;
+        height: 54px;
+        line-height: 54px;
+        margin: 8px 4px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color .3s;
+        webkit-transition: background-color .3s;
+        width: 54px;
+    }
+    
+    .btn-social .fa,.btn-social i
+    {
+        backface-visibility: hidden;
+        moz-backface-visibility: hidden;
+        ms-transform: scale(1);
+        o-transform: scale(1);
+        transform: scale(1);
+        transition: all .25s;
+        webkit-backface-visibility: hidden;
+        webkit-transform: scale(1);
+        webkit-transition: all .25s;
+    }
+    .btn-social:hover,.btn-social:focus
+    {
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+    }
+    .btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+    {
+        ms-transform: scale(1.3);
+        o-transform: scale(1.3);
+        transform: scale(1.3);
+        webkit-transform: scale(1.3);
+    }
+    .btn-social.btn-xs
+    {
+        font-size: 9px;
+        height: 24px;
+        line-height: 13px;
+        margin: 6px 2px;
+        width: 24px;
+    }
+    .btn-social.btn-sm
+    {
+        font-size: 13px;
+        height: 36px;
+        line-height: 18px;
+        margin: 6px 2px;
+        width: 36px;
+    }
+    .btn-social.btn-lg
+    {
+        font-size: 22px;
+        height: 72px;
+        line-height: 40px;
+        margin: 10px 6px;
+        width: 72px;
+    }
+    
+    .btn-behance
+    {
+        background-color: #1769ff;
+    }
+    .btn-behance:hover
+    {
+        background-color: #4a8aff;
+    }
+    .btn-bitbucket
+    {
+        background-color: #205081;
+    }
+    .btn-bitbucket:hover
+    {
+        background-color: #2a69aa;
+    }
+    .btn-codepen
+    {
+        background-color: #76daff;
+    }
+    .btn-codepen:hover
+    {
+        background-color: #a9e8ff;
+    }
+    .btn-deviantart
+    {
+        background-color: #4e6252;
+    }
+    .btn-deviantart:hover
+    {
+        background-color: #657e6a;
+    }
+    .btn-digg
+    {
+        background-color: #000;
+    }
+    .btn-digg:hover
+    {
+        background-color: #1a1a1a;
+    }
+    .btn-dribbble
+    {
+        background-color: #ea4c89;
+    }
+    .btn-dribbble:hover
+    {
+        background-color: #ef7aa7;
+    }
+    .btn-dropbox
+    {
+        background-color: #007ee5;
+    }
+    .btn-dropbox:hover
+    {
+        background-color: #1998ff;
+    }
+    .btn-facebook
+    {
+        background-color: #3b5998;
+    }
+    .btn-facebook:hover
+    {
+        background-color: #4c70ba;
+    }
+    .btn-flickr
+    {
+        background-color: #0063dc;
+    }
+    .btn-flickr:hover
+    {
+        background-color: #107cff;
+    }
+    .btn-foursquare
+    {
+        background-color: #ef4b78;
+    }
+    .btn-foursquare:hover
+    {
+        background-color: #f37a9b;
+    }
+    .btn-github
+    {
+        background-color: #4183c4;
+    }
+    .btn-github:hover
+    {
+        background-color: #689cd0;
+    }
+    .btn-google-plus
+    {
+        background-color: #dd4b39;
+    }
+    .btn-google-plus:hover
+    {
+        background-color: #e47365;
+    }
+    .btn-instagram
+    {
+        background-color: #3f729b;
+    }
+    .btn-instagram:hover
+    {
+        background-color: #548cb9;
+    }
+    .btn-jsfiddle
+    {
+        background-color: #4679bd;
+    }
+    .btn-jsfiddle:hover
+    {
+        background-color: #6c94ca;
+    }
+    .btn-lastfm
+    {
+        background-color: #e31b23;
+    }
+    .btn-lastfm:hover
+    {
+        background-color: #e9484e;
+    }
+    .btn-linkedin
+    {
+        background-color: #0976b4;
+    }
+    .btn-linkedin:hover
+    {
+        background-color: #0b96e5;
+    }
+    .btn-paypal
+    {
+        background-color: #253b80;
+    }
+    .btn-paypal:hover
+    {
+        background-color: #304da8;
+    }
+    .btn-pinterest
+    {
+        background-color: #cc2127;
+    }
+    .btn-pinterest:hover
+    {
+        background-color: #e04046;
+    }
+    .btn-reddit
+    {
+        background-color: #ff4500;
+    }
+    .btn-reddit:hover
+    {
+        background-color: #ff6a33;
+    }
+    .btn-skype
+    {
+        background-color: #00aff0;
+    }
+    .btn-skype:hover
+    {
+        background-color: #24c4ff;
+    }
+    .btn-soundcloud
+    {
+        background-color: #f80;
+    }
+    .btn-soundcloud:hover
+    {
+        background-color: #ffa033;
+    }
+    .btn-stack-overflow
+    {
+        background-color: #fe7a15;
+    }
+    .btn-stack-overflow:hover
+    {
+        background-color: #fe9748;
+    }
+    .btn-steam
+    {
+        background-color: #7da10e;
+    }
+    .btn-steam:hover
+    {
+        background-color: #a1d012;
+    }
+    .btn-stumbleupon
+    {
+        background-color: #eb4924;
+    }
+    .btn-stumbleupon:hover
+    {
+        background-color: #ef7053;
+    }
+    .btn-trello
+    {
+        background-color: #256a92;
+    }
+    .btn-trello:hover
+    {
+        background-color: #2f88bb;
+    }
+    .btn-tumblr
+    {
+        background-color: #35465c;
+    }
+    .btn-tumblr:hover
+    {
+        background-color: #485f7c;
+    }
+    .btn-twitch
+    {
+        background-color: #6441a5;
+    }
+    .btn-twitch:hover
+    {
+        background-color: #7e5bbe;
+    }
+    .btn-twitter
+    {
+        background-color: #55acee;
+    }
+    .btn-twitter:hover
+    {
+        background-color: #83c3f3;
+    }
+    .btn-vimeo
+    {
+        background-color: #1ab7ea;
+    }
+    .btn-vimeo:hover
+    {
+        background-color: #49c6ee;
+    }
+    .btn-vine
+    {
+        background-color: #00b488;
+    }
+    .btn-vine:hover
+    {
+        background-color: #00e7af;
+    }
+    .btn-vk
+    {
+        background-color: #45668e;
+    }
+    .btn-vk:hover
+    {
+        background-color: #587fae;
+    }
+    .btn-wechat
+    {
+        background-color: #98d11c;
+    }
+    .btn-wechat:hover
+    {
+        background-color: #afe53b;
+    }
+    .btn-wordpress
+    {
+        background-color: #21759b;
+    }
+    .btn-wordpress:hover
+    {
+        background-color: #2a95c5;
+    }
+    .btn-xing
+    {
+        background-color: #026466;
+    }
+    .btn-xing:hover
+    {
+        background-color: #039598;
+    }
+    .btn-yahoo
+    {
+        background-color: #400191;
+    }
+    .btn-yahoo:hover
+    {
+        background-color: #5601c4;
+    }
+    .btn-yelp
+    {
+        background-color: #af0606;
+    }
+    .btn-yelp:hover
+    {
+        background-color: #e00808;
+    }
+    .btn-youtube
+    {
+        background-color: #e52d27;
+    }
+    .btn-youtube:hover
+    {
+        background-color: #ea5955;
+    }
+    .btn-email
+    {
+        background-color: #44c456;
+    }
+    .btn-email:hover
+    {
+        background-color: #6bd079;
+    }
+
+
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1439px)  {
+
+/////About
+.backAbout{
+
+    margin:0;
+    padding-bottom:10%;
+    //background-image: url("./assets/img/ninja.jpg");
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+    max-height: 1480px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 10px;
+
+}
+
+.fakeNav{
+    height: 55px;
+    background-color: #000;
+    margin-bottom: 50%;
+}
+
+
+    //////Home user
+
+.backUser{
+    position: absolute;  
+    background-color:#202020;
+    background-size: cover;
+    //background: url("./assets/img/backgroundblue.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    //height: 100%;
+    width: 100%;
+   
+}
+
+.containerDash{
+    //@at-rootmargin: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+// .cardDash{
+//     color: rgb(51, 51, 51);
+//     display: block;
+//     float: left;
+//     font-family: "Open Sans", sans-serif;
+//     font-size: 14px;
+//     height: 320px;
+//     line-height: 20px;
+//     min-height: 1px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     position: relative;
+//     
+// }
+
+.dashUnit{
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 22%;
+    float: left;
+}
+
+
+.packIconDash{
+    margin: auto;
+    width: 100px;
+}
+.countMail{
+    margin: auto;
+    width: 130px;
+}
+
+.dashUnitSmall{
+
+    margin: 1%;
+
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 129px;
+    width: 22%;
+    float: left;
+
+
+}
+
+.dashUnitBig{
+
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 46%;
+    float: left;
+
+
+}
+.cardDashbig{
+    color: rgb(51, 51, 51);
+    display: block;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    height: 320px;
+    line-height: 20px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 585px;
+    float: left;
+
+}
+.title{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 8px;
+    padding: 0px;
+    height: inherit;
+}
+.userImg{
+    width: 220px;
+    height: 100px;
+    background-image: url("./assets/img/robo.jpg");
+    margin: auto;
+    margin-top: 5%;
+
+}
+.fontCountMail{
+    font-size: 850%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    //margin: auto;
+}
+.nameMail{
+    font-size: 300%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+
+}
+.contTextMail{
+    width: 100%;
+    margin: auto;
+    }
+
+    /////HOME
+
+    #divText{
+        position:absolute;
+        top:35%;
+        z-index: 1;
+        left: 25%;
+        right: 25%
+    }
+    .backHom{
+        width: 100%;
+        height:700px;
+        background-color: rgb(61, 61, 61) 
+    }
+    .centered{
+        margin-left: 5%;
+        margin-right: 5%;
+    
+    }
+    .contentCard{
+        margin: 2%;
+        margin-top: 2%;
+        //margin-left: 20%;
+        //margin-right: 20%
+        padding-top: 5%;
+    }
+    
+    .contentCardHome{
+        margin: 5%;
+        margin-top: 2%;
+        //margin-left: 10%;
+        //margin-right: 10%
+    }
+    .cardHome{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .cardContainer{
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+    }
+    
+    .image-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+      }
+      
+      .image-card img {
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+      }
+      
+      .zoom-effect-container:hover .image-card img {
+        -webkit-transform: scale(1.18);
+        transform: scale(1.18);
+      }
+      .zoom-effect-container {
+        float: left;
+        position: relative;
+        width: 24%;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 6px;
+        border-radius: 4px;
+    }
+    ////FOOTER
+    .footer{
+        background-color: #2B292E;
+        //position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+        //background-color: red;
+        color: white;
+        text-align: center;    
+    }
     .container {
         max-width: 100%; 
     }
+    .containerIconFooter{
+        height: 70px;
+    }
+    .hFootText{
+        color:white;
+    }
+    .pFootText{
+        color:white;
+    
+    }
+    .hrFoot{
+        color:white;
+    
+    }
+    .footColum{
+        margin-right: 10%;
+        margin-left: 10%;
+    
+    }
+    .lastFooter{
+        background-color: #2B292E;   
+    }
+     
+    a.btn-social,
+    .btn-social
+    {
+        border-radius: 50%;
+        color: #ffffff !important;
+        display: inline-block;
+        height: 54px;
+        line-height: 54px;
+        margin: 8px 4px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color .3s;
+        webkit-transition: background-color .3s;
+        width: 54px;
+    }
+    
+    .btn-social .fa,.btn-social i
+    {
+        backface-visibility: hidden;
+        moz-backface-visibility: hidden;
+        ms-transform: scale(1);
+        o-transform: scale(1);
+        transform: scale(1);
+        transition: all .25s;
+        webkit-backface-visibility: hidden;
+        webkit-transform: scale(1);
+        webkit-transition: all .25s;
+    }
+    .btn-social:hover,.btn-social:focus
+    {
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+    }
+    .btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+    {
+        ms-transform: scale(1.3);
+        o-transform: scale(1.3);
+        transform: scale(1.3);
+        webkit-transform: scale(1.3);
+    }
+    .btn-social.btn-xs
+    {
+        font-size: 9px;
+        height: 24px;
+        line-height: 13px;
+        margin: 6px 2px;
+        width: 24px;
+    }
+    .btn-social.btn-sm
+    {
+        font-size: 13px;
+        height: 36px;
+        line-height: 18px;
+        margin: 6px 2px;
+        width: 36px;
+    }
+    .btn-social.btn-lg
+    {
+        font-size: 22px;
+        height: 72px;
+        line-height: 40px;
+        margin: 10px 6px;
+        width: 72px;
+    }
+    
+    .btn-behance
+    {
+        background-color: #1769ff;
+    }
+    .btn-behance:hover
+    {
+        background-color: #4a8aff;
+    }
+    .btn-bitbucket
+    {
+        background-color: #205081;
+    }
+    .btn-bitbucket:hover
+    {
+        background-color: #2a69aa;
+    }
+    .btn-codepen
+    {
+        background-color: #76daff;
+    }
+    .btn-codepen:hover
+    {
+        background-color: #a9e8ff;
+    }
+    .btn-deviantart
+    {
+        background-color: #4e6252;
+    }
+    .btn-deviantart:hover
+    {
+        background-color: #657e6a;
+    }
+    .btn-digg
+    {
+        background-color: #000;
+    }
+    .btn-digg:hover
+    {
+        background-color: #1a1a1a;
+    }
+    .btn-dribbble
+    {
+        background-color: #ea4c89;
+    }
+    .btn-dribbble:hover
+    {
+        background-color: #ef7aa7;
+    }
+    .btn-dropbox
+    {
+        background-color: #007ee5;
+    }
+    .btn-dropbox:hover
+    {
+        background-color: #1998ff;
+    }
+    .btn-facebook
+    {
+        background-color: #3b5998;
+    }
+    .btn-facebook:hover
+    {
+        background-color: #4c70ba;
+    }
+    .btn-flickr
+    {
+        background-color: #0063dc;
+    }
+    .btn-flickr:hover
+    {
+        background-color: #107cff;
+    }
+    .btn-foursquare
+    {
+        background-color: #ef4b78;
+    }
+    .btn-foursquare:hover
+    {
+        background-color: #f37a9b;
+    }
+    .btn-github
+    {
+        background-color: #4183c4;
+    }
+    .btn-github:hover
+    {
+        background-color: #689cd0;
+    }
+    .btn-google-plus
+    {
+        background-color: #dd4b39;
+    }
+    .btn-google-plus:hover
+    {
+        background-color: #e47365;
+    }
+    .btn-instagram
+    {
+        background-color: #3f729b;
+    }
+    .btn-instagram:hover
+    {
+        background-color: #548cb9;
+    }
+    .btn-jsfiddle
+    {
+        background-color: #4679bd;
+    }
+    .btn-jsfiddle:hover
+    {
+        background-color: #6c94ca;
+    }
+    .btn-lastfm
+    {
+        background-color: #e31b23;
+    }
+    .btn-lastfm:hover
+    {
+        background-color: #e9484e;
+    }
+    .btn-linkedin
+    {
+        background-color: #0976b4;
+    }
+    .btn-linkedin:hover
+    {
+        background-color: #0b96e5;
+    }
+    .btn-paypal
+    {
+        background-color: #253b80;
+    }
+    .btn-paypal:hover
+    {
+        background-color: #304da8;
+    }
+    .btn-pinterest
+    {
+        background-color: #cc2127;
+    }
+    .btn-pinterest:hover
+    {
+        background-color: #e04046;
+    }
+    .btn-reddit
+    {
+        background-color: #ff4500;
+    }
+    .btn-reddit:hover
+    {
+        background-color: #ff6a33;
+    }
+    .btn-skype
+    {
+        background-color: #00aff0;
+    }
+    .btn-skype:hover
+    {
+        background-color: #24c4ff;
+    }
+    .btn-soundcloud
+    {
+        background-color: #f80;
+    }
+    .btn-soundcloud:hover
+    {
+        background-color: #ffa033;
+    }
+    .btn-stack-overflow
+    {
+        background-color: #fe7a15;
+    }
+    .btn-stack-overflow:hover
+    {
+        background-color: #fe9748;
+    }
+    .btn-steam
+    {
+        background-color: #7da10e;
+    }
+    .btn-steam:hover
+    {
+        background-color: #a1d012;
+    }
+    .btn-stumbleupon
+    {
+        background-color: #eb4924;
+    }
+    .btn-stumbleupon:hover
+    {
+        background-color: #ef7053;
+    }
+    .btn-trello
+    {
+        background-color: #256a92;
+    }
+    .btn-trello:hover
+    {
+        background-color: #2f88bb;
+    }
+    .btn-tumblr
+    {
+        background-color: #35465c;
+    }
+    .btn-tumblr:hover
+    {
+        background-color: #485f7c;
+    }
+    .btn-twitch
+    {
+        background-color: #6441a5;
+    }
+    .btn-twitch:hover
+    {
+        background-color: #7e5bbe;
+    }
+    .btn-twitter
+    {
+        background-color: #55acee;
+    }
+    .btn-twitter:hover
+    {
+        background-color: #83c3f3;
+    }
+    .btn-vimeo
+    {
+        background-color: #1ab7ea;
+    }
+    .btn-vimeo:hover
+    {
+        background-color: #49c6ee;
+    }
+    .btn-vine
+    {
+        background-color: #00b488;
+    }
+    .btn-vine:hover
+    {
+        background-color: #00e7af;
+    }
+    .btn-vk
+    {
+        background-color: #45668e;
+    }
+    .btn-vk:hover
+    {
+        background-color: #587fae;
+    }
+    .btn-wechat
+    {
+        background-color: #98d11c;
+    }
+    .btn-wechat:hover
+    {
+        background-color: #afe53b;
+    }
+    .btn-wordpress
+    {
+        background-color: #21759b;
+    }
+    .btn-wordpress:hover
+    {
+        background-color: #2a95c5;
+    }
+    .btn-xing
+    {
+        background-color: #026466;
+    }
+    .btn-xing:hover
+    {
+        background-color: #039598;
+    }
+    .btn-yahoo
+    {
+        background-color: #400191;
+    }
+    .btn-yahoo:hover
+    {
+        background-color: #5601c4;
+    }
+    .btn-yelp
+    {
+        background-color: #af0606;
+    }
+    .btn-yelp:hover
+    {
+        background-color: #e00808;
+    }
+    .btn-youtube
+    {
+        background-color: #e52d27;
+    }
+    .btn-youtube:hover
+    {
+        background-color: #ea5955;
+    }
+    .btn-email
+    {
+        background-color: #44c456;
+    }
+    .btn-email:hover
+    {
+        background-color: #6bd079;
+    }
+
+
 
 }
 
-.containerIconFooter{
-    height: 70px;
-}
-.hFootText{
-    color:white;
-}
-.pFootText{
-    color:white;
+@media only screen and (min-width: 1199px) and (max-width: 1279px)  {
 
-}
-.hrFoot{
-    color:white;
 
-}
-.footColum{
-    margin-right: 10%;
-    margin-left: 10%;
+    /////About
+.backAbout{
 
-}
-.lastFooter{
-    background-color: #2B292E;
-
+    margin:0;
+    padding-bottom:10%;
+    //background-image: url("./assets/img/ninja.jpg");
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+    max-height: 1480px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 10px;
 
 }
 
-
-
-a.btn-social,
-.btn-social
-{
-    border-radius: 50%;
-    color: #ffffff !important;
-    display: inline-block;
-    height: 54px;
-    line-height: 54px;
-    margin: 8px 4px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color .3s;
-    webkit-transition: background-color .3s;
-    width: 54px;
-}
-
-.btn-social .fa,.btn-social i
-{
-    backface-visibility: hidden;
-    moz-backface-visibility: hidden;
-    ms-transform: scale(1);
-    o-transform: scale(1);
-    transform: scale(1);
-    transition: all .25s;
-    webkit-backface-visibility: hidden;
-    webkit-transform: scale(1);
-    webkit-transition: all .25s;
-}
-.btn-social:hover,.btn-social:focus
-{
-    color: #fff;
-    outline: none;
-    text-decoration: none;
-}
-.btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
-{
-    ms-transform: scale(1.3);
-    o-transform: scale(1.3);
-    transform: scale(1.3);
-    webkit-transform: scale(1.3);
-}
-.btn-social.btn-xs
-{
-    font-size: 9px;
-    height: 24px;
-    line-height: 13px;
-    margin: 6px 2px;
-    width: 24px;
-}
-.btn-social.btn-sm
-{
-    font-size: 13px;
-    height: 36px;
-    line-height: 18px;
-    margin: 6px 2px;
-    width: 36px;
-}
-.btn-social.btn-lg
-{
-    font-size: 22px;
-    height: 72px;
-    line-height: 40px;
-    margin: 10px 6px;
-    width: 72px;
-}
-
-.btn-behance
-{
-    background-color: #1769ff;
-}
-.btn-behance:hover
-{
-    background-color: #4a8aff;
-}
-.btn-bitbucket
-{
-    background-color: #205081;
-}
-.btn-bitbucket:hover
-{
-    background-color: #2a69aa;
-}
-.btn-codepen
-{
-    background-color: #76daff;
-}
-.btn-codepen:hover
-{
-    background-color: #a9e8ff;
-}
-.btn-deviantart
-{
-    background-color: #4e6252;
-}
-.btn-deviantart:hover
-{
-    background-color: #657e6a;
-}
-.btn-digg
-{
+.fakeNav{
+    height: 55px;
     background-color: #000;
-}
-.btn-digg:hover
-{
-    background-color: #1a1a1a;
-}
-.btn-dribbble
-{
-    background-color: #ea4c89;
-}
-.btn-dribbble:hover
-{
-    background-color: #ef7aa7;
-}
-.btn-dropbox
-{
-    background-color: #007ee5;
-}
-.btn-dropbox:hover
-{
-    background-color: #1998ff;
-}
-.btn-facebook
-{
-    background-color: #3b5998;
-}
-.btn-facebook:hover
-{
-    background-color: #4c70ba;
-}
-.btn-flickr
-{
-    background-color: #0063dc;
-}
-.btn-flickr:hover
-{
-    background-color: #107cff;
-}
-.btn-foursquare
-{
-    background-color: #ef4b78;
-}
-.btn-foursquare:hover
-{
-    background-color: #f37a9b;
-}
-.btn-github
-{
-    background-color: #4183c4;
-}
-.btn-github:hover
-{
-    background-color: #689cd0;
-}
-.btn-google-plus
-{
-    background-color: #dd4b39;
-}
-.btn-google-plus:hover
-{
-    background-color: #e47365;
-}
-.btn-instagram
-{
-    background-color: #3f729b;
-}
-.btn-instagram:hover
-{
-    background-color: #548cb9;
-}
-.btn-jsfiddle
-{
-    background-color: #4679bd;
-}
-.btn-jsfiddle:hover
-{
-    background-color: #6c94ca;
-}
-.btn-lastfm
-{
-    background-color: #e31b23;
-}
-.btn-lastfm:hover
-{
-    background-color: #e9484e;
-}
-.btn-linkedin
-{
-    background-color: #0976b4;
-}
-.btn-linkedin:hover
-{
-    background-color: #0b96e5;
-}
-.btn-paypal
-{
-    background-color: #253b80;
-}
-.btn-paypal:hover
-{
-    background-color: #304da8;
-}
-.btn-pinterest
-{
-    background-color: #cc2127;
-}
-.btn-pinterest:hover
-{
-    background-color: #e04046;
-}
-.btn-reddit
-{
-    background-color: #ff4500;
-}
-.btn-reddit:hover
-{
-    background-color: #ff6a33;
-}
-.btn-skype
-{
-    background-color: #00aff0;
-}
-.btn-skype:hover
-{
-    background-color: #24c4ff;
-}
-.btn-soundcloud
-{
-    background-color: #f80;
-}
-.btn-soundcloud:hover
-{
-    background-color: #ffa033;
-}
-.btn-stack-overflow
-{
-    background-color: #fe7a15;
-}
-.btn-stack-overflow:hover
-{
-    background-color: #fe9748;
-}
-.btn-steam
-{
-    background-color: #7da10e;
-}
-.btn-steam:hover
-{
-    background-color: #a1d012;
-}
-.btn-stumbleupon
-{
-    background-color: #eb4924;
-}
-.btn-stumbleupon:hover
-{
-    background-color: #ef7053;
-}
-.btn-trello
-{
-    background-color: #256a92;
-}
-.btn-trello:hover
-{
-    background-color: #2f88bb;
-}
-.btn-tumblr
-{
-    background-color: #35465c;
-}
-.btn-tumblr:hover
-{
-    background-color: #485f7c;
-}
-.btn-twitch
-{
-    background-color: #6441a5;
-}
-.btn-twitch:hover
-{
-    background-color: #7e5bbe;
-}
-.btn-twitter
-{
-    background-color: #55acee;
-}
-.btn-twitter:hover
-{
-    background-color: #83c3f3;
-}
-.btn-vimeo
-{
-    background-color: #1ab7ea;
-}
-.btn-vimeo:hover
-{
-    background-color: #49c6ee;
-}
-.btn-vine
-{
-    background-color: #00b488;
-}
-.btn-vine:hover
-{
-    background-color: #00e7af;
-}
-.btn-vk
-{
-    background-color: #45668e;
-}
-.btn-vk:hover
-{
-    background-color: #587fae;
-}
-.btn-wechat
-{
-    background-color: #98d11c;
-}
-.btn-wechat:hover
-{
-    background-color: #afe53b;
-}
-.btn-wordpress
-{
-    background-color: #21759b;
-}
-.btn-wordpress:hover
-{
-    background-color: #2a95c5;
-}
-.btn-xing
-{
-    background-color: #026466;
-}
-.btn-xing:hover
-{
-    background-color: #039598;
-}
-.btn-yahoo
-{
-    background-color: #400191;
-}
-.btn-yahoo:hover
-{
-    background-color: #5601c4;
-}
-.btn-yelp
-{
-    background-color: #af0606;
-}
-.btn-yelp:hover
-{
-    background-color: #e00808;
-}
-.btn-youtube
-{
-    background-color: #e52d27;
-}
-.btn-youtube:hover
-{
-    background-color: #ea5955;
-}
-.btn-email
-{
-    background-color: #44c456;
-}
-.btn-email:hover
-{
-    background-color: #6bd079;
-}
+    margin-bottom: 50%;
+}
+
+    //////Home user
+
+.backUser{
+    position: absolute;  
+    background-color:#202020;
+    background-size: cover;
+    //background: url("./assets/img/backgroundblue.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    //height: 100%;
+    width: 100%;
+   
+}
+
+.containerDash{
+    //@at-rootmargin: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+// .cardDash{
+//     color: rgb(51, 51, 51);
+//     display: block;
+//     float: left;
+//     font-family: "Open Sans", sans-serif;
+//     font-size: 14px;
+//     height: 320px;
+//     line-height: 20px;
+//     min-height: 1px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     position: relative;
+//     
+// }
+
+.dashUnit{
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 22%;
+    float: left;
+}
+
+
+.packIconDash{
+    margin: auto;
+    width: 100px;
+}
+.countMail{
+    margin: auto;
+    width: 130px;
+}
+
+.dashUnitSmall{
+
+    margin: 1%;
+
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 129px;
+    width: 22%;
+    float: left;
+
+
+}
+
+.dashUnitBig{
+
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 46%;
+    float: left;
+
+
+}
+.cardDashbig{
+    color: rgb(51, 51, 51);
+    display: block;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    height: 320px;
+    line-height: 20px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 585px;
+    float: left;
+
+}
+.title{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 8px;
+    padding: 0px;
+    height: inherit;
+}
+.userImg{
+    width: 220px;
+    height: 100px;
+    background-image: url("./assets/img/robo.jpg");
+    margin: auto;
+    margin-top: 5%;
+
+}
+.fontCountMail{
+    font-size: 850%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    //margin: auto;
+}
+.nameMail{
+    font-size: 300%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+
+}
+.contTextMail{
+    width: 100%;
+    margin: auto;
+    }
+
+     /////HOME
+     #divText{
+        position:absolute;
+        top:35%;
+        z-index: 1;
+        left: 25%;
+        right: 25%
+    }
+     .backHom{
+        width: 100%;
+        height:700px;
+        background-color: rgb(61, 61, 61) 
+    }
+    .centered{
+        margin-left: 5%;
+        margin-right: 5%;
+    
+    }
+    .contentCard{
+        //margin: 2%;
+        margin-top: 2%;
+        //margin-left: 20%;
+        //margin-right: 20%
+        padding-top: 5%;
+    }
+    
+    .contentCardHome{
+        //margin: 5%;
+        margin-top: 2%;
+        //margin-left: 10%;
+        //margin-right: 10%
+    }
+    .cardHome{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .cardContainer{
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+    }
+    
+    .image-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+      }
+      
+      .image-card img {
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+      }
+      
+      .zoom-effect-container:hover .image-card img {
+        -webkit-transform: scale(1.18);
+        transform: scale(1.18);
+      }
+      .zoom-effect-container {
+        float: left;
+        position: relative;
+        width: 24%;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 6px;
+        border-radius: 4px;
+    }
+
+     ////FOOTER
+     .footer{
+        background-color: #2B292E;
+        //position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+        //background-color: red;
+        color: white;
+        text-align: center;    
+    }
+    .container {
+        max-width: 100%; 
+    }
+    .containerIconFooter{
+        height: 70px;
+    }
+    .hFootText{
+        color:white;
+    }
+    .pFootText{
+        color:white;
+    
+    }
+    .hrFoot{
+        color:white;
+    
+    }
+    .footColum{
+        margin-right: 10%;
+        margin-left: 10%;
+    
+    }
+    .lastFooter{
+        background-color: #2B292E;   
+    }
+     
+    a.btn-social,
+    .btn-social
+    {
+        border-radius: 50%;
+        color: #ffffff !important;
+        display: inline-block;
+        height: 54px;
+        line-height: 54px;
+        margin: 8px 4px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color .3s;
+        webkit-transition: background-color .3s;
+        width: 54px;
+    }
+    
+    .btn-social .fa,.btn-social i
+    {
+        backface-visibility: hidden;
+        moz-backface-visibility: hidden;
+        ms-transform: scale(1);
+        o-transform: scale(1);
+        transform: scale(1);
+        transition: all .25s;
+        webkit-backface-visibility: hidden;
+        webkit-transform: scale(1);
+        webkit-transition: all .25s;
+    }
+    .btn-social:hover,.btn-social:focus
+    {
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+    }
+    .btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+    {
+        ms-transform: scale(1.3);
+        o-transform: scale(1.3);
+        transform: scale(1.3);
+        webkit-transform: scale(1.3);
+    }
+    .btn-social.btn-xs
+    {
+        font-size: 9px;
+        height: 24px;
+        line-height: 13px;
+        margin: 6px 2px;
+        width: 24px;
+    }
+    .btn-social.btn-sm
+    {
+        font-size: 13px;
+        height: 36px;
+        line-height: 18px;
+        margin: 6px 2px;
+        width: 36px;
+    }
+    .btn-social.btn-lg
+    {
+        font-size: 22px;
+        height: 72px;
+        line-height: 40px;
+        margin: 10px 6px;
+        width: 72px;
+    }
+    
+    .btn-behance
+    {
+        background-color: #1769ff;
+    }
+    .btn-behance:hover
+    {
+        background-color: #4a8aff;
+    }
+    .btn-bitbucket
+    {
+        background-color: #205081;
+    }
+    .btn-bitbucket:hover
+    {
+        background-color: #2a69aa;
+    }
+    .btn-codepen
+    {
+        background-color: #76daff;
+    }
+    .btn-codepen:hover
+    {
+        background-color: #a9e8ff;
+    }
+    .btn-deviantart
+    {
+        background-color: #4e6252;
+    }
+    .btn-deviantart:hover
+    {
+        background-color: #657e6a;
+    }
+    .btn-digg
+    {
+        background-color: #000;
+    }
+    .btn-digg:hover
+    {
+        background-color: #1a1a1a;
+    }
+    .btn-dribbble
+    {
+        background-color: #ea4c89;
+    }
+    .btn-dribbble:hover
+    {
+        background-color: #ef7aa7;
+    }
+    .btn-dropbox
+    {
+        background-color: #007ee5;
+    }
+    .btn-dropbox:hover
+    {
+        background-color: #1998ff;
+    }
+    .btn-facebook
+    {
+        background-color: #3b5998;
+    }
+    .btn-facebook:hover
+    {
+        background-color: #4c70ba;
+    }
+    .btn-flickr
+    {
+        background-color: #0063dc;
+    }
+    .btn-flickr:hover
+    {
+        background-color: #107cff;
+    }
+    .btn-foursquare
+    {
+        background-color: #ef4b78;
+    }
+    .btn-foursquare:hover
+    {
+        background-color: #f37a9b;
+    }
+    .btn-github
+    {
+        background-color: #4183c4;
+    }
+    .btn-github:hover
+    {
+        background-color: #689cd0;
+    }
+    .btn-google-plus
+    {
+        background-color: #dd4b39;
+    }
+    .btn-google-plus:hover
+    {
+        background-color: #e47365;
+    }
+    .btn-instagram
+    {
+        background-color: #3f729b;
+    }
+    .btn-instagram:hover
+    {
+        background-color: #548cb9;
+    }
+    .btn-jsfiddle
+    {
+        background-color: #4679bd;
+    }
+    .btn-jsfiddle:hover
+    {
+        background-color: #6c94ca;
+    }
+    .btn-lastfm
+    {
+        background-color: #e31b23;
+    }
+    .btn-lastfm:hover
+    {
+        background-color: #e9484e;
+    }
+    .btn-linkedin
+    {
+        background-color: #0976b4;
+    }
+    .btn-linkedin:hover
+    {
+        background-color: #0b96e5;
+    }
+    .btn-paypal
+    {
+        background-color: #253b80;
+    }
+    .btn-paypal:hover
+    {
+        background-color: #304da8;
+    }
+    .btn-pinterest
+    {
+        background-color: #cc2127;
+    }
+    .btn-pinterest:hover
+    {
+        background-color: #e04046;
+    }
+    .btn-reddit
+    {
+        background-color: #ff4500;
+    }
+    .btn-reddit:hover
+    {
+        background-color: #ff6a33;
+    }
+    .btn-skype
+    {
+        background-color: #00aff0;
+    }
+    .btn-skype:hover
+    {
+        background-color: #24c4ff;
+    }
+    .btn-soundcloud
+    {
+        background-color: #f80;
+    }
+    .btn-soundcloud:hover
+    {
+        background-color: #ffa033;
+    }
+    .btn-stack-overflow
+    {
+        background-color: #fe7a15;
+    }
+    .btn-stack-overflow:hover
+    {
+        background-color: #fe9748;
+    }
+    .btn-steam
+    {
+        background-color: #7da10e;
+    }
+    .btn-steam:hover
+    {
+        background-color: #a1d012;
+    }
+    .btn-stumbleupon
+    {
+        background-color: #eb4924;
+    }
+    .btn-stumbleupon:hover
+    {
+        background-color: #ef7053;
+    }
+    .btn-trello
+    {
+        background-color: #256a92;
+    }
+    .btn-trello:hover
+    {
+        background-color: #2f88bb;
+    }
+    .btn-tumblr
+    {
+        background-color: #35465c;
+    }
+    .btn-tumblr:hover
+    {
+        background-color: #485f7c;
+    }
+    .btn-twitch
+    {
+        background-color: #6441a5;
+    }
+    .btn-twitch:hover
+    {
+        background-color: #7e5bbe;
+    }
+    .btn-twitter
+    {
+        background-color: #55acee;
+    }
+    .btn-twitter:hover
+    {
+        background-color: #83c3f3;
+    }
+    .btn-vimeo
+    {
+        background-color: #1ab7ea;
+    }
+    .btn-vimeo:hover
+    {
+        background-color: #49c6ee;
+    }
+    .btn-vine
+    {
+        background-color: #00b488;
+    }
+    .btn-vine:hover
+    {
+        background-color: #00e7af;
+    }
+    .btn-vk
+    {
+        background-color: #45668e;
+    }
+    .btn-vk:hover
+    {
+        background-color: #587fae;
+    }
+    .btn-wechat
+    {
+        background-color: #98d11c;
+    }
+    .btn-wechat:hover
+    {
+        background-color: #afe53b;
+    }
+    .btn-wordpress
+    {
+        background-color: #21759b;
+    }
+    .btn-wordpress:hover
+    {
+        background-color: #2a95c5;
+    }
+    .btn-xing
+    {
+        background-color: #026466;
+    }
+    .btn-xing:hover
+    {
+        background-color: #039598;
+    }
+    .btn-yahoo
+    {
+        background-color: #400191;
+    }
+    .btn-yahoo:hover
+    {
+        background-color: #5601c4;
+    }
+    .btn-yelp
+    {
+        background-color: #af0606;
+    }
+    .btn-yelp:hover
+    {
+        background-color: #e00808;
+    }
+    .btn-youtube
+    {
+        background-color: #e52d27;
+    }
+    .btn-youtube:hover
+    {
+        background-color: #ea5955;
+    }
+    .btn-email
+    {
+        background-color: #44c456;
+    }
+    .btn-email:hover
+    {
+        background-color: #6bd079;
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1198px)  {
+
+
+        /////About
+.backAbout{
+
+    margin:0;
+    padding-bottom:10%;
+    //background-image: url("./assets/img/ninja.jpg");
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+    max-height: 1480px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 18px;
+
+}
+
+.fakeNav{
+    height: 55px;
+    background-color: #000;
+    margin-bottom: 50%;
+}
+
+    //////Home user
+
+.backUser{
+    position: absolute;  
+    background-color:#202020;
+    background-size: cover;
+    //background: url("./assets/img/backgroundblue.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    //height: 100%;
+    width: 100%;
+   
+}
+
+.containerDash{
+    //@at-rootmargin: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+// .cardDash{
+//     color: rgb(51, 51, 51);
+//     display: block;
+//     float: left;
+//     font-family: "Open Sans", sans-serif;
+//     font-size: 14px;
+//     height: 320px;
+//     line-height: 20px;
+//     min-height: 1px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     position: relative;
+//     
+// }
+
+.dashUnit{
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 22%;
+    float: left;
+}
+
+
+.packIconDash{
+    margin: auto;
+    width: 100px;
+}
+.countMail{
+    margin: auto;
+    width: 130px;
+}
+
+.dashUnitSmall{
+
+    margin: 1%;
+
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 129px;
+    width: 22%;
+    float: left;
+
+
+}
+
+.dashUnitBig{
+
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 46%;
+    float: left;
+
+
+}
+.cardDashbig{
+    color: rgb(51, 51, 51);
+    display: block;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    height: 320px;
+    line-height: 20px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 585px;
+    float: left;
+
+}
+.title{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 8px;
+    padding: 0px;
+    height: inherit;
+}
+.userImg{
+    width: 220px;
+    height: 100px;
+    background-image: url("./assets/img/robo.jpg");
+    margin: auto;
+    margin-top: 5%;
+
+}
+.fontCountMail{
+    font-size: 850%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    //margin: auto;
+}
+.nameMail{
+    font-size: 300%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+
+}
+.contTextMail{
+    width: 100%;
+    margin: auto;
+    }
+
+    /////HOME
+    #divText{
+        position:absolute;
+        top:35%;
+        z-index: 1;
+        left: 25%;
+        right: 25%
+    }
+    .backHom{
+        width: 100%;
+        height:700px;
+        background-color: rgb(61, 61, 61) 
+    }
+    // .centered{
+    //     margin-left: 5%;
+    //     margin-right: 5%;
+    
+    //}
+    .contentCard{
+        //margin: 2%;
+        margin-top: 2%;
+        //margin-left: 20%;
+        //margin-right: 20%
+        padding-top: 5%;
+    }
+    
+    .contentCardHome{
+        //margin: 5%;
+        margin-top: 2%;
+        margin-left: 10%;
+        margin-right: 10%
+    }
+    .cardHome{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .cardContainer{
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+    }
+    
+    .image-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+      }
+      
+      .image-card img {
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+      }
+      
+      .zoom-effect-container:hover .image-card img {
+        -webkit-transform: scale(1.18);
+        transform: scale(1.18);
+      }
+      .zoom-effect-container {
+        float: left;
+        position: relative;
+        width: 24%;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 3px;
+        border-radius: 4px;
+    }
+
+//     .cardsIcon
+//     {
+//         width: 540px;
+//     }
+//    .centered{   
+//         margin:auto   
+//     }
+    .iconHome{
+    max-width:100%;
+    height:auto;
+    }
+
+    //////DASHBOARD
+
+    .textWeatherDash
+    {
+        float: left;
+        margin-top: 2px;
+        margin-left: 10px;
+        //width: 150px;
+
+    }
+    .emailText{
+        font-size:1.5vw;
+    }
+    .dashUnitBig{
+        width: 70%;
+    }
+
+    ////FOOTER
+    .footer{
+       background-color: #2B292E;
+       //position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       height: 300px;
+       //background-color: red;
+       color: white;
+       text-align: center;    
+   }
+   .container {
+       max-width: 100%; 
+   }
+   .containerIconFooter{
+       height: 70px;
+   }
+   .hFootText{
+       color:white;
+   }
+   .pFootText{
+       color:white;
+   
+   }
+   .hrFoot{
+       color:white;
+   
+   }
+   .footColum{
+       margin-right: 10%;
+       margin-left: 10%;
+   
+   }
+   .lastFooter{
+       background-color: #2B292E;   
+   }
+    
+   a.btn-social,
+   .btn-social
+   {
+       border-radius: 50%;
+       color: #ffffff !important;
+       display: inline-block;
+       height: 54px;
+       line-height: 54px;
+       margin: 8px 4px;
+       text-align: center;
+       text-decoration: none;
+       transition: background-color .3s;
+       webkit-transition: background-color .3s;
+       width: 54px;
+   }
+   
+   .btn-social .fa,.btn-social i
+   {
+       backface-visibility: hidden;
+       moz-backface-visibility: hidden;
+       ms-transform: scale(1);
+       o-transform: scale(1);
+       transform: scale(1);
+       transition: all .25s;
+       webkit-backface-visibility: hidden;
+       webkit-transform: scale(1);
+       webkit-transition: all .25s;
+   }
+   .btn-social:hover,.btn-social:focus
+   {
+       color: #fff;
+       outline: none;
+       text-decoration: none;
+   }
+   .btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+   {
+       ms-transform: scale(1.3);
+       o-transform: scale(1.3);
+       transform: scale(1.3);
+       webkit-transform: scale(1.3);
+   }
+   .btn-social.btn-xs
+   {
+       font-size: 9px;
+       height: 24px;
+       line-height: 13px;
+       margin: 6px 2px;
+       width: 24px;
+   }
+   .btn-social.btn-sm
+   {
+       font-size: 13px;
+       height: 36px;
+       line-height: 18px;
+       margin: 6px 2px;
+       width: 36px;
+   }
+   .btn-social.btn-lg
+   {
+       font-size: 22px;
+       height: 72px;
+       line-height: 40px;
+       margin: 10px 6px;
+       width: 72px;
+   }
+   
+   .btn-behance
+   {
+       background-color: #1769ff;
+   }
+   .btn-behance:hover
+   {
+       background-color: #4a8aff;
+   }
+   .btn-bitbucket
+   {
+       background-color: #205081;
+   }
+   .btn-bitbucket:hover
+   {
+       background-color: #2a69aa;
+   }
+   .btn-codepen
+   {
+       background-color: #76daff;
+   }
+   .btn-codepen:hover
+   {
+       background-color: #a9e8ff;
+   }
+   .btn-deviantart
+   {
+       background-color: #4e6252;
+   }
+   .btn-deviantart:hover
+   {
+       background-color: #657e6a;
+   }
+   .btn-digg
+   {
+       background-color: #000;
+   }
+   .btn-digg:hover
+   {
+       background-color: #1a1a1a;
+   }
+   .btn-dribbble
+   {
+       background-color: #ea4c89;
+   }
+   .btn-dribbble:hover
+   {
+       background-color: #ef7aa7;
+   }
+   .btn-dropbox
+   {
+       background-color: #007ee5;
+   }
+   .btn-dropbox:hover
+   {
+       background-color: #1998ff;
+   }
+   .btn-facebook
+   {
+       background-color: #3b5998;
+   }
+   .btn-facebook:hover
+   {
+       background-color: #4c70ba;
+   }
+   .btn-flickr
+   {
+       background-color: #0063dc;
+   }
+   .btn-flickr:hover
+   {
+       background-color: #107cff;
+   }
+   .btn-foursquare
+   {
+       background-color: #ef4b78;
+   }
+   .btn-foursquare:hover
+   {
+       background-color: #f37a9b;
+   }
+   .btn-github
+   {
+       background-color: #4183c4;
+   }
+   .btn-github:hover
+   {
+       background-color: #689cd0;
+   }
+   .btn-google-plus
+   {
+       background-color: #dd4b39;
+   }
+   .btn-google-plus:hover
+   {
+       background-color: #e47365;
+   }
+   .btn-instagram
+   {
+       background-color: #3f729b;
+   }
+   .btn-instagram:hover
+   {
+       background-color: #548cb9;
+   }
+   .btn-jsfiddle
+   {
+       background-color: #4679bd;
+   }
+   .btn-jsfiddle:hover
+   {
+       background-color: #6c94ca;
+   }
+   .btn-lastfm
+   {
+       background-color: #e31b23;
+   }
+   .btn-lastfm:hover
+   {
+       background-color: #e9484e;
+   }
+   .btn-linkedin
+   {
+       background-color: #0976b4;
+   }
+   .btn-linkedin:hover
+   {
+       background-color: #0b96e5;
+   }
+   .btn-paypal
+   {
+       background-color: #253b80;
+   }
+   .btn-paypal:hover
+   {
+       background-color: #304da8;
+   }
+   .btn-pinterest
+   {
+       background-color: #cc2127;
+   }
+   .btn-pinterest:hover
+   {
+       background-color: #e04046;
+   }
+   .btn-reddit
+   {
+       background-color: #ff4500;
+   }
+   .btn-reddit:hover
+   {
+       background-color: #ff6a33;
+   }
+   .btn-skype
+   {
+       background-color: #00aff0;
+   }
+   .btn-skype:hover
+   {
+       background-color: #24c4ff;
+   }
+   .btn-soundcloud
+   {
+       background-color: #f80;
+   }
+   .btn-soundcloud:hover
+   {
+       background-color: #ffa033;
+   }
+   .btn-stack-overflow
+   {
+       background-color: #fe7a15;
+   }
+   .btn-stack-overflow:hover
+   {
+       background-color: #fe9748;
+   }
+   .btn-steam
+   {
+       background-color: #7da10e;
+   }
+   .btn-steam:hover
+   {
+       background-color: #a1d012;
+   }
+   .btn-stumbleupon
+   {
+       background-color: #eb4924;
+   }
+   .btn-stumbleupon:hover
+   {
+       background-color: #ef7053;
+   }
+   .btn-trello
+   {
+       background-color: #256a92;
+   }
+   .btn-trello:hover
+   {
+       background-color: #2f88bb;
+   }
+   .btn-tumblr
+   {
+       background-color: #35465c;
+   }
+   .btn-tumblr:hover
+   {
+       background-color: #485f7c;
+   }
+   .btn-twitch
+   {
+       background-color: #6441a5;
+   }
+   .btn-twitch:hover
+   {
+       background-color: #7e5bbe;
+   }
+   .btn-twitter
+   {
+       background-color: #55acee;
+   }
+   .btn-twitter:hover
+   {
+       background-color: #83c3f3;
+   }
+   .btn-vimeo
+   {
+       background-color: #1ab7ea;
+   }
+   .btn-vimeo:hover
+   {
+       background-color: #49c6ee;
+   }
+   .btn-vine
+   {
+       background-color: #00b488;
+   }
+   .btn-vine:hover
+   {
+       background-color: #00e7af;
+   }
+   .btn-vk
+   {
+       background-color: #45668e;
+   }
+   .btn-vk:hover
+   {
+       background-color: #587fae;
+   }
+   .btn-wechat
+   {
+       background-color: #98d11c;
+   }
+   .btn-wechat:hover
+   {
+       background-color: #afe53b;
+   }
+   .btn-wordpress
+   {
+       background-color: #21759b;
+   }
+   .btn-wordpress:hover
+   {
+       background-color: #2a95c5;
+   }
+   .btn-xing
+   {
+       background-color: #026466;
+   }
+   .btn-xing:hover
+   {
+       background-color: #039598;
+   }
+   .btn-yahoo
+   {
+       background-color: #400191;
+   }
+   .btn-yahoo:hover
+   {
+       background-color: #5601c4;
+   }
+   .btn-yelp
+   {
+       background-color: #af0606;
+   }
+   .btn-yelp:hover
+   {
+       background-color: #e00808;
+   }
+   .btn-youtube
+   {
+       background-color: #e52d27;
+   }
+   .btn-youtube:hover
+   {
+       background-color: #ea5955;
+   }
+   .btn-email
+   {
+       background-color: #44c456;
+   }
+   .btn-email:hover
+   {
+       background-color: #6bd079;
+   }
+
+
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1023px)  {
+
+    /////About
+    .backAbout{
+
+        margin:0;
+        padding-bottom:10%;
+        //background-image: url("./assets/img/ninja.jpg");
+        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+        background-size: cover;
+        max-height: 1480px;
+        width: 100%;
+        z-index: 10;
+        position: absolute;
+        top: 18px;
+    
+    }
+    
+    .fakeNav{
+        height: 55px;
+        background-color: #000;
+        margin-bottom: 50%;
+    }
+    //////Home user
+
+.backUser{
+    position: absolute;  
+    background-color:#202020;
+    background-size: cover;
+    //background: url("./assets/img/backgroundblue.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    //height: 100%;
+    width: 100%;
+   
+}
+
+.containerDash{
+    //@at-rootmargin: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+// .cardDash{
+//     color: rgb(51, 51, 51);
+//     display: block;
+//     float: left;
+//     font-family: "Open Sans", sans-serif;
+//     font-size: 14px;
+//     height: 320px;
+//     line-height: 20px;
+//     min-height: 1px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     position: relative;
+//     
+// }
+
+.dashUnit{
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 30%;
+    float: left;
+}
+
+
+.packIconDash{
+    margin: auto;
+    width: 100px;
+}
+.countMail{
+    margin: auto;
+    width: 130px;
+}
+
+.dashUnitSmall{
+
+    margin: 1%;
+
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 129px;
+    width: 46%;
+    float: left;
+
+
+}
+
+.dashUnitBig{
+
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 94%;
+    float: left;
+
+
+}
+.cardDashbig{
+    color: rgb(51, 51, 51);
+    display: block;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    height: 320px;
+    line-height: 20px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 585px;
+    float: left;
+
+}
+.title{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 8px;
+    padding: 0px;
+    height: inherit;
+}
+.userImg{
+    width: 220px;
+    height: 100px;
+    background-image: url("./assets/img/robo.jpg");
+    margin: auto;
+    margin-top: 5%;
+
+}
+.fontCountMail{
+    font-size: 850%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    //margin: auto;
+}
+.nameMail{
+    font-size: 300%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+
+}
+.contTextMail{
+    width: 100%;
+    margin: auto;
+    }
+
+    /////HOME
+
+    #divText{
+        position:absolute;
+        top:35%;
+        z-index: 1;
+        left: 25%;
+        right: 25%
+    }
+    .backHom{
+        width: 100%;
+        height:700px;
+        background-color: rgb(61, 61, 61) 
+    }
+    // .centered{
+    //     margin-left: 5%;
+    //     margin-right: 5%;
+    
+    //}
+    .contentCard{
+        //margin: 2%;
+        margin-top: 2%;
+        //margin-left: 20%;
+        //margin-right: 20%
+        padding-top: 5%;
+    }
+
+
+    .cardsIcon {
+        width: 60%;
+        margin-right: 20%;
+    }
+    
+    .contentCardHome{
+        //margin: 5%;
+        margin-top: 2%;
+        margin-left: 10%;
+        margin-right: 10%
+    }
+    .cardHome{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .cardContainer{
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+    }
+    
+    .image-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+      }
+      
+      .image-card img {
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+      }
+     
+      
+      .zoom-effect-container:hover .image-card img {
+        -webkit-transform: scale(1.18);
+        transform: scale(1.18);
+      }
+      .zoom-effect-container {
+        float: left;
+        position: relative;
+        width: 24%;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 3px;
+        border-radius: 4px;
+    }
+
+     ////FOOTER
+     .footer{
+        background-color: #2B292E;
+        //position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+        //background-color: red;
+        color: white;
+        text-align: center;    
+    }
+    .container {
+        max-width: 100%; 
+    }
+    .containerIconFooter{
+        height: 70px;
+    }
+    .hFootText{
+        color:white;
+    }
+    .pFootText{
+        color:white;
+    
+    }
+    .hrFoot{
+        color:white;
+    
+    }
+    .footColum{
+        margin-right: 10%;
+        margin-left: 10%;
+    
+    }
+    .lastFooter{
+        background-color: #2B292E;   
+    }
+     
+    a.btn-social,
+    .btn-social
+    {
+        border-radius: 50%;
+        color: #ffffff !important;
+        display: inline-block;
+        height: 54px;
+        line-height: 54px;
+        margin: 8px 4px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color .3s;
+        webkit-transition: background-color .3s;
+        width: 54px;
+    }
+    
+    .btn-social .fa,.btn-social i
+    {
+        backface-visibility: hidden;
+        moz-backface-visibility: hidden;
+        ms-transform: scale(1);
+        o-transform: scale(1);
+        transform: scale(1);
+        transition: all .25s;
+        webkit-backface-visibility: hidden;
+        webkit-transform: scale(1);
+        webkit-transition: all .25s;
+    }
+    .btn-social:hover,.btn-social:focus
+    {
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+    }
+    .btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+    {
+        ms-transform: scale(1.3);
+        o-transform: scale(1.3);
+        transform: scale(1.3);
+        webkit-transform: scale(1.3);
+    }
+    .btn-social.btn-xs
+    {
+        font-size: 9px;
+        height: 24px;
+        line-height: 13px;
+        margin: 6px 2px;
+        width: 24px;
+    }
+    .btn-social.btn-sm
+    {
+        font-size: 13px;
+        height: 36px;
+        line-height: 18px;
+        margin: 6px 2px;
+        width: 36px;
+    }
+    .btn-social.btn-lg
+    {
+        font-size: 22px;
+        height: 72px;
+        line-height: 40px;
+        margin: 10px 6px;
+        width: 72px;
+    }
+    
+    .btn-behance
+    {
+        background-color: #1769ff;
+    }
+    .btn-behance:hover
+    {
+        background-color: #4a8aff;
+    }
+    .btn-bitbucket
+    {
+        background-color: #205081;
+    }
+    .btn-bitbucket:hover
+    {
+        background-color: #2a69aa;
+    }
+    .btn-codepen
+    {
+        background-color: #76daff;
+    }
+    .btn-codepen:hover
+    {
+        background-color: #a9e8ff;
+    }
+    .btn-deviantart
+    {
+        background-color: #4e6252;
+    }
+    .btn-deviantart:hover
+    {
+        background-color: #657e6a;
+    }
+    .btn-digg
+    {
+        background-color: #000;
+    }
+    .btn-digg:hover
+    {
+        background-color: #1a1a1a;
+    }
+    .btn-dribbble
+    {
+        background-color: #ea4c89;
+    }
+    .btn-dribbble:hover
+    {
+        background-color: #ef7aa7;
+    }
+    .btn-dropbox
+    {
+        background-color: #007ee5;
+    }
+    .btn-dropbox:hover
+    {
+        background-color: #1998ff;
+    }
+    .btn-facebook
+    {
+        background-color: #3b5998;
+    }
+    .btn-facebook:hover
+    {
+        background-color: #4c70ba;
+    }
+    .btn-flickr
+    {
+        background-color: #0063dc;
+    }
+    .btn-flickr:hover
+    {
+        background-color: #107cff;
+    }
+    .btn-foursquare
+    {
+        background-color: #ef4b78;
+    }
+    .btn-foursquare:hover
+    {
+        background-color: #f37a9b;
+    }
+    .btn-github
+    {
+        background-color: #4183c4;
+    }
+    .btn-github:hover
+    {
+        background-color: #689cd0;
+    }
+    .btn-google-plus
+    {
+        background-color: #dd4b39;
+    }
+    .btn-google-plus:hover
+    {
+        background-color: #e47365;
+    }
+    .btn-instagram
+    {
+        background-color: #3f729b;
+    }
+    .btn-instagram:hover
+    {
+        background-color: #548cb9;
+    }
+    .btn-jsfiddle
+    {
+        background-color: #4679bd;
+    }
+    .btn-jsfiddle:hover
+    {
+        background-color: #6c94ca;
+    }
+    .btn-lastfm
+    {
+        background-color: #e31b23;
+    }
+    .btn-lastfm:hover
+    {
+        background-color: #e9484e;
+    }
+    .btn-linkedin
+    {
+        background-color: #0976b4;
+    }
+    .btn-linkedin:hover
+    {
+        background-color: #0b96e5;
+    }
+    .btn-paypal
+    {
+        background-color: #253b80;
+    }
+    .btn-paypal:hover
+    {
+        background-color: #304da8;
+    }
+    .btn-pinterest
+    {
+        background-color: #cc2127;
+    }
+    .btn-pinterest:hover
+    {
+        background-color: #e04046;
+    }
+    .btn-reddit
+    {
+        background-color: #ff4500;
+    }
+    .btn-reddit:hover
+    {
+        background-color: #ff6a33;
+    }
+    .btn-skype
+    {
+        background-color: #00aff0;
+    }
+    .btn-skype:hover
+    {
+        background-color: #24c4ff;
+    }
+    .btn-soundcloud
+    {
+        background-color: #f80;
+    }
+    .btn-soundcloud:hover
+    {
+        background-color: #ffa033;
+    }
+    .btn-stack-overflow
+    {
+        background-color: #fe7a15;
+    }
+    .btn-stack-overflow:hover
+    {
+        background-color: #fe9748;
+    }
+    .btn-steam
+    {
+        background-color: #7da10e;
+    }
+    .btn-steam:hover
+    {
+        background-color: #a1d012;
+    }
+    .btn-stumbleupon
+    {
+        background-color: #eb4924;
+    }
+    .btn-stumbleupon:hover
+    {
+        background-color: #ef7053;
+    }
+    .btn-trello
+    {
+        background-color: #256a92;
+    }
+    .btn-trello:hover
+    {
+        background-color: #2f88bb;
+    }
+    .btn-tumblr
+    {
+        background-color: #35465c;
+    }
+    .btn-tumblr:hover
+    {
+        background-color: #485f7c;
+    }
+    .btn-twitch
+    {
+        background-color: #6441a5;
+    }
+    .btn-twitch:hover
+    {
+        background-color: #7e5bbe;
+    }
+    .btn-twitter
+    {
+        background-color: #55acee;
+    }
+    .btn-twitter:hover
+    {
+        background-color: #83c3f3;
+    }
+    .btn-vimeo
+    {
+        background-color: #1ab7ea;
+    }
+    .btn-vimeo:hover
+    {
+        background-color: #49c6ee;
+    }
+    .btn-vine
+    {
+        background-color: #00b488;
+    }
+    .btn-vine:hover
+    {
+        background-color: #00e7af;
+    }
+    .btn-vk
+    {
+        background-color: #45668e;
+    }
+    .btn-vk:hover
+    {
+        background-color: #587fae;
+    }
+    .btn-wechat
+    {
+        background-color: #98d11c;
+    }
+    .btn-wechat:hover
+    {
+        background-color: #afe53b;
+    }
+    .btn-wordpress
+    {
+        background-color: #21759b;
+    }
+    .btn-wordpress:hover
+    {
+        background-color: #2a95c5;
+    }
+    .btn-xing
+    {
+        background-color: #026466;
+    }
+    .btn-xing:hover
+    {
+        background-color: #039598;
+    }
+    .btn-yahoo
+    {
+        background-color: #400191;
+    }
+    .btn-yahoo:hover
+    {
+        background-color: #5601c4;
+    }
+    .btn-yelp
+    {
+        background-color: #af0606;
+    }
+    .btn-yelp:hover
+    {
+        background-color: #e00808;
+    }
+    .btn-youtube
+    {
+        background-color: #e52d27;
+    }
+    .btn-youtube:hover
+    {
+        background-color: #ea5955;
+    }
+    .btn-email
+    {
+        background-color: #44c456;
+    }
+    .btn-email:hover
+    {
+        background-color: #6bd079;
+    }
+ 
+
+
+
+
+    
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 899px)  {
+
+
+/////About
+.backAbout{
+
+    margin:0;
+    padding-bottom:10%;
+    //background-image: url("./assets/img/ninja.jpg");
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+    max-height: 1480px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 40px;
+
+}
+
+  
+.fakeNav{
+    height: 100px;
+    background-color: #000;
+    margin-bottom: 50%;
+}
+
+       //////Home user
+
+.backUser{
+    position: absolute;  
+    background-color:#202020;
+    background-size: cover;
+    //background: url("./assets/img/backgroundblue.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    //height: 100%;
+    width: 100%;
+   
+}
+
+.containerDash{
+    //@at-rootmargin: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+// .cardDash{
+//     color: rgb(51, 51, 51);
+//     display: block;
+//     float: left;
+//     font-family: "Open Sans", sans-serif;
+//     font-size: 14px;
+//     height: 320px;
+//     line-height: 20px;
+//     min-height: 1px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     position: relative;
+//     
+// }
+
+.dashUnit{
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 30%;
+    float: left;
+}
+
+
+.packIconDash{
+    margin: auto;
+    width: 100px;
+}
+.countMail{
+    margin: auto;
+    width: 130px;
+}
+
+.dashUnitSmall{
+
+    margin: 1%;
+
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 129px;
+    width: 46%;
+    float: left;
+
+
+}
+
+.dashUnitBig{
+
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 94%;
+    float: left;
+
+
+}
+.cardDashbig{
+    color: rgb(51, 51, 51);
+    display: block;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    height: 320px;
+    line-height: 20px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 585px;
+    float: left;
+
+}
+.title{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 8px;
+    padding: 0px;
+    height: inherit;
+}
+.userImg{
+    width: 220px;
+    height: 100px;
+    background-image: url("./assets/img/robo.jpg");
+    margin: auto;
+    margin-top: 5%;
+
+}
+.fontCountMail{
+    font-size: 850%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    //margin: auto;
+}
+.nameMail{
+    font-size: 300%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+
+}
+.contTextMail{
+    width: 100%;
+    margin: auto;
+    }
+
+
+    /////HOME
+   
+    #divText{
+        position:absolute;
+        top:25%;
+        z-index: 1;
+        left: 25%;
+        right: 25%
+    
+    }
+    .backHom{
+        width: 100%;
+        height:1100px;
+        background-color: rgb(61, 61, 61) 
+    }
+    .cardsIcon {
+        width: 60%;
+        margin: auto;
+    }
+    .contentCard{
+        //margin: 2%;
+        margin-top: 2%;
+        //margin-left: 20%;
+        //margin-right: 20%
+        padding-top: 5%;
+    }
+    
+    .contentCardHome{
+        //margin: 5%;
+        margin-top: 2%;
+        margin-left: 10%;
+        margin-right: 10%
+    }
+    .cardHome{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .cardContainer{
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+    }
+    
+    .image-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+      }
+      
+      .image-card img {
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+      }
+      
+      .zoom-effect-container:hover .image-card img {
+        -webkit-transform: scale(1.18);
+        transform: scale(1.18);
+      }
+      .zoom-effect-container {
+        float: left;
+        position: relative;
+        width: 49%;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 3px;
+        border-radius: 4px;
+    }
+
+     ////FOOTER
+     .footer{
+        background-color: #2B292E;
+        //position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: red;
+        color: white;
+        text-align: center;    
+    }
+    .container {
+        max-width: 100%; 
+    }
+    .registerDiv{
+        margin-bottom: 0%;
+    }
+    .containerIconFooter{
+        height: 140px;
+        //margin-right: 20%;
+    }
+    .iconFoot{
+        width: 470px;
+        //margin-left: 20%;
+        //margin-right: 20%;
+        margin:auto;
+    }
+    .hFootText{
+        color:white;
+    }
+    .pFootText{
+        color:white;
+    
+    }
+    .hrFoot{
+        color:white;
+    
+    }
+    .footColum{
+        margin-right: 10%;
+        margin-left: 10%;
+    
+    }
+    .lastFooter{
+        background-color: #2B292E;   
+    }
+     
+    a.btn-social,
+    .btn-social
+    {
+        border-radius: 50%;
+        color: #ffffff !important;
+        display: inline-block;
+        height: 54px;
+        line-height: 54px;
+        margin: 8px 4px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color .3s;
+        webkit-transition: background-color .3s;
+        width: 54px;
+    }
+    
+    .btn-social .fa,.btn-social i
+    {
+        backface-visibility: hidden;
+        moz-backface-visibility: hidden;
+        ms-transform: scale(1);
+        o-transform: scale(1);
+        transform: scale(1);
+        transition: all .25s;
+        webkit-backface-visibility: hidden;
+        webkit-transform: scale(1);
+        webkit-transition: all .25s;
+    }
+    .btn-social:hover,.btn-social:focus
+    {
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+    }
+    .btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+    {
+        ms-transform: scale(1.3);
+        o-transform: scale(1.3);
+        transform: scale(1.3);
+        webkit-transform: scale(1.3);
+    }
+    .btn-social.btn-xs
+    {
+        font-size: 9px;
+        height: 24px;
+        line-height: 13px;
+        margin: 6px 2px;
+        width: 24px;
+    }
+    .btn-social.btn-sm
+    {
+        font-size: 13px;
+        height: 36px;
+        line-height: 18px;
+        margin: 6px 2px;
+        width: 36px;
+    }
+    .btn-social.btn-lg
+    {
+        font-size: 22px;
+        height: 72px;
+        line-height: 40px;
+        margin: 10px 6px;
+        width: 72px;
+    }
+    
+    .btn-behance
+    {
+        background-color: #1769ff;
+    }
+    .btn-behance:hover
+    {
+        background-color: #4a8aff;
+    }
+    .btn-bitbucket
+    {
+        background-color: #205081;
+    }
+    .btn-bitbucket:hover
+    {
+        background-color: #2a69aa;
+    }
+    .btn-codepen
+    {
+        background-color: #76daff;
+    }
+    .btn-codepen:hover
+    {
+        background-color: #a9e8ff;
+    }
+    .btn-deviantart
+    {
+        background-color: #4e6252;
+    }
+    .btn-deviantart:hover
+    {
+        background-color: #657e6a;
+    }
+    .btn-digg
+    {
+        background-color: #000;
+    }
+    .btn-digg:hover
+    {
+        background-color: #1a1a1a;
+    }
+    .btn-dribbble
+    {
+        background-color: #ea4c89;
+    }
+    .btn-dribbble:hover
+    {
+        background-color: #ef7aa7;
+    }
+    .btn-dropbox
+    {
+        background-color: #007ee5;
+    }
+    .btn-dropbox:hover
+    {
+        background-color: #1998ff;
+    }
+    .btn-facebook
+    {
+        background-color: #3b5998;
+    }
+    .btn-facebook:hover
+    {
+        background-color: #4c70ba;
+    }
+    .btn-flickr
+    {
+        background-color: #0063dc;
+    }
+    .btn-flickr:hover
+    {
+        background-color: #107cff;
+    }
+    .btn-foursquare
+    {
+        background-color: #ef4b78;
+    }
+    .btn-foursquare:hover
+    {
+        background-color: #f37a9b;
+    }
+    .btn-github
+    {
+        background-color: #4183c4;
+    }
+    .btn-github:hover
+    {
+        background-color: #689cd0;
+    }
+    .btn-google-plus
+    {
+        background-color: #dd4b39;
+    }
+    .btn-google-plus:hover
+    {
+        background-color: #e47365;
+    }
+    .btn-instagram
+    {
+        background-color: #3f729b;
+    }
+    .btn-instagram:hover
+    {
+        background-color: #548cb9;
+    }
+    .btn-jsfiddle
+    {
+        background-color: #4679bd;
+    }
+    .btn-jsfiddle:hover
+    {
+        background-color: #6c94ca;
+    }
+    .btn-lastfm
+    {
+        background-color: #e31b23;
+    }
+    .btn-lastfm:hover
+    {
+        background-color: #e9484e;
+    }
+    .btn-linkedin
+    {
+        background-color: #0976b4;
+    }
+    .btn-linkedin:hover
+    {
+        background-color: #0b96e5;
+    }
+    .btn-paypal
+    {
+        background-color: #253b80;
+    }
+    .btn-paypal:hover
+    {
+        background-color: #304da8;
+    }
+    .btn-pinterest
+    {
+        background-color: #cc2127;
+    }
+    .btn-pinterest:hover
+    {
+        background-color: #e04046;
+    }
+    .btn-reddit
+    {
+        background-color: #ff4500;
+    }
+    .btn-reddit:hover
+    {
+        background-color: #ff6a33;
+    }
+    .btn-skype
+    {
+        background-color: #00aff0;
+    }
+    .btn-skype:hover
+    {
+        background-color: #24c4ff;
+    }
+    .btn-soundcloud
+    {
+        background-color: #f80;
+    }
+    .btn-soundcloud:hover
+    {
+        background-color: #ffa033;
+    }
+    .btn-stack-overflow
+    {
+        background-color: #fe7a15;
+    }
+    .btn-stack-overflow:hover
+    {
+        background-color: #fe9748;
+    }
+    .btn-steam
+    {
+        background-color: #7da10e;
+    }
+    .btn-steam:hover
+    {
+        background-color: #a1d012;
+    }
+    .btn-stumbleupon
+    {
+        background-color: #eb4924;
+    }
+    .btn-stumbleupon:hover
+    {
+        background-color: #ef7053;
+    }
+    .btn-trello
+    {
+        background-color: #256a92;
+    }
+    .btn-trello:hover
+    {
+        background-color: #2f88bb;
+    }
+    .btn-tumblr
+    {
+        background-color: #35465c;
+    }
+    .btn-tumblr:hover
+    {
+        background-color: #485f7c;
+    }
+    .btn-twitch
+    {
+        background-color: #6441a5;
+    }
+    .btn-twitch:hover
+    {
+        background-color: #7e5bbe;
+    }
+    .btn-twitter
+    {
+        background-color: #55acee;
+    }
+    .btn-twitter:hover
+    {
+        background-color: #83c3f3;
+    }
+    .btn-vimeo
+    {
+        background-color: #1ab7ea;
+    }
+    .btn-vimeo:hover
+    {
+        background-color: #49c6ee;
+    }
+    .btn-vine
+    {
+        background-color: #00b488;
+    }
+    .btn-vine:hover
+    {
+        background-color: #00e7af;
+    }
+    .btn-vk
+    {
+        background-color: #45668e;
+    }
+    .btn-vk:hover
+    {
+        background-color: #587fae;
+    }
+    .btn-wechat
+    {
+        background-color: #98d11c;
+    }
+    .btn-wechat:hover
+    {
+        background-color: #afe53b;
+    }
+    .btn-wordpress
+    {
+        background-color: #21759b;
+    }
+    .btn-wordpress:hover
+    {
+        background-color: #2a95c5;
+    }
+    .btn-xing
+    {
+        background-color: #026466;
+    }
+    .btn-xing:hover
+    {
+        background-color: #039598;
+    }
+    .btn-yahoo
+    {
+        background-color: #400191;
+    }
+    .btn-yahoo:hover
+    {
+        background-color: #5601c4;
+    }
+    .btn-yelp
+    {
+        background-color: #af0606;
+    }
+    .btn-yelp:hover
+    {
+        background-color: #e00808;
+    }
+    .btn-youtube
+    {
+        background-color: #e52d27;
+    }
+    .btn-youtube:hover
+    {
+        background-color: #ea5955;
+    }
+    .btn-email
+    {
+        background-color: #44c456;
+    }
+    .btn-email:hover
+    {
+        background-color: #6bd079;
+    }
+ 
+
+
+
+
+    
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 599px)  {
+
+
+    /////About
+.backAbout{
+
+    margin:0;
+    padding-bottom:10%;
+    //background-image: url("./assets/img/ninja.jpg");
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+    max-height: 1480px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 40px;
+
+}
+
+  
+.fakeNav{
+    height: 100px;
+    background-color: #000;
+    margin-bottom: 50%;
+}
+
+    //////Home user
+
+.backUser{
+    position: absolute;  
+    background-color:#202020;
+    background-size: cover;
+    //background: url("./assets/img/backgroundblue.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    //height: 100%;
+    width: 100%;
+   
+}
+
+.containerDash{
+    //@at-rootmargin: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+// .cardDash{
+//     color: rgb(51, 51, 51);
+//     display: block;
+//     float: left;
+//     font-family: "Open Sans", sans-serif;
+//     font-size: 14px;
+//     height: 320px;
+//     line-height: 20px;
+//     min-height: 1px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     position: relative;
+//     
+// }
+
+.dashUnit{
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 93%;
+    float: left;
+}
+
+
+.packIconDash{
+    margin: auto;
+    width: 100px;
+}
+.countMail{
+    margin: auto;
+    width: 130px;
+}
+
+.dashUnitSmall{
+
+    margin: 1%;
+
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 129px;
+    width: 93%;
+    float: left;
+
+
+}
+
+.dashUnitBig{
+
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 93%;
+    float: left;
+
+
+}
+.cardDashbig{
+    color: rgb(51, 51, 51);
+    display: block;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    height: 320px;
+    line-height: 20px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 585px;
+    float: left;
+
+}
+.title{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 8px;
+    padding: 0px;
+    height: inherit;
+}
+.userImg{
+    width: 220px;
+    height: 100px;
+    background-image: url("./assets/img/robo.jpg");
+    margin: auto;
+    margin-top: 5%;
+
+}
+.fontCountMail{
+    font-size: 850%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    //margin: auto;
+}
+.nameMail{
+    font-size: 300%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+
+}
+.contTextMail{
+    width: 100%;
+    margin: auto;
+    }
+
+
+    /////HOME
+    #divText{
+        position:absolute;
+        top:5%;
+        z-index: 1;
+        left: 25%;
+        right: 25%
+    }
+    .car{
+        margin-top: 56px;
+    }
+    .backHom{
+        width: 100%;
+        height:1100px;
+        background-color: rgb(61, 61, 61) 
+    }
+    .cardsIcon {
+        width: 60%;
+        margin: auto;
+    }
+    .contentCard{
+        //margin: 2%;
+        margin-top: 2%;
+        //margin-left: 20%;
+        //margin-right: 20%
+        padding-top: 5%;
+    }
+    
+    .contentCardHome{
+        //margin: 5%;
+        margin-top: 2%;
+        margin-left: 10%;
+        margin-right: 10%
+    }
+    .cardHome{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .cardContainer{
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+    }
+    
+    .image-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+      }
+      
+      .image-card img {
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+      }
+      
+      .zoom-effect-container:hover .image-card img {
+        -webkit-transform: scale(1.18);
+        transform: scale(1.18);
+      }
+      .zoom-effect-container {
+        float: left;
+        position: relative;
+        width: 48.8%;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 3px;
+        border-radius: 4px;
+    }
+
+     ////FOOTER
+     .footer{
+        background-color: #2B292E;
+        //position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: red;
+        color: white;
+        text-align: center;    
+    }
+    .container {
+        max-width: 100%; 
+    }
+    .registerDiv{
+        margin-bottom: 0%;
+    }
+    .containerIconFooter{
+        height: 140px;
+        //margin-right: 20%;
+    }
+    .iconFoot{
+        width: 470px;
+        //margin-left: 20%;
+        //margin-right: 20%;
+        margin:auto;
+    }
+    .hFootText{
+        color:white;
+    }
+    .pFootText{
+        color:white;
+    
+    }
+    .hrFoot{
+        color:white;
+    
+    }
+    .footColum{
+        margin-right: 10%;
+        margin-left: 10%;
+    
+    }
+    .lastFooter{
+        background-color: #2B292E;   
+    }
+     
+    a.btn-social,
+    .btn-social
+    {
+        border-radius: 50%;
+        color: #ffffff !important;
+        display: inline-block;
+        height: 54px;
+        line-height: 54px;
+        margin: 8px 4px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color .3s;
+        webkit-transition: background-color .3s;
+        width: 54px;
+    }
+    
+    .btn-social .fa,.btn-social i
+    {
+        backface-visibility: hidden;
+        moz-backface-visibility: hidden;
+        ms-transform: scale(1);
+        o-transform: scale(1);
+        transform: scale(1);
+        transition: all .25s;
+        webkit-backface-visibility: hidden;
+        webkit-transform: scale(1);
+        webkit-transition: all .25s;
+    }
+    .btn-social:hover,.btn-social:focus
+    {
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+    }
+    .btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+    {
+        ms-transform: scale(1.3);
+        o-transform: scale(1.3);
+        transform: scale(1.3);
+        webkit-transform: scale(1.3);
+    }
+    .btn-social.btn-xs
+    {
+        font-size: 9px;
+        height: 24px;
+        line-height: 13px;
+        margin: 6px 2px;
+        width: 24px;
+    }
+    .btn-social.btn-sm
+    {
+        font-size: 13px;
+        height: 36px;
+        line-height: 18px;
+        margin: 6px 2px;
+        width: 36px;
+    }
+    .btn-social.btn-lg
+    {
+        font-size: 22px;
+        height: 72px;
+        line-height: 40px;
+        margin: 10px 6px;
+        width: 72px;
+    }
+    
+    .btn-behance
+    {
+        background-color: #1769ff;
+    }
+    .btn-behance:hover
+    {
+        background-color: #4a8aff;
+    }
+    .btn-bitbucket
+    {
+        background-color: #205081;
+    }
+    .btn-bitbucket:hover
+    {
+        background-color: #2a69aa;
+    }
+    .btn-codepen
+    {
+        background-color: #76daff;
+    }
+    .btn-codepen:hover
+    {
+        background-color: #a9e8ff;
+    }
+    .btn-deviantart
+    {
+        background-color: #4e6252;
+    }
+    .btn-deviantart:hover
+    {
+        background-color: #657e6a;
+    }
+    .btn-digg
+    {
+        background-color: #000;
+    }
+    .btn-digg:hover
+    {
+        background-color: #1a1a1a;
+    }
+    .btn-dribbble
+    {
+        background-color: #ea4c89;
+    }
+    .btn-dribbble:hover
+    {
+        background-color: #ef7aa7;
+    }
+    .btn-dropbox
+    {
+        background-color: #007ee5;
+    }
+    .btn-dropbox:hover
+    {
+        background-color: #1998ff;
+    }
+    .btn-facebook
+    {
+        background-color: #3b5998;
+    }
+    .btn-facebook:hover
+    {
+        background-color: #4c70ba;
+    }
+    .btn-flickr
+    {
+        background-color: #0063dc;
+    }
+    .btn-flickr:hover
+    {
+        background-color: #107cff;
+    }
+    .btn-foursquare
+    {
+        background-color: #ef4b78;
+    }
+    .btn-foursquare:hover
+    {
+        background-color: #f37a9b;
+    }
+    .btn-github
+    {
+        background-color: #4183c4;
+    }
+    .btn-github:hover
+    {
+        background-color: #689cd0;
+    }
+    .btn-google-plus
+    {
+        background-color: #dd4b39;
+    }
+    .btn-google-plus:hover
+    {
+        background-color: #e47365;
+    }
+    .btn-instagram
+    {
+        background-color: #3f729b;
+    }
+    .btn-instagram:hover
+    {
+        background-color: #548cb9;
+    }
+    .btn-jsfiddle
+    {
+        background-color: #4679bd;
+    }
+    .btn-jsfiddle:hover
+    {
+        background-color: #6c94ca;
+    }
+    .btn-lastfm
+    {
+        background-color: #e31b23;
+    }
+    .btn-lastfm:hover
+    {
+        background-color: #e9484e;
+    }
+    .btn-linkedin
+    {
+        background-color: #0976b4;
+    }
+    .btn-linkedin:hover
+    {
+        background-color: #0b96e5;
+    }
+    .btn-paypal
+    {
+        background-color: #253b80;
+    }
+    .btn-paypal:hover
+    {
+        background-color: #304da8;
+    }
+    .btn-pinterest
+    {
+        background-color: #cc2127;
+    }
+    .btn-pinterest:hover
+    {
+        background-color: #e04046;
+    }
+    .btn-reddit
+    {
+        background-color: #ff4500;
+    }
+    .btn-reddit:hover
+    {
+        background-color: #ff6a33;
+    }
+    .btn-skype
+    {
+        background-color: #00aff0;
+    }
+    .btn-skype:hover
+    {
+        background-color: #24c4ff;
+    }
+    .btn-soundcloud
+    {
+        background-color: #f80;
+    }
+    .btn-soundcloud:hover
+    {
+        background-color: #ffa033;
+    }
+    .btn-stack-overflow
+    {
+        background-color: #fe7a15;
+    }
+    .btn-stack-overflow:hover
+    {
+        background-color: #fe9748;
+    }
+    .btn-steam
+    {
+        background-color: #7da10e;
+    }
+    .btn-steam:hover
+    {
+        background-color: #a1d012;
+    }
+    .btn-stumbleupon
+    {
+        background-color: #eb4924;
+    }
+    .btn-stumbleupon:hover
+    {
+        background-color: #ef7053;
+    }
+    .btn-trello
+    {
+        background-color: #256a92;
+    }
+    .btn-trello:hover
+    {
+        background-color: #2f88bb;
+    }
+    .btn-tumblr
+    {
+        background-color: #35465c;
+    }
+    .btn-tumblr:hover
+    {
+        background-color: #485f7c;
+    }
+    .btn-twitch
+    {
+        background-color: #6441a5;
+    }
+    .btn-twitch:hover
+    {
+        background-color: #7e5bbe;
+    }
+    .btn-twitter
+    {
+        background-color: #55acee;
+    }
+    .btn-twitter:hover
+    {
+        background-color: #83c3f3;
+    }
+    .btn-vimeo
+    {
+        background-color: #1ab7ea;
+    }
+    .btn-vimeo:hover
+    {
+        background-color: #49c6ee;
+    }
+    .btn-vine
+    {
+        background-color: #00b488;
+    }
+    .btn-vine:hover
+    {
+        background-color: #00e7af;
+    }
+    .btn-vk
+    {
+        background-color: #45668e;
+    }
+    .btn-vk:hover
+    {
+        background-color: #587fae;
+    }
+    .btn-wechat
+    {
+        background-color: #98d11c;
+    }
+    .btn-wechat:hover
+    {
+        background-color: #afe53b;
+    }
+    .btn-wordpress
+    {
+        background-color: #21759b;
+    }
+    .btn-wordpress:hover
+    {
+        background-color: #2a95c5;
+    }
+    .btn-xing
+    {
+        background-color: #026466;
+    }
+    .btn-xing:hover
+    {
+        background-color: #039598;
+    }
+    .btn-yahoo
+    {
+        background-color: #400191;
+    }
+    .btn-yahoo:hover
+    {
+        background-color: #5601c4;
+    }
+    .btn-yelp
+    {
+        background-color: #af0606;
+    }
+    .btn-yelp:hover
+    {
+        background-color: #e00808;
+    }
+    .btn-youtube
+    {
+        background-color: #e52d27;
+    }
+    .btn-youtube:hover
+    {
+        background-color: #ea5955;
+    }
+    .btn-email
+    {
+        background-color: #44c456;
+    }
+    .btn-email:hover
+    {
+        background-color: #6bd079;
+    }
+ 
+
+
+
+
+    
+}
+
+
+
+@media only screen and (min-width: 434px) and (max-width: 499px)  {
+
+/////About
+.backAbout{
+
+    margin:0;
+    padding-bottom:10%;
+    //background-image: url("./assets/img/ninja.jpg");
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+    max-height: 1480px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 40px;
+
+}
+
+  
+.fakeNav{
+    height: 100px;
+    background-color: #000;
+    margin-bottom: 50%;
+}    
+
+
+.backUser{
+    position: absolute;  
+    background-color:#202020;
+    background-size: cover;
+    //background: url("./assets/img/backgroundblue.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    //height: 100%;
+    width: 100%;
+   
+}
+
+.containerDash{
+    //@at-rootmargin: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+// .cardDash{
+//     color: rgb(51, 51, 51);
+//     display: block;
+//     float: left;
+//     font-family: "Open Sans", sans-serif;
+//     font-size: 14px;
+//     height: 320px;
+//     line-height: 20px;
+//     min-height: 1px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     position: relative;
+//     
+// }
+
+.dashUnit{
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 93%;
+    float: left;
+}
+
+
+.packIconDash{
+    margin: auto;
+    width: 100px;
+}
+.countMail{
+    margin: auto;
+    width: 130px;
+}
+
+.dashUnitSmall{
+
+    margin: 1%;
+
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 129px;
+    width: 93%;
+    float: left;
+
+
+}
+
+.dashUnitBig{
+
+    margin: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 93%;
+    float: left;
+
+
+}
+.cardDashbig{
+    color: rgb(51, 51, 51);
+    display: block;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    height: 320px;
+    line-height: 20px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 585px;
+    float: left;
+
+}
+.title{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 8px;
+    padding: 0px;
+    height: inherit;
+}
+.userImg{
+    width: 220px;
+    height: 100px;
+    background-image: url("./assets/img/robo.jpg");
+    margin: auto;
+    margin-top: 5%;
+
+}
+.fontCountMail{
+    font-size: 850%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    //margin: auto;
+}
+.nameMail{
+    font-size: 300%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+
+}
+.contTextMail{
+    width: 100%;
+    margin: auto;
+    }
+
+
+    /////HOME
+    #textHead {
+        color: white;
+        font-size: 32px;
+    }
+    #textHead2 {
+        color: white;
+        font-size: 22px;
+
+    }
+    #divText{
+        position:absolute;
+        top:5%;
+        z-index: 1;
+        left: 25%;
+        right: 25%
+    }
+    .car{
+        margin-top: 56px;
+    }
+    .backHom{
+        width: 100%;
+        height:2100px;
+        background-color: rgb(61, 61, 61) 
+    }
+    .cardsIcon {
+        width: 60%;
+        margin: auto;
+    }
+    .contentCard{
+        //margin: 2%;
+        margin-top: 2%;
+        //margin-left: 20%;
+        //margin-right: 20%
+        padding-top: 5%;
+    }
+    
+    .contentCardHome{
+        //margin: 5%;
+        margin-top: 2%;
+        margin-left: 10%;
+        margin-right: 10%
+    }
+    .cardHome{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .cardContainer{
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+    }
+    
+    .image-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+      }
+      
+      .image-card img {
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+      }
+      
+      .zoom-effect-container:hover .image-card img {
+        -webkit-transform: scale(1.18);
+        transform: scale(1.18);
+      }
+      .zoom-effect-container {
+        float: left;
+        position: relative;
+        width: 99%;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 3px;
+        border-radius: 4px;
+    }
+
+     ////FOOTER
+     .footer{
+        background-color: #2B292E;
+        //position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: red;
+        color: white;
+        text-align: center;    
+    }
+    .container {
+        max-width: 100%; 
+    }
+    .registerDiv{
+        margin-bottom: 0%;
+    }
+    .containerIconFooter{
+        height: 140px;
+        //margin-right: 20%;
+    }
+    .iconFoot{
+        width: 100%;
+        //margin-left: 20%;
+        //margin-right: 20%;
+        margin:auto;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .hFootText{
+        color:white;
+    }
+    .pFootText{
+        color:white;
+    
+    }
+    .hrFoot{
+        color:white;
+    
+    }
+    .footColum{
+        margin-right: 10%;
+        margin-left: 10%;
+    
+    }
+    .lastFooter{
+        background-color: #2B292E;   
+    }
+     
+    a.btn-social,
+    .btn-social
+    {
+        border-radius: 50%;
+        color: #ffffff !important;
+        display: inline-block;
+        
+        line-height: 54px;
+        margin: 8px 4px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color .3s;
+        webkit-transition: background-color .3s;
+        height: 54px;
+        width: 54px;
+        //max-width: 54px;
+        //height: auto;
+        
+    }
+    
+    .btn-social .fa,.btn-social i
+    {
+        backface-visibility: hidden;
+        moz-backface-visibility: hidden;
+        ms-transform: scale(1);
+        o-transform: scale(1);
+        transform: scale(1);
+        transition: all .25s;
+        webkit-backface-visibility: hidden;
+        webkit-transform: scale(1);
+        webkit-transition: all .25s;
+    }
+    .btn-social:hover,.btn-social:focus
+    {
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+    }
+    .btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+    {
+        ms-transform: scale(1.3);
+        o-transform: scale(1.3);
+        transform: scale(1.3);
+        webkit-transform: scale(1.3);
+    }
+    .btn-social.btn-xs
+    {
+        font-size: 9px;
+        height: 24px;
+        line-height: 13px;
+        margin: 6px 2px;
+        width: 24px;
+    }
+    .btn-social.btn-sm
+    {
+        font-size: 13px;
+        height: 36px;
+        line-height: 18px;
+        margin: 6px 2px;
+        width: 36px;
+    }
+    .btn-social.btn-lg
+    {
+        font-size: 22px;
+        height: 72px;
+        line-height: 40px;
+        margin: 10px 6px;
+        width: 72px;
+    }
+    
+    .btn-behance
+    {
+        background-color: #1769ff;
+    }
+    .btn-behance:hover
+    {
+        background-color: #4a8aff;
+    }
+    .btn-bitbucket
+    {
+        background-color: #205081;
+    }
+    .btn-bitbucket:hover
+    {
+        background-color: #2a69aa;
+    }
+    .btn-codepen
+    {
+        background-color: #76daff;
+    }
+    .btn-codepen:hover
+    {
+        background-color: #a9e8ff;
+    }
+    .btn-deviantart
+    {
+        background-color: #4e6252;
+    }
+    .btn-deviantart:hover
+    {
+        background-color: #657e6a;
+    }
+    .btn-digg
+    {
+        background-color: #000;
+    }
+    .btn-digg:hover
+    {
+        background-color: #1a1a1a;
+    }
+    .btn-dribbble
+    {
+        background-color: #ea4c89;
+    }
+    .btn-dribbble:hover
+    {
+        background-color: #ef7aa7;
+    }
+    .btn-dropbox
+    {
+        background-color: #007ee5;
+    }
+    .btn-dropbox:hover
+    {
+        background-color: #1998ff;
+    }
+    .btn-facebook
+    {
+        background-color: #3b5998;
+    }
+    .btn-facebook:hover
+    {
+        background-color: #4c70ba;
+    }
+    .btn-flickr
+    {
+        background-color: #0063dc;
+    }
+    .btn-flickr:hover
+    {
+        background-color: #107cff;
+    }
+    .btn-foursquare
+    {
+        background-color: #ef4b78;
+    }
+    .btn-foursquare:hover
+    {
+        background-color: #f37a9b;
+    }
+    .btn-github
+    {
+        background-color: #4183c4;
+    }
+    .btn-github:hover
+    {
+        background-color: #689cd0;
+    }
+    .btn-google-plus
+    {
+        background-color: #dd4b39;
+    }
+    .btn-google-plus:hover
+    {
+        background-color: #e47365;
+    }
+    .btn-instagram
+    {
+        background-color: #3f729b;
+    }
+    .btn-instagram:hover
+    {
+        background-color: #548cb9;
+    }
+    .btn-jsfiddle
+    {
+        background-color: #4679bd;
+    }
+    .btn-jsfiddle:hover
+    {
+        background-color: #6c94ca;
+    }
+    .btn-lastfm
+    {
+        background-color: #e31b23;
+    }
+    .btn-lastfm:hover
+    {
+        background-color: #e9484e;
+    }
+    .btn-linkedin
+    {
+        background-color: #0976b4;
+    }
+    .btn-linkedin:hover
+    {
+        background-color: #0b96e5;
+    }
+    .btn-paypal
+    {
+        background-color: #253b80;
+    }
+    .btn-paypal:hover
+    {
+        background-color: #304da8;
+    }
+    .btn-pinterest
+    {
+        background-color: #cc2127;
+    }
+    .btn-pinterest:hover
+    {
+        background-color: #e04046;
+    }
+    .btn-reddit
+    {
+        background-color: #ff4500;
+    }
+    .btn-reddit:hover
+    {
+        background-color: #ff6a33;
+    }
+    .btn-skype
+    {
+        background-color: #00aff0;
+    }
+    .btn-skype:hover
+    {
+        background-color: #24c4ff;
+    }
+    .btn-soundcloud
+    {
+        background-color: #f80;
+    }
+    .btn-soundcloud:hover
+    {
+        background-color: #ffa033;
+    }
+    .btn-stack-overflow
+    {
+        background-color: #fe7a15;
+    }
+    .btn-stack-overflow:hover
+    {
+        background-color: #fe9748;
+    }
+    .btn-steam
+    {
+        background-color: #7da10e;
+    }
+    .btn-steam:hover
+    {
+        background-color: #a1d012;
+    }
+    .btn-stumbleupon
+    {
+        background-color: #eb4924;
+    }
+    .btn-stumbleupon:hover
+    {
+        background-color: #ef7053;
+    }
+    .btn-trello
+    {
+        background-color: #256a92;
+    }
+    .btn-trello:hover
+    {
+        background-color: #2f88bb;
+    }
+    .btn-tumblr
+    {
+        background-color: #35465c;
+    }
+    .btn-tumblr:hover
+    {
+        background-color: #485f7c;
+    }
+    .btn-twitch
+    {
+        background-color: #6441a5;
+    }
+    .btn-twitch:hover
+    {
+        background-color: #7e5bbe;
+    }
+    .btn-twitter
+    {
+        background-color: #55acee;
+    }
+    .btn-twitter:hover
+    {
+        background-color: #83c3f3;
+    }
+    .btn-vimeo
+    {
+        background-color: #1ab7ea;
+    }
+    .btn-vimeo:hover
+    {
+        background-color: #49c6ee;
+    }
+    .btn-vine
+    {
+        background-color: #00b488;
+    }
+    .btn-vine:hover
+    {
+        background-color: #00e7af;
+    }
+    .btn-vk
+    {
+        background-color: #45668e;
+    }
+    .btn-vk:hover
+    {
+        background-color: #587fae;
+    }
+    .btn-wechat
+    {
+        background-color: #98d11c;
+    }
+    .btn-wechat:hover
+    {
+        background-color: #afe53b;
+    }
+    .btn-wordpress
+    {
+        background-color: #21759b;
+    }
+    .btn-wordpress:hover
+    {
+        background-color: #2a95c5;
+    }
+    .btn-xing
+    {
+        background-color: #026466;
+    }
+    .btn-xing:hover
+    {
+        background-color: #039598;
+    }
+    .btn-yahoo
+    {
+        background-color: #400191;
+    }
+    .btn-yahoo:hover
+    {
+        background-color: #5601c4;
+    }
+    .btn-yelp
+    {
+        background-color: #af0606;
+    }
+    .btn-yelp:hover
+    {
+        background-color: #e00808;
+    }
+    .btn-youtube
+    {
+        background-color: #e52d27;
+    }
+    .btn-youtube:hover
+    {
+        background-color: #ea5955;
+    }
+    .btn-email
+    {
+        background-color: #44c456;
+    }
+    .btn-email:hover
+    {
+        background-color: #6bd079;
+    }
+ 
+
+
+
+
+    
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 433px)  {
+
+/////About
+.backAbout{
+
+    margin:0;
+    padding-bottom:10%;
+    //background-image: url("./assets/img/ninja.jpg");
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+    max-height: 1480px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 60px;
+
+}
+
+  
+.fakeNav{
+    height: 100px;
+    background-color: #000;
+    margin-bottom: 50%;
+}
+.backUser{
+    position: absolute;  
+    background-color:#202020;
+    background-size: cover;
+    //background: url("./assets/img/backgroundblue.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    //height: 100%;
+    width: 100%;
+   
+}
+
+.containerDash{
+    //@at-rootmargin: auto;
+    // margin-left: 5%;
+    margin-top: 20%;
+
+}
+
+// .cardDash{
+//     color: rgb(51, 51, 51);
+//     display: block;
+//     float: left;
+//     font-family: "Open Sans", sans-serif;
+//     font-size: 14px;
+//     height: 320px;
+//     line-height: 20px;
+//     min-height: 1px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     position: relative;
+//     
+// }
+
+.dashUnit{
+    margin-bottom: 1%;
+    margin-top: 1%;
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    background-color: #3d3d3d;
+    color: white;
+    height: 290px;
+    width: 100%;
+    float: left;
+}
+
+
+.packIconDash{
+    margin: auto;
+    width: 100px;
+}
+.countMail{
+    margin: auto;
+    width: 130px;
+}
+
+.dashUnitSmall{
+
+    margin-bottom: 1%;
+    margin-top: 1%;
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 129px;
+    width: 100%;
+    float: left;
+
+
+}
+
+.dashUnitBig{
+
+    margin-bottom: 1%;
+    margin-top: 1%;
+
+    padding-bottom: 10px;
+    border: 1px solid #383737;
+    //background-image: url('../images/sep-half.png');
+    background-color: #3d3d3d;
+    color: white;
+    height: 390px;
+    width: 100%;
+    float: left;
+
+
+}
+.cardDashbig{
+    color: rgb(51, 51, 51);
+    display: block;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    height: 320px;
+    line-height: 20px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 585px;
+    float: left;
+
+}
+.title{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 8px;
+    padding: 0px;
+    height: inherit;
+}
+.userImg{
+    width: 220px;
+    height: 100px;
+    background-image: url("./assets/img/robo.jpg");
+    margin: auto;
+    margin-top: 5%;
+
+}
+.fontCountMail{
+    font-size: 850%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    //margin: auto;
+}
+.nameMail{
+    font-size: 300%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+
+}
+.contTextMail{
+    width: 100%;
+    margin: auto;
+    }
+    /////HOME
+    #textHead {
+        color: white;
+        font-size: 22px;
+    }
+    #textHead2 {
+        color: white;
+        font-size: 15px;
+
+    }
+    #divText{
+        position:absolute;
+        top:5%;
+        z-index: 1;
+        left: 25%;
+        right: 25%
+    }
+   .iconHome{
+       width: 100px;
+       height: 100px;
+   }
+    .car{
+        margin-top: 56px;
+    }
+    .backHom{
+        width: 100%;
+        height:2100px;
+        background-color: rgb(61, 61, 61) 
+    }
+    .cardsIcon {
+        width: 80%;
+        margin: auto;
+    }
+    .contentCard{
+        //margin: 2%;
+        margin-top: 2%;
+        //margin-left: 20%;
+        //margin-right: 20%
+        padding-top: 5%;
+    }
+    
+    .contentCardHome{
+        //margin: 5%;
+        margin-top: 2%;
+        margin-left: 10%;
+        margin-right: 10%
+    }
+    .cardHome{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .cardContainer{
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+    }
+    
+    .image-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+      }
+      
+      .image-card img {
+        -webkit-transition: 1s ease;
+        transition: 1s ease;
+      }
+      
+      .zoom-effect-container:hover .image-card img {
+        -webkit-transform: scale(1.18);
+        transform: scale(1.18);
+      }
+      .zoom-effect-container {
+        float: left;
+        position: relative;
+        width: 98%;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 3px;
+        border-radius: 4px;
+    }
+
+     ////FOOTER
+     .footer{
+        background-color: #2B292E;
+        //position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: red;
+        color: white;
+        text-align: center;    
+    }
+    .container {
+        max-width: 100%; 
+    }
+    .registerDiv{
+        margin-bottom: 0%;
+    }
+    .containerIconFooter{
+        height: 300px;
+        //margin-right: 20%;
+    }
+    .iconFoot{
+        width: 300px;
+        //margin-left: 20%;
+        //margin-right: 20%;
+        margin:auto;
+    }
+    .hFootText{
+        color:white;
+    }
+    .pFootText{
+        color:white;
+    
+    }
+    .hrFoot{
+        color:white;
+    
+    }
+    .footColum{
+        margin-right: 10%;
+        margin-left: 10%;
+    
+    }
+    .lastFooter{
+        background-color: #2B292E;   
+    }
+     
+    a.btn-social,
+    .btn-social
+    {
+        border-radius: 50%;
+        color: #ffffff !important;
+        display: inline-block;
+        height: 54px;
+        line-height: 54px;
+        margin: 8px 4px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color .3s;
+        webkit-transition: background-color .3s;
+        width: 54px;
+    }
+    
+    .btn-social .fa,.btn-social i
+    {
+        backface-visibility: hidden;
+        moz-backface-visibility: hidden;
+        ms-transform: scale(1);
+        o-transform: scale(1);
+        transform: scale(1);
+        transition: all .25s;
+        webkit-backface-visibility: hidden;
+        webkit-transform: scale(1);
+        webkit-transition: all .25s;
+    }
+    .btn-social:hover,.btn-social:focus
+    {
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+    }
+    .btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+    {
+        ms-transform: scale(1.3);
+        o-transform: scale(1.3);
+        transform: scale(1.3);
+        webkit-transform: scale(1.3);
+    }
+    .btn-social.btn-xs
+    {
+        font-size: 9px;
+        height: 24px;
+        line-height: 13px;
+        margin: 6px 2px;
+        width: 24px;
+    }
+    .btn-social.btn-sm
+    {
+        font-size: 13px;
+        height: 36px;
+        line-height: 18px;
+        margin: 6px 2px;
+        width: 36px;
+    }
+    .btn-social.btn-lg
+    {
+        font-size: 22px;
+        height: 72px;
+        line-height: 40px;
+        margin: 10px 6px;
+        width: 72px;
+    }
+    
+    .btn-behance
+    {
+        background-color: #1769ff;
+    }
+    .btn-behance:hover
+    {
+        background-color: #4a8aff;
+    }
+    .btn-bitbucket
+    {
+        background-color: #205081;
+    }
+    .btn-bitbucket:hover
+    {
+        background-color: #2a69aa;
+    }
+    .btn-codepen
+    {
+        background-color: #76daff;
+    }
+    .btn-codepen:hover
+    {
+        background-color: #a9e8ff;
+    }
+    .btn-deviantart
+    {
+        background-color: #4e6252;
+    }
+    .btn-deviantart:hover
+    {
+        background-color: #657e6a;
+    }
+    .btn-digg
+    {
+        background-color: #000;
+    }
+    .btn-digg:hover
+    {
+        background-color: #1a1a1a;
+    }
+    .btn-dribbble
+    {
+        background-color: #ea4c89;
+    }
+    .btn-dribbble:hover
+    {
+        background-color: #ef7aa7;
+    }
+    .btn-dropbox
+    {
+        background-color: #007ee5;
+    }
+    .btn-dropbox:hover
+    {
+        background-color: #1998ff;
+    }
+    .btn-facebook
+    {
+        background-color: #3b5998;
+    }
+    .btn-facebook:hover
+    {
+        background-color: #4c70ba;
+    }
+    .btn-flickr
+    {
+        background-color: #0063dc;
+    }
+    .btn-flickr:hover
+    {
+        background-color: #107cff;
+    }
+    .btn-foursquare
+    {
+        background-color: #ef4b78;
+    }
+    .btn-foursquare:hover
+    {
+        background-color: #f37a9b;
+    }
+    .btn-github
+    {
+        background-color: #4183c4;
+    }
+    .btn-github:hover
+    {
+        background-color: #689cd0;
+    }
+    .btn-google-plus
+    {
+        background-color: #dd4b39;
+    }
+    .btn-google-plus:hover
+    {
+        background-color: #e47365;
+    }
+    .btn-instagram
+    {
+        background-color: #3f729b;
+    }
+    .btn-instagram:hover
+    {
+        background-color: #548cb9;
+    }
+    .btn-jsfiddle
+    {
+        background-color: #4679bd;
+    }
+    .btn-jsfiddle:hover
+    {
+        background-color: #6c94ca;
+    }
+    .btn-lastfm
+    {
+        background-color: #e31b23;
+    }
+    .btn-lastfm:hover
+    {
+        background-color: #e9484e;
+    }
+    .btn-linkedin
+    {
+        background-color: #0976b4;
+    }
+    .btn-linkedin:hover
+    {
+        background-color: #0b96e5;
+    }
+    .btn-paypal
+    {
+        background-color: #253b80;
+    }
+    .btn-paypal:hover
+    {
+        background-color: #304da8;
+    }
+    .btn-pinterest
+    {
+        background-color: #cc2127;
+    }
+    .btn-pinterest:hover
+    {
+        background-color: #e04046;
+    }
+    .btn-reddit
+    {
+        background-color: #ff4500;
+    }
+    .btn-reddit:hover
+    {
+        background-color: #ff6a33;
+    }
+    .btn-skype
+    {
+        background-color: #00aff0;
+    }
+    .btn-skype:hover
+    {
+        background-color: #24c4ff;
+    }
+    .btn-soundcloud
+    {
+        background-color: #f80;
+    }
+    .btn-soundcloud:hover
+    {
+        background-color: #ffa033;
+    }
+    .btn-stack-overflow
+    {
+        background-color: #fe7a15;
+    }
+    .btn-stack-overflow:hover
+    {
+        background-color: #fe9748;
+    }
+    .btn-steam
+    {
+        background-color: #7da10e;
+    }
+    .btn-steam:hover
+    {
+        background-color: #a1d012;
+    }
+    .btn-stumbleupon
+    {
+        background-color: #eb4924;
+    }
+    .btn-stumbleupon:hover
+    {
+        background-color: #ef7053;
+    }
+    .btn-trello
+    {
+        background-color: #256a92;
+    }
+    .btn-trello:hover
+    {
+        background-color: #2f88bb;
+    }
+    .btn-tumblr
+    {
+        background-color: #35465c;
+    }
+    .btn-tumblr:hover
+    {
+        background-color: #485f7c;
+    }
+    .btn-twitch
+    {
+        background-color: #6441a5;
+    }
+    .btn-twitch:hover
+    {
+        background-color: #7e5bbe;
+    }
+    .btn-twitter
+    {
+        background-color: #55acee;
+    }
+    .btn-twitter:hover
+    {
+        background-color: #83c3f3;
+    }
+    .btn-vimeo
+    {
+        background-color: #1ab7ea;
+    }
+    .btn-vimeo:hover
+    {
+        background-color: #49c6ee;
+    }
+    .btn-vine
+    {
+        background-color: #00b488;
+    }
+    .btn-vine:hover
+    {
+        background-color: #00e7af;
+    }
+    .btn-vk
+    {
+        background-color: #45668e;
+    }
+    .btn-vk:hover
+    {
+        background-color: #587fae;
+    }
+    .btn-wechat
+    {
+        background-color: #98d11c;
+    }
+    .btn-wechat:hover
+    {
+        background-color: #afe53b;
+    }
+    .btn-wordpress
+    {
+        background-color: #21759b;
+    }
+    .btn-wordpress:hover
+    {
+        background-color: #2a95c5;
+    }
+    .btn-xing
+    {
+        background-color: #026466;
+    }
+    .btn-xing:hover
+    {
+        background-color: #039598;
+    }
+    .btn-yahoo
+    {
+        background-color: #400191;
+    }
+    .btn-yahoo:hover
+    {
+        background-color: #5601c4;
+    }
+    .btn-yelp
+    {
+        background-color: #af0606;
+    }
+    .btn-yelp:hover
+    {
+        background-color: #e00808;
+    }
+    .btn-youtube
+    {
+        background-color: #e52d27;
+    }
+    .btn-youtube:hover
+    {
+        background-color: #ea5955;
+    }
+    .btn-email
+    {
+        background-color: #44c456;
+    }
+    .btn-email:hover
+    {
+        background-color: #6bd079;
+    }
+ 
+
+
+
+
+    
+}
+
+
+
+
+
+
 
 ///////HOME
 .contentCardHome{
@@ -513,16 +6054,16 @@ a.btn-social,
     transition: 1s ease;
 }
 
-.zoom-effect-container {
-    float: left;
-    position: relative;
-    width: 24%;
-    height: 500px;
-    margin: 0 auto;
-    overflow: hidden;
-    margin: 6px;
-    border-radius: 4px;
-}
+// .zoom-effect-container {
+//     float: left;
+//     position: relative;
+//     width: 24%;
+//     height: 500px;
+//     margin: 0 auto;
+//     overflow: hidden;
+//     margin: 6px;
+//     border-radius: 4px;
+// }
 
 .image-card {
   position: absolute;
@@ -542,76 +6083,11 @@ a.btn-social,
 }
 .backHom{
     width: 100%;
-    height:1000px;
+    //height:1000px;
     background-color: rgb(61, 61, 61) 
 }
 
-@media (max-width: 1248px)  and (min-width: 900px) {
-    .zoom-effect-container {
-        float: left;
-        position: relative;
-        width: 31%;
-        height: 450px;
-        margin: 0 auto;
-        overflow: hidden;
-        margin: 10px;
-        border-radius: 4px;
-    }
-    .backHom{
-        
-        height:1000px;
-        
-    }
-    
-   
-}
 
-@media (max-width: 899px)  and (min-width: 700px) {
-    .zoom-effect-container {
-        float: left;
-        position: relative;
-        width: 47%;
-        height: 500px;
-        margin: 0 auto;
-        overflow: hidden;
-        margin: 10px;
-        border-radius: 4px;
-    }
-    .backHom{
-        height:1200px;   
-    }  
-}
-@media (max-width: 699px)  and (min-width: 556px) {
-    .zoom-effect-container {
-        float: left;
-        position: relative;
-        width: 47%;
-        height: 400px;
-        margin: 0 auto;
-        overflow: hidden;
-        margin: 8px;
-        border-radius: 4px;
-    }
-    .backHom{
-        height:1000px;   
-    }  
-}
-
-@media (max-width: 555px)  and (min-width: 320px) {
-    .zoom-effect-container {
-        float: left;
-        position: relative;
-        width: 98%;
-        height: 600px;
-        margin: 0 auto;
-        overflow: hidden;
-        margin-bottom: 10px;
-        border-radius: 4px;
-    }
-    .backHom{
-        height:2500px;   
-    }  
-}
 
 
 
@@ -622,42 +6098,37 @@ a.btn-social,
   
 ///////ABOUT
 
-.backAbout{
+// .backAbout{
 
-    margin:0;
-    padding-bottom:10%;
-    background-image: url("./assets/img/ninja.jpg");
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover;
-    height: 980px;
-    width: 100%;
+//     margin:0;
+//     padding-bottom:10%;
+//     //background-image: url("./assets/img/ninja.jpg");
+//     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+//     background-size: cover;
+//     max-height: 980px;
+//     width: 100%;
 
-}
+// }
+
 .some-class {
     height: 50px;
     width: 100%;
     box-shadow: 0px 15px 20px -15px #111; 
   }
-.contentCard{
-    margin: 2%;
-    margin-top: 2%;
-    //margin-left: 20%;
-    //margin-right: 20%
-}
+// .contentCard{
+//     margin: 2%;
+//     margin-top: 2%;
+//     //margin-left: 20%;
+//     //margin-right: 20%
+// }
 .containerCardHome{
     //margin-top: 180px
     margin:auto;
    max-width: 1280px;
 }
 
-#divText{
-    position:absolute;
-    top:35%;
-    z-index: 1;
-    left: 25%;
-    right: 25%
 
-}
+
 #textHead{
     color: white
 }
@@ -706,9 +6177,7 @@ a.btn-social,
 }
 
 @media only screen and (min-width: 1400px) {
-
-    
-    
+   
     .packIcon{
         margin-left:auto;
         margin-right: auto;
@@ -725,258 +6194,6 @@ a.btn-social,
     }
 }
 
-
-@media only screen 
-and (device-width : 768px) 
-and (device-height : 1024px) 
-{ //ipad portrait
-    .homeIcon{
-        width: 15%;
-        height: auto;
-    
-    }
-    .DivIcon{
-        height: 500px; 
-        background-color: transparent
-    
-    }
-    .iconHome{    
-        height: auto;
-        
-    }
-    .packIcon{    
-        //padding-left: 20px;
-        margin-right: 39px;
-        width: 600px
-    }
-    .contentCard{
-        margin: 5%;
-        margin-top: 2%;
-        margin-left: 3%;
-        margin-right: 3%
-    }
-    
-
-} 
-
-@media only screen 
-and (device-width : 1024px) 
-and (device-height : 768px) 
-{ //ipad land
-    .homeIcon{
-        width: 15%;
-        height: auto;
-    
-    }
-    .DivIcon{
-        height: 400px; 
-        background-color: transparent
-    
-    }
-    .iconHome{
-        width: 128px;    
-        height: auto;
-        
-    }
-    .packIcon{    
-        //padding-left: 20px;
-        margin-right: 39px;
-        width: 1024px
-    }
-    .imgCar{
-        height: 768px;
-    }
-    .contentCard{
-        margin: 5%;
-        margin-top: 2%;
-        margin-left: 3%;
-        margin-right: 3%
-    }
-    
-
-} 
-
-
-
-@media only screen 
-and (device-width : 834px) 
-and (device-height : 1112px) 
-{ //ipad pro portrait
-    .homeIcon{
-        width: 15%;
-        height: auto;
-    
-    }
-    .DivIcon{
-        height: 360px; 
-        background-color: transparent
-    
-    }
-    .iconHome{ 
-        width: 100px;   
-        height: auto;
-        
-    }
-    .packIcon{    
-        padding-left: 13px;
-        margin-right: 39px;
-        width: 1000px
-    }
-    .contentCard{
-        margin: 2%;
-        margin-top: 2%;
-        margin-left: 2%;
-        margin-right: 2%
-    }
-    
-
-}
-
-@media only screen 
-and (device-width : 1112px) 
-and (device-height : 834px) 
-{ //ipad pro land
-    .homeIcon{
-        width: 10%;
-        height: auto;
-    
-    }
-    .DivIcon{
-        height: 360px; 
-        background-color: transparent
-    
-    }
-    .imgCar{
-        height: 800px;
-    }
-    .iconHome{ 
-        width: 100px;   
-        height: auto;
-        
-    }
-    .packIcon{    
-        padding-left: 70px;
-        margin-right: 39px;
-        width: 1000px
-    }
-    .contentCard{
-        margin: 2%;
-        margin-top: 2%;
-        margin-left: 2%;
-        margin-right: 2%
-    }
-    
-
-}
-
-
-@media only screen 
-and (device-width : 1024px) 
-and (device-height : 1366px) 
-{ //ipad pro portrait
-    .homeIcon{
-        width: 15%;
-        height: auto;
-    
-    }
-    .DivIcon{
-        height: 360px; 
-        background-color: transparent
-    
-    }
-    .iconHome{ 
-        width: 100px;   
-        height: auto;
-        
-    }
-    .packIcon{    
-        padding-left: 100px;
-        margin-right: 39px;
-        width: 1000px
-    }
-    .contentCard{
-        margin: 5%;
-        margin-top: 2%;
-        margin-left: 3%;
-        margin-right: 3%
-    }
-    
-
-}
-
-@media only screen 
-and (device-width : 1366px) 
-and (device-height : 1024px) 
-{ //ipad pro land
-    .homeIcon{
-        width: 15%;
-        height: auto;
-    
-    }
-    .DivIcon{
-        height: 450px; 
-        background-color: transparent
-    
-    }
-    .iconHome{
-        width: 128px;    
-        height: auto;
-        
-    }
-    .packIcon{    
-        padding-left: 150px;
-        margin-right: 150px;
-        width: 1200px;
-        
-    }
-    .imgCar{
-        height: 1024px;
-    }
-    .contentCard{
-        margin: 5%;
-        margin-top: 2%;
-        margin-left: 3%;
-        margin-right: 3%
-    }
-    
-
-} 
-
-@media only screen 
-and (device-width : 1280px) 
-and (device-height : 800px) 
-{    .homeIcon{
-    width: 10%;
-    height: auto;
-
-}
-.DivIcon{
-    height: 400px; 
-    background-color: transparent
-
-}
-.iconHome{
-    width: 128px;    
-    height: auto;
-    
-}
-.packIcon{    
-    //padding-left: 20px;
-    margin-right: 120px;
-    width: 1024px
-}
-    .imgCar{
-        height: 800px;
-    }
-    .contentCard{
-        margin: 5%;
-        margin-top: 2%;
-        margin-left: 5%;
-        margin-right: 5%
-    }
-    
-
-} 
 
 
 @media only screen 
@@ -1888,64 +7105,7 @@ and (height : 667px) {
             }  
 
     }
-    // @media only screen 
-    // and (device-width : 640px) 
-    // and (device-height : 360px) 
-    // {   
-    //     .homeIcon{
-    //         width: 20%;
-    //         height: auto;
-    
-    //     }
-    //     .DivIcon{
-    //         height: 560px; 
-    //         background-color: transparent
-    
-    //     }
-    //     .iconHome{    
-    //         height: auto;
-        
-    //     }
-    //     .packIcon{    
-            
-    //         //margin-right: 15px;
-    //         width: 240px
-    //     }
-
-    //     .imgCar{
-    //         height: 360px;
-    //     }
-    //     #divText{
-    //         position:absolute;
-    //         top:19%;
-    //         z-index: 1;
-    //         left: 15%;
-    //         right: 15%
-    //         }
-    //     #buttonHead{
-    //         color: white; 
-    //         border: 1px solid white;                
-    //         margin: 2%;
-    //         position:absolute;
-    //         top:85%;
-    //         left: 25%;                
-    //         right: 50%
-    //         }
-    //     #buttonHead2{
-    //         color: white; 
-    //         border: 1px solid white;
-    //         margin: 2%;
-    //         position:absolute;
-    //         top:85%;
-    //         }
-    //     .contentCard{
-    //         margin: 5%;
-    //         margin-top: 2%;
-    //         margin-left: 2%;
-    //         margin-right: 2%
-    //         }  
-
-    // }  
+ 
 
     @media only screen 
     and (device-width : 740px) 
@@ -2666,26 +7826,9 @@ h1{
     }
 }
 
-@media only screen 
-and (device-width : 1024px) 
-and (device-height : 768px) 
-//ipad landscape
-{
-    .back{
-        position: relative;
-        margin:0;
-        //background-attachment:fixed;
-        background-image: url("./assets/img/Parallax-Background-Dark-08.jpg");
-        -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-        background-size: cover;
-        //height: 100%;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-    }
 
- }
+
+
  @media only screen 
 and (device-height : 375px) 
 and (device-width : 812px) 
@@ -3441,116 +8584,7 @@ and (device-width : 812px)
 
 }
 
-//////Home user
 
-.backUser{
-    position: absolute;  
-    background-color:#202020;
-    background-size: cover;
-    //background: url("./assets/img/backgroundblue.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    //height: 100%;
-    width: 100%;
-   
-}
-
-.containerDash{
-    //@at-rootmargin: auto;
-    margin-left: 5%;
-    margin-top: 5%;
-}
-
-// .cardDash{
-//     color: rgb(51, 51, 51);
-//     display: block;
-//     float: left;
-//     font-family: "Open Sans", sans-serif;
-//     font-size: 14px;
-//     height: 320px;
-//     line-height: 20px;
-//     min-height: 1px;
-//     padding-left: 15px;
-//     padding-right: 15px;
-//     position: relative;
-//     
-// }
-
-.dashUnit{
-    margin: 15px;
-    padding-bottom: 10px;
-    border: 1px solid #383737;
-    background-color: #3d3d3d;
-    color: white;
-    height: 290px;
-    width: 22%;
-    float: left;
-}
-
-.dashUnitSmall{
-
-    margin: 15px;
-    padding-bottom: 10px;
-    border: 1px solid #383737;
-    //background-image: url('../images/sep-half.png');
-    background-color: #3d3d3d;
-    color: white;
-    height: 130px;
-    width: 22%;
-    float: left;
-
-
-}
-
-.dashUnitBig{
-
-    margin: 15px;
-    padding-bottom: 10px;
-    border: 1px solid #383737;
-    //background-image: url('../images/sep-half.png');
-    background-color: #3d3d3d;
-    color: white;
-    height: 290px;
-    width: 45.9%;
-    float: left;
-
-
-}
-.cardDashbig{
-    color: rgb(51, 51, 51);
-    display: block;
-    float: left;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    height: 320px;
-    line-height: 20px;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    width: 585px;
-    float: left;
-
-}
-.title{
-    font-size: 11px;
-    text-transform: uppercase;
-    color: #ffffff;
-    margin: 8px;
-    padding: 0px;
-    height: inherit;
-}
-.userImg{
-    width: 220px;
-    height: 100px;
-    background-image: url("./assets/img/robo.jpg");
-    margin: auto;
-    margin-top: 5%;
-
-}
-.fontCountMail{
-    font-size: 850%;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 
 ///////mailbox
 

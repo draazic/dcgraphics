@@ -9,34 +9,38 @@
          <div class ="userImg"></div> 
         <div>
           <h2 style="text-align: center;">{{user?.name}}</h2>
-          <h5 style="text-align: center;">{{user?.email}}</h5> 
+          <h5 class="emailText" style="text-align: center;">{{user?.email}}</h5> 
         </div>
-         <div style="margin-left:80px;margin-top:50px" >
-          <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-          <mat-icon aria-hidden="false" aria-label="Example home icon">mail</mat-icon>
-          <mat-icon aria-hidden="false" aria-label="Example home icon">settings_applications</mat-icon>
-          <mat-icon aria-hidden="false" aria-label="Example home icon">images</mat-icon>
-
-
-        </div> 
+        <div>
+          <div class="packIconDash" >
+            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">mail</mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">settings_applications</mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">images</mat-icon>
+          </div> 
+        </div>
      </div>
    
 
   
       <div class = "dashUnit">
           <span class = "title">Mail</span>
-          <div style="margin-left:105px; height: 160px;">
+          <div>
+            <div class="countMail">
               <span class="fontCountMail"   [countUp]="newNum" [reanimateOnClick]="false"
               [options]="option">
               </span>
+            </div>
           </div> 
-          <div style="margin-left:110px">
-              <span style="font-size: 300%;"class="fontCountMail" >Mails
+          <div>
+            <div class="contTextMail">
+              <span class="nameMail" >Mails
               </span>
-          </div> 
+            </div> 
+          </div>
       </div>
 
-        <div class = "dashUnit">
+         <div class = "dashUnit">
         <span class = "title">Map</span>
           <app-map></app-map>  
    
@@ -46,20 +50,18 @@
     
           <div class = "dashUnitSmall">
             <span class = "title"> Date time</span>
-            <h5 style="text-align: center;margin-top:35px">{{date}}</h5>
-
-     
+            <h5 style="text-align: center;margin-top:35px">{{date}}</h5>    
           </div>
+
           <div class = "dashUnitSmall">
-            <span style="float: left; height: 10px; width: 100%;margin-top: 0px;" class = "title"> weather</span>
+            <span style="float: left; height: 10px;margin-top: 0px;" class = "title"> weather</span>
             <div style="float: left;margin-top: 2px;"> <img src={{weather?.current_condition?.icon_big}}  style="height: 100px;" alt=""> </div>
-            <div style="float: left;margin-top: 2px;margin-left: 10px;width: 150px;">            
-              <h1> {{weather?.current_condition?.tmp}} °</h1>
-              
+            <div class='textWeatherDash' >            
+              <h1> {{weather?.current_condition?.tmp}} °</h1>             
               <h6 >{{weather?.current_condition?.condition}}</h6>
             </div>
      
-            </div>
+        </div>
    
 
    
@@ -88,29 +90,19 @@
    
      
          <div class = "dashUnit">
-         <span class = "title"> title</span>
-
-    
+          <span class = "title"> title</span>    
          </div>
-       
-   
-       
-           <div class = "dashUnit">
-           <span class = "title"> title</span>
-
-      
-           </div>
-        
-   
-       
-             <div class = "dashUnit">
-             <span class = "title"> title</span>
-
-        
-             </div>
+            
+        <div class = "dashUnit">
+          <span class = "title"> title</span>    
+        </div>
+               
+        <div class = "dashUnit">
+          <span class = "title"> title</span>       
+        </div>
       
 
- </div>
+   </div>
 </div>
 
 
