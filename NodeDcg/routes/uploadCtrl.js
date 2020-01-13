@@ -24,8 +24,7 @@ models.portfolio.create({
     
   }).then(image => {
     try{
-      fs.writeFileSync(__basedir + '/tmp/' + image.titre, image.url);    
-      
+      fs.writeFileSync(image.url);         
       // exit node.js app
       res.json({'msg': 'File uploaded successfully!', 'file': req.file});
     }catch(e){

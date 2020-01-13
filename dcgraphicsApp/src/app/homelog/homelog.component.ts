@@ -68,7 +68,7 @@ export class HomelogComponent implements OnInit {
     startVal: this.num,
     useEasing: true,
     duration: 3,
-    //decimalPlaces: 1,
+    
   };
   interval: any;
   currentView: string;
@@ -79,6 +79,8 @@ export class HomelogComponent implements OnInit {
 
 
   @ViewChild('fileInput', {static: false}) fileInput: ElementRef;
+  name:string;
+  content:string;
 
 
 
@@ -108,7 +110,6 @@ export class HomelogComponent implements OnInit {
   onFileChange(event) {
     if(event.target.files.length > 0) {
       let file = event.target.files[0];
-      console.log(file.name);
       this.form.get('uploadfile').setValue(file);  
     }
   }
@@ -128,23 +129,29 @@ export class HomelogComponent implements OnInit {
     this.portfolioService.createPortfolio(formModel).subscribe((res)=>{
       this.portfolioService.getPortfolios().subscribe((res : any[])=>{
         this.images = res;
+
       });
         },
       err=>{
       console.log(" Error..");
-      //this.formValues.resetForm();
         } 
       );
     setTimeout(() => {
-      console.log(formModel);
       alert('done!');
       this.loading = false;
+      this.form.get('uploadfile').setValue(null);
+      this.fileInput.nativeElement.value = '';
+      this.name='';
+      this.content='';
+      
     }, 1000);
   }
 
   clearFile() {
     this.form.get('uploadfile').setValue(null);
     this.fileInput.nativeElement.value = '';
+    this.name='';
+    this.content='';
   }
 
 
@@ -155,7 +162,6 @@ export class HomelogComponent implements OnInit {
         startVal: this.num,
         useEasing: true,
         duration: 3,
-        //decimalPlaces: 1,
       };
       if (this.interval)
       clearInterval(this.interval);
@@ -191,7 +197,6 @@ export class HomelogComponent implements OnInit {
           };
           this.dataCurrentService.setPosition(this.position)
           
-          //console.log(this.position);
 
         })
       });

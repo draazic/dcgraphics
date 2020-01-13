@@ -19,8 +19,7 @@ import { Router } from '@angular/router';
       state('show', style({
         opacity: 1,
         color: "#2B292E"
-        
-        
+               
       })),
       state('hide',   style({
         opacity: 0,
@@ -70,6 +69,7 @@ export class NavComponent implements OnInit {
     window.location.replace('/login');
     
   }
+  
   
   
 }
