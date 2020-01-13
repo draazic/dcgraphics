@@ -84,6 +84,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 @media only screen and (min-width: 1440px) {
 
 
+
+
+
+    ///////contact
+
+
+.containerContact {
+    padding-top: 5%;
+    max-width: 500px;
+    margin:auto;
+    }
     //////Home user
 
 .backUser{
@@ -7529,6 +7540,7 @@ and (min-width:700px)
 and (max-width: 1199px) 
 {
 .containerContact {
+            padding-top: 10%;
             max-width: 500px;
             margin:auto;
         }
@@ -7811,6 +7823,15 @@ h1{
 }
 @media only screen and (min-width: 1025px) {
     /* styles for browsers larger than 1440px; */
+
+    ///////contact
+
+
+    .containerContact {
+        padding-top: 5%;
+        max-width: 500px;
+        margin:auto;
+    }
     .back{
         position: absolute;
         margin:0;
