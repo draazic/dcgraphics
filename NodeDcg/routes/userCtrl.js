@@ -3,6 +3,7 @@ var jwt      = require('jsonwebtoken');
 var models   = require('../models');
 var jwtUtils = require('../utils/jwt.utils');
 var asyncLib =  require('async');
+const fs = require('fs');
 
 const EMAIL_REGEX=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const PASSWORD_REGEX=/^(?=.*\d).{4,9}$/;
@@ -15,7 +16,7 @@ module.exports = {
         var bio = req.body.bio;
         var isAdmin = req.body.isAdmin;
 
-        //console.log(password)
+        
         
         
 
@@ -53,6 +54,7 @@ module.exports = {
                                    password:bcryptedPassword,
                                    bio:bio,
                                    isAdmin:isAdmin
+                                   //urlAvatar default string link of database
                                    
                     })
                                 
@@ -79,7 +81,7 @@ module.exports = {
 
     },
     login: function(req, res){
-            console.log(req.body)
+            //console.log(req.body)
             var email = req.body.email;
             var password =req.body.password;
             //console.log(password);
@@ -99,9 +101,7 @@ module.exports = {
                             return res.status(200).json({
                                 'userId': userFound.id,
                                 'token': jwtUtils.generateTokenForUser(userFound)
-
                             })
-
                         }else{
                             return res.status(403).json({'error':'invalid password'})
                         }
@@ -122,13 +122,13 @@ module.exports = {
 
         var headerAuth = req.headers['authorization'];
         var id = jwtUtils.getUserId(headerAuth);
-        console.log(id);
+        //console.log(id);
 
         if(id < 0)
         return res.status(400).json({'error':'wrong token'});
 
         models.user.findOne({
-            attributes:['id','email','name','bio'],
+            attributes:['id','email','name','bio','avatarUrl'],
             where:{id:id}
         }).then(function(user){
             if (user){
@@ -140,50 +140,111 @@ module.exports = {
             res.status(500).json({'error':'cannot fetch user'});
         });
 
-
-
     },
     updateUserProfile: function(req,res){
-
-        //get auth header
+     
         var headerAuth = req.headers['authorization'];
         var userId = jwtUtils.getUserId(headerAuth);
-
-        // console.log(headerAuth)
-        // console.log(userId)
-        //params
-        var bio = req.body.bio;
         
 
+        if(userId < 0)
+        return res.status(400).json({'error':'wrong token'});
+
+       
+        let avatar = req.file ? req.file.filename : undefined;
+       
+
+
+        //params
+        var name = req.body.name;
+        var bio = req.body.bio;
+        var avatarUrl = 'http://localhost:3000/avatars/'+ avatar;
+        
+               
+
         asyncLib.waterfall([
+
             function(done){
-                models.user.findOne({
-                    attributes: ['id','bio'],//modif 
+                models.user.findOne({                    
+                    //attributes: ['id','bio'],//modif 
+                    attributes:['id','email','name','bio','avatarUrl'],
                     where: {id:userId}
-                }).then(function(userFound){
+
+            }).then(function(userFound){
+                console.log("userFound");
+
                     done(null, userFound);
                 })
-                .catch(function(err){
-                    res.status(500).json({'error':'unable to verify user'});
-                });
+               
             },
             function(userFound, done){
+                
+
                 if(userFound){
-                    //console.log(userFound)
-                    userFound.update({
-                        bio: (bio ? bio : userFound.bio)
-                    }).then(function(){
-                        done(userFound);
-                    }).catch(function(err){
-                        res.status(500).json({'error':'cannot update user'});
-                    });
+
+                    if(avatar!=null || avatar!=undefined){
+                     
+                      
+                      let urlStr = userFound.avatarUrl;
+                      var fileToDelete=urlStr.substr(22);
+                      console.log(fileToDelete);
+
+                      fs.unlink(fileToDelete, (err) => {
+                         if (err) throw err;
+                         res.status(200).send({msg:"deleted"})                  
+                         console.log('file was deleted');
+                                          
+                         })
+
+                        userFound.update({
+                           avatarUrl: null,
+                           })
+                           userFound.update({
+                        
+                            name: (name == "undefined" || name == "" ? userFound.name : name),                            
+                            bio: (bio = undefined ? userFound.bio : bio),
+                            avatarUrl: (avatarUrl ? avatarUrl: userFound.avatarUrl),
+                            
+                            data: fs.readFileSync(__basedir + '/avatars/' + req.file.filename)
+    
+                        })
+                        .then(image => {
+                            try{
+                              var test=image.url;
+                              var text = new String(test);
+                              fs.writeFileSync(text);         
+                              // exit node.js app
+                              res.json({'msg': 'File uploaded successfully!', 'file': req.file});
+                            }catch(e){
+                              console.log(e);
+                              res.json({'err': e});
+                            }
+                          })
+                        .then(function(){
+                            done(userFound);
+                        }).catch(function(err){
+                            res.status(500).json({'error':'cannot update user'});
+                        });
+                    }else{
+                      
+                        userFound.update({
+                         
+                            name: (name == "undefined" || name == "" ? userFound.name : name),                            
+                            bio: (bio = undefined ? userFound.bio : bio),                            
+                        })                       
+                        .then(function(){
+                            console.log("reponce : " + name);
+                            done(userFound);
+                        }).catch(function(err){
+                            res.status(500).json({'error':'cannot update user'});
+                        });
+                    }
+                
                 }else{
                     res.status(404).json({'error':'user not found for update'});
 
                 }
             }
-
-
         ],function(userFound){
             if(userFound){
                 return res.status(201).json(userFound);
@@ -192,7 +253,6 @@ module.exports = {
 
             }
         });
-
 
     }
 

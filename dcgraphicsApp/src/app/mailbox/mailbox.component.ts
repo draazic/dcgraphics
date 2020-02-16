@@ -12,6 +12,7 @@ import {Mail}    from '../interface/mail.interface';
 
 
 
+
 @Component({
   selector: 'app-mailbox',
   templateUrl: './mailbox.component.html',
@@ -30,9 +31,6 @@ export class MailboxComponent implements OnInit {
       this.clients = res;
       console.log(this.clients)
   });
-
-
-
 }
 
 
@@ -54,9 +52,9 @@ delCard(id){
     console.log(res);
     this.formService.getClients().subscribe((res : any[])=>{
       this.clients = res;
+    });
   });
-});
-}
+ }
 
 }
 
@@ -83,15 +81,11 @@ export class DialogSendMailDialog {
       (res)=>{
       console.log('success');
       console.log(res);
-
         },
       err=>{
       console.log(" not Error..");
-        } 
-      );
+        });
       this.dialogRef.close();
-
-
   }
 
 }

@@ -11,8 +11,6 @@ export class AppComponent {
   title = 'dcgraphicsApp';
 
   getState(outlet) {
-    console.log(outlet.activatedRouteData.state)
-     
 
     return outlet.activatedRouteData.state;
 

@@ -18,7 +18,7 @@ import { MatButtonModule, MatCardModule,  MatInputModule, MatFormFieldModule,Mat
 import { UserComponent } from './user/user.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
-import { HomelogComponent } from './homelog/homelog.component';
+import { HomelogComponent,DialogSettingDialog } from './homelog/homelog.component';
 import { UserService } from './service/user.service';
 import { MailService } from './service/mail.service';
 import { FileSelectDirective } from 'ng2-file-upload';
@@ -32,12 +32,10 @@ import { DatePipe } from '@angular/common';
 import { WeatherService } from './service/weather.service';
 import { LocationService } from './service/location.service';
 import { DataCurrentService } from './service/dataCurrent.service';
-
 import { CountUpModule } from 'countup.js-angular2';
 import { AngularFireModule, FirebaseOptionsToken} from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { MapComponent } from './homelog/map/map.component';
-//import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 
@@ -52,6 +50,7 @@ import { MapComponent } from './homelog/map/map.component';
     ContactComponent,
     DialogOverviewExampleDialog,
     DialogSendMailDialog,
+    DialogSettingDialog,
     UserComponent,
     SignInComponent,
     SignUpComponent,
@@ -92,7 +91,7 @@ import { MapComponent } from './homelog/map/map.component';
         closeButton: true, }   
     )],
 
-  entryComponents:[DialogOverviewExampleDialog, DialogSendMailDialog], 
+  entryComponents:[DialogOverviewExampleDialog, DialogSendMailDialog,DialogSettingDialog], 
   providers: [
     FormService, 
     UserService, 
