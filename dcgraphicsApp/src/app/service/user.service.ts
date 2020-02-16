@@ -22,7 +22,8 @@ export class UserService {
     }
 
     userAuthentication(user):Observable<Object>{
-        console.log(user)
+       
+
         var data = "email="+user.email+"&password="+user.password;
         
         var reqHeader = new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'});
@@ -44,6 +45,13 @@ export class UserService {
         {headers: new HttpHeaders({'Authorization':localStorage.getItem('token')})}
         )
 
+    }
+
+    update(user:User):Observable<Object>{
+        this.loggedIn.next(true);
+        return this.http.post(this.baseUrl +'/me',user,
+        {headers: new HttpHeaders({'Authorization':localStorage.getItem('token')})}
+        )
     }
 
 }

@@ -11,7 +11,7 @@ export class WeatherService {
   constructor(private http: HttpClient) { }
 
   getData(lat,lng) {
-    console.log(lat)  
+     
     return this.http.get<any[]>(this.baseUrl + '/lat='+lat+'lng='+lng);
 }
 

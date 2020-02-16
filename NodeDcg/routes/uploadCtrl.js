@@ -1,25 +1,27 @@
 var models = require('../models');
 const fs = require('fs');
 var path = require("path");
+var jwtUtils = require('../utils/jwt.utils');
+
 
 
 // Upload a Multipart-File then saving it to MySQL database
 exports.upload = (req, res) => { 
-    console.log(req);
+    //console.log(req);
+    //var headerAuth = req.headers['authorization'];
+    // var userId = jwtUtils.getUserId(headerAuth);
 
-    //console.log(req.body);
-    //console.log(req.body); 
+    // console.log("l'id: "+userId);
+    // console.log("req: "+req.file); 
 
 models.portfolio.create({
-    //idUser: req.body.idUser,
+  
     titre: req.file.originalname, 
     content: req.body.content,
     likes: req.body.likes,  
-    //url: req.file.destination + req.file.filename,
     url: 'http://localhost:3000/uploads/'+ req.file.filename,
 
-    userId:  req.body.userId,
-    //name: req.file.originalname,
+    userId:1,
     data: fs.readFileSync(__basedir + '/uploads/' + req.file.filename)
     
   }).then(image => {
@@ -51,13 +53,13 @@ exports.deleteById = (req, res) =>{
   models.portfolio.findOne({
     where: {id: req.params.id}
     }).then(function(portfolio) {
-      console.log(portfolio.url);
+      //console.log(portfolio.url);
       let urlStr=portfolio.url;
       
       console.log(urlStr)
       var url=urlStr.substr(22);
       console.log(url)
-      //fs.unlink(path.join("http://localhost:3000/uploads/uploadfile-1565180459455-blacketwhite.jpg" ), (err) => {
+      //fs.unlink(path.join("http://localhost:3000/uploads/uploadfile-1580570421763-elephant-1822636_1920.jpg" ), (err) => {
       fs.unlink(path.join(url), (err) => {
       if (err) throw err;
       res.status(200).send({msg:"deleted"})

@@ -1,17 +1,20 @@
 const multer = require('multer');
- 
+
+
 var storage = multer.diskStorage({
+    
   destination: (req, file, cb) => {
     
-    cb(null, __basedir + '/uploads/')
+    cb(null, __basedir + '/avatars/')
   },
   filename: (req, file, cb) => {
-
+    console.log("file:" + file);
     cb(null, file.fieldname + "-" + Date.now() + "-" + file.originalname)
   }
 });
-console.log("l autre storage:" + storage); 
-var upload = multer({storage: storage});
-//console.log(upload); 
+
+console.log("Storage: " + storage); 
+var uploadAvatar = multer({storage: storage});
+//console.log(uploadAvatar); 
  
-module.exports = upload;
+module.exports = uploadAvatar;

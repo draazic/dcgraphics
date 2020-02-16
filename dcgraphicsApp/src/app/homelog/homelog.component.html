@@ -6,7 +6,9 @@
     
      <div class = "dashUnit">
         <span class = "title">user</span>
-         <div class ="userImg"></div> 
+         <div class ="userImg">             
+           <img style="height: 150px;" src={{user?.avatarUrl}}> 
+         </div> 
         <div>
           <h2 style="text-align: center;">{{user?.name}}</h2>
           <h5 class="emailText" style="text-align: center;">{{user?.email}}</h5> 
@@ -15,7 +17,7 @@
           <div class="packIconDash" >
             <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
             <mat-icon aria-hidden="false" aria-label="Example home icon">mail</mat-icon>
-            <mat-icon aria-hidden="false" aria-label="Example home icon">settings_applications</mat-icon>
+            <a  style="color: inherit;cursor: pointer;"><mat-icon aria-hidden="false" aria-label="Example home icon" (click)="ModalSend(client)">settings_applications </mat-icon></a>
             <mat-icon aria-hidden="false" aria-label="Example home icon">images</mat-icon>
           </div> 
         </div>

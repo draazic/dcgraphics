@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild ,ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild ,ElementRef,Inject, Output, EventEmitter, Input } from '@angular/core';
 import { routerTransition } from '../router.animations';
 import { UserService } from '../service/user.service';
 import { WeatherService } from '../service/weather.service';
@@ -9,6 +9,9 @@ import {MailService} from '../service/mail.service';
 import {FormService} from '../form.service';
 import {Position} from '../interface/position.interface';
 import {DataCurrentService} from '../service/dataCurrent.service';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from  '@angular/material';
+import {User}    from '../interface/user.interface';
+
 
 
 
@@ -92,7 +95,9 @@ export class HomelogComponent implements OnInit {
     private router: Router,
     private datePipe: DatePipe,
     private locationService : LocationService,
-    private portfolioService : PortfolioService, private fb: FormBuilder) { 
+    private portfolioService : PortfolioService, 
+    private fb: FormBuilder,
+    private  dialog:  MatDialog) { 
       this.createForm();
 
   }
@@ -125,7 +130,8 @@ export class HomelogComponent implements OnInit {
   onSubmit() {
     const formModel = this.prepareSave();
     this.loading = true;
-    
+    console.log(formModel);
+
     this.portfolioService.createPortfolio(formModel).subscribe((res)=>{
       this.portfolioService.getPortfolios().subscribe((res : any[])=>{
         this.images = res;
@@ -155,6 +161,9 @@ export class HomelogComponent implements OnInit {
   }
 
 
+
+
+
   //Mail Count
   changeView(view) {
     if (view !== this.currentView) {
@@ -174,6 +183,32 @@ export class HomelogComponent implements OnInit {
       }
     }
   }
+
+//Modal userSetting
+  ModalSend(user:User){
+ 
+
+  const dialogRef=this.dialog.open(DialogSettingDialog,{ 
+      height: '520px',
+      width: '600px',
+      
+    });
+
+
+  dialogRef.afterClosed().subscribe(()=>{
+    this.userService.getUser().subscribe((data : any)=>{
+      this.user = data;
+      });
+    }); 
+  }
+
+  getUser(): void{
+    this.userService.getUser().subscribe((data : any)=>{
+      this.user = data;
+    });
+
+  }
+
 
 
   ngOnInit() {
@@ -197,17 +232,115 @@ export class HomelogComponent implements OnInit {
           };
           this.dataCurrentService.setPosition(this.position)
           
-
         })
       });
 
-    this.userService.getUser().subscribe((data : any)=>{
-      this.user = data;
-    });
-
+   
 
     //mail Count
     this.changeView('view1');
 
+ 
+    
+    this.getUser();
+
   }
+}
+
+
+
+
+@Component({
+  selector: 'dialog-setting',
+  templateUrl: 'dialog-setting.html',
+})
+export class DialogSettingDialog {
+
+  form: FormGroup;
+  file:any
+  fileToUpload: File = null;
+  loading: boolean = false;
+  private dataUser =[];
+  eventBool: boolean = false;
+
+
+
+
+  @ViewChild('fileInput', {static: false}) fileInput: ElementRef;
+  name:string;
+  bio:string;
+
+
+
+
+  constructor(
+    private dataCurrentService : DataCurrentService, 
+    public dialogRef: MatDialogRef<DialogSettingDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: User,
+    private userService : UserService,
+    private fb: FormBuilder,
+
+    ) {this.createForm();}
+
+
+    createForm() {
+      this.form = this.fb.group({
+        name: ['', Validators.required],
+        bio: ['', Validators.required],
+        uploadfile: ['', Validators.required],
+      });
+    }
+
+    onFileChange(event) {
+      if(event.target.files.length > 0) {
+        let file = event.target.files[0];
+        this.form.get('uploadfile').setValue(file);  
+      }
+    }
+
+     
+  private prepareSave(): any {
+    let input = new FormData();
+    input.append('name', this.form.get('name').value);
+    input.append('bio', this.form.get('bio').value);
+    input.append('uploadfile', this.form.get('uploadfile').value);
+    
+    return input;
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  onSubmit() {
+    const formModel = this.prepareSave();
+    this.loading = true;
+
+    //this.dataCurrentService.setValueForRefresh(this.loading)
+
+    this.userService.update(formModel).subscribe((res)=>{
+      this.userService.getUser().subscribe((res:any[])=>{
+        this.dataUser=res;
+        
+        
+      });
+        },
+      err=>{
+      console.log(" Error..");
+        } 
+      );
+    setTimeout(() => {
+      this.loading = false;
+      this.dialogRef.close();
+      
+    }, 1000);
+  } 
+
+  clearFile() {
+    this.form.get('uploadfile').setValue(null);
+    this.fileInput.nativeElement.value = '';
+    this.name='';
+    this.bio='';
+  }
+
 }

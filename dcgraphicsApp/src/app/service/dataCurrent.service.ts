@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, Subject} from 'rxjs';
 import {Position} from '../interface/position.interface';
 
 @Injectable()
@@ -20,6 +20,5 @@ export class DataCurrentService {
         return this.Position; 
       }
 
-
-    
+      
 }

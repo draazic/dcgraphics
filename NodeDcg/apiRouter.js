@@ -14,7 +14,9 @@ exports.router=(function(){
     
     var apiRouter = express.Router();
     const upload = require('./config/upload.config.js');
-    //console.log(upload)
+    const uploadAvatar = require('./config/uploadAvatar.config.js');
+
+    //console.log(uploadAvatar)
     const fileWorker = require('./routes/uploadCtrl.js');
     //console.log(fileWorker)
 
@@ -37,11 +39,14 @@ exports.router=(function(){
     apiRouter.route('/login/').post(userCtrl.login);
 
     apiRouter.route('/me/').get(userCtrl.getUserProfile);
-    apiRouter.route('/me/').put(userCtrl.updateUserProfile);
+    apiRouter.route('/me/').post(uploadAvatar.single("uploadfile"),userCtrl.updateUserProfile);
+    //apiRouter.route('/me/').post(upload.single("uploadfile"),userCtrl.updateUserProfile);
+
 
     apiRouter.route('/mail/').post(sendformCtrl.sendMail);
 
     apiRouter.route('/uploadfile').post(upload.single("uploadfile"), fileWorker.upload);
+
     apiRouter.route('/portfolios').get(uploadCtrl.find);
     apiRouter.route('/portfolio/:id').delete(uploadCtrl.deleteById);
     
