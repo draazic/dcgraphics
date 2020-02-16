@@ -12,7 +12,13 @@ html, body { height: 100%; }
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"; }
 
-
+////lightbox portfolio
+.lb-outerContainer {
+    border-radius:0px ;
+    *, ::after, ::before {
+        box-sizing: content-box; 
+    }
+}
 ////log
 .containerLog{
     width: 50%;
@@ -925,6 +931,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
     /////HOME
 
+    .inHeadCard{
+        position: absolute;
+        top: 5%;
+        left:5%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+    }
+    .inContentCard{
+        position: absolute;
+        top: 25%;
+        left:9%;
+        font-size: 18px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+        width: 15%;
+    }
+
     #divText{
         position:absolute;
         top:35%;
@@ -1565,6 +1591,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
     }
 
      /////HOME
+     .inHeadCard{
+        position: absolute;
+        top: 5%;
+        left:5%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+    }
+    .inContentCard{
+        position: absolute;
+        top: 25%;
+        left:8%;
+        font-size: 18px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+        width: 15%;
+    }
+
      #divText{
         position:absolute;
         top:35%;
@@ -2207,6 +2253,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
     }
 
     /////HOME
+
+
+    .inHeadCard{
+        position: absolute;
+        top: 5%;
+        left:5%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+    }
+    .inContentCard{
+        position: absolute;
+        top: 25%;
+        left:7%;
+        font-size: 18px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+        width: 13%;
+    }
+
     #divText{
         position:absolute;
         top:35%;
@@ -2875,6 +2943,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
     /////HOME
 
+    .inHeadCard{
+        position: absolute;
+        top: 5%;
+        left:5%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+    }
+    .inContentCard{
+        position: absolute;
+        top: 25%;
+        left:6%;
+        font-size: 18px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+        width: 10%;
+    }
+
     #divText{
         position:absolute;
         top:35%;
@@ -3529,6 +3617,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
 
     /////HOME
+    .inHeadCard{
+        position: absolute;
+        top: 5%;
+        left:5%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+    }
+    .inContentCard{
+        position: absolute;
+        top: 25%;
+        left:10%;
+        font-size: 18px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+        width: 16%;
+    }
    
     #divText{
         position:absolute;
@@ -4187,6 +4294,27 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
 
     /////HOME
+
+    .inHeadCard{
+        position: absolute;
+        top: 5%;
+        left:5%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+    }
+    .inContentCard{
+        position: absolute;
+        top: 25%;
+        left:8%;
+        font-size: 18px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+        width: 10%;
+    }
+
     #divText{
         position:absolute;
         top:5%;
@@ -4845,6 +4973,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
 
     /////HOME
+
+    .inHeadCard{
+        position: absolute;
+        top: 5%;
+        left:5%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+    }
+    .inContentCard{
+        position: absolute;
+        top: 25%;
+        left:13%;
+        font-size: 18px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+        width: 20%;
+    }
+
+
     #textHead {
         color: white;
         font-size: 32px;
@@ -5515,6 +5665,27 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
     margin: auto;
     }
     /////HOME
+
+    .inHeadCard{
+        position: absolute;
+        top: 5%;
+        left:5%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+    }
+    .inContentCard{
+        position: absolute;
+        top: 25%;
+        left:8%;
+        font-size: 18px;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color:white;
+        width: 15%;
+    }
+
     #textHead {
         color: white;
         font-size: 22px;

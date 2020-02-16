@@ -15,7 +15,6 @@ getPortfolios():Observable<Portfolio[]> {
     return this.http.get<Portfolio[]>(this.baseUrl + '/portfolios');
 }
 createPortfolio(portfolio:Portfolio):Observable<Object>{
-  console.log(portfolio)
   return this.http.post(this.baseUrl + '/uploadfile',portfolio);
 }
 
