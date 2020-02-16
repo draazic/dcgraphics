@@ -36,6 +36,7 @@ import { CountUpModule } from 'countup.js-angular2';
 import { AngularFireModule, FirebaseOptionsToken} from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { MapComponent } from './homelog/map/map.component';
+import { LightboxModule } from 'ngx-lightbox';
 
 
 
@@ -81,7 +82,8 @@ import { MapComponent } from './homelog/map/map.component';
     MatInputModule, 
     MatButtonModule, 
     MatCardModule,
-    MatGridListModule, 
+    MatGridListModule,
+    LightboxModule, 
     MatFormFieldModule,
     MatDialogModule,
     MatIconModule,

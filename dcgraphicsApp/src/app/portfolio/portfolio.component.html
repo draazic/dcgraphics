@@ -9,12 +9,12 @@
   <div [@listStagger]='images.length' style="margin-top:0.05%;width:100%;background-color:#e5e2e2; ">
     <mat-grid-list [cols]="breakpoint" rowHeight="2:0.5"  (window:resize)="onResize($event)">
         <mat-grid-tile
-            *ngFor="let image of images"
+            *ngFor="let image of images ; let i=index"
             [colspan]="image.cols"
             [rowspan]="image.rows"
             [style.background]="image.color">
             <div>
-              <img class="imagePortfolio" src={{image.url}}>
+              <img class="imagePortfolio" src={{image.url}} (click)="open(i)">
             </div>
         </mat-grid-tile>
       </mat-grid-list>
