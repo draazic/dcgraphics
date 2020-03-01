@@ -30,6 +30,7 @@ import { MygaleryComponent } from './mygalery/mygalery.component';
 import { FooterComponent } from './footer/footer.component';
 import { DatePipe } from '@angular/common';
 import { WeatherService } from './service/weather.service';
+import { ScrollTopService } from './service/scrolltop.service';
 import { LocationService } from './service/location.service';
 import { DataCurrentService } from './service/dataCurrent.service';
 import { CountUpModule } from 'countup.js-angular2';
@@ -37,6 +38,7 @@ import { AngularFireModule, FirebaseOptionsToken} from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { MapComponent } from './homelog/map/map.component';
 import { LightboxModule } from 'ngx-lightbox';
+
 
 
 
@@ -67,6 +69,7 @@ import { LightboxModule } from 'ngx-lightbox';
   ],
   
   imports: [
+    
     CommonModule,
     AngularFireModule,
     AngularFireDatabaseModule,
@@ -103,7 +106,8 @@ import { LightboxModule } from 'ngx-lightbox';
     DatePipe,
     WeatherService,
     LocationService,
-    DataCurrentService
+    DataCurrentService,
+    ScrollTopService
    
   ],
   bootstrap: [AppComponent]

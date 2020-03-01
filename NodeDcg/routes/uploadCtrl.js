@@ -13,10 +13,11 @@ exports.upload = (req, res) => {
 
     // console.log("l'id: "+userId);
     // console.log("req: "+req.file); 
+    //console.log(req);
 
 models.portfolio.create({
-  
-    titre: req.file.originalname, 
+    //titre: req.file.originalname, 
+    titre: req.body.name, 
     content: req.body.content,
     likes: req.body.likes,  
     url: 'http://localhost:3000/uploads/'+ req.file.filename,

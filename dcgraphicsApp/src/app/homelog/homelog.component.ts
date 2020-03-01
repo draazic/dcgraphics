@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild ,ElementRef,Inject, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, ViewChild ,ElementRef,Inject, Output, EventEmitter, Input, OnDestroy } from '@angular/core';
 import { routerTransition } from '../router.animations';
 import { UserService } from '../service/user.service';
 import { WeatherService } from '../service/weather.service';
@@ -10,7 +10,11 @@ import {FormService} from '../form.service';
 import {Position} from '../interface/position.interface';
 import {DataCurrentService} from '../service/dataCurrent.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from  '@angular/material';
-import {User}    from '../interface/user.interface';
+import {User} from '../interface/user.interface';
+import { ScrollTopService } from '../service/scrolltop.service';
+import { Subscription } from "rxjs";
+
+
 
 
 
@@ -46,7 +50,7 @@ export interface Date {
   styleUrls: ['./homelog.component.scss'],
   animations: [ routerTransition ]
 })
-export class HomelogComponent implements OnInit {
+export class HomelogComponent implements OnInit, OnDestroy {
   user: any;
   highData:[];
   breakpoint: number;
@@ -57,6 +61,11 @@ export class HomelogComponent implements OnInit {
   date:any;
   weather:any;
   position: Position;
+
+  private subscribeWeatherArray: Subscription[] = []; 
+  private subscribeUserArray: Subscription[] = [];
+  private subscribePortfolioArray: Subscription[] = [];
+  private subscribeCountArray: Subscription[] = [];
   
 
   form: FormGroup;
@@ -97,7 +106,8 @@ export class HomelogComponent implements OnInit {
     private locationService : LocationService,
     private portfolioService : PortfolioService, 
     private fb: FormBuilder,
-    private  dialog:  MatDialog) { 
+    private  dialog:  MatDialog,
+    private scrollTopService : ScrollTopService) { 
       this.createForm();
 
   }
@@ -132,16 +142,19 @@ export class HomelogComponent implements OnInit {
     this.loading = true;
     console.log(formModel);
 
-    this.portfolioService.createPortfolio(formModel).subscribe((res)=>{
-      this.portfolioService.getPortfolios().subscribe((res : any[])=>{
-        this.images = res;
-
-      });
-        },
-      err=>{
-      console.log(" Error..");
-        } 
-      );
+    this.subscribePortfolioArray.push(
+      this.portfolioService.createPortfolio(formModel).subscribe((res)=>{
+        this.portfolioService.getPortfolios().subscribe((res : any[])=>{
+          this.images = res;
+  
+            });
+          },
+        err=>{
+        console.log(" Error..");
+          } 
+        )
+    )
+    
     setTimeout(() => {
       alert('done!');
       this.loading = false;
@@ -175,11 +188,14 @@ export class HomelogComponent implements OnInit {
       if (this.interval)
       clearInterval(this.interval);
       if (view === 'view1') {
-        this.formService.getClients().subscribe((res : any[])=>{
-          this.clients = res;
-          this.newNum = this.clients.length;
-          this.num = this.newNum;
-        });
+          this.subscribeCountArray.push(
+              this.formService.getClients().subscribe((res : any[])=>{
+              this.clients = res;
+              this.newNum = this.clients.length;
+              this.num = this.newNum;
+  })
+)
+        
       }
     }
   }
@@ -201,18 +217,22 @@ export class HomelogComponent implements OnInit {
       });
     }); 
   }
-
+///user subcribe
   getUser(): void{
-    this.userService.getUser().subscribe((data : any)=>{
-      this.user = data;
-    });
+    this.subscribeUserArray.push(
+      this.userService.getUser().subscribe((data : any)=>{
+        this.user = data;
+      })
+    )
+    
 
   }
 
 
 
   ngOnInit() {
-   
+    this.scrollTopService.setScrollTop();
+  
     //Date current
     var event = new Date();
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
@@ -220,19 +240,22 @@ export class HomelogComponent implements OnInit {
     this.date=event.toLocaleDateString('fr-FR', options)
 
 
-    //weather;   
+    //weather Service;   
     this.locationService.getPosition().then(pos=>
       {
+        this.subscribeWeatherArray.push(
           this.weatherService.getData(pos.lat ,pos.lng).subscribe((data : any)=>{
-          this.weather=data;
-          
-          this.position = {
-            lat : this.weather.city_info.latitude,
-            long : this.weather.city_info.longitude
-          };
-          this.dataCurrentService.setPosition(this.position)
-          
-        })
+            this.weather=data;
+            
+            this.position = {
+              lat : this.weather.city_info.latitude,
+              long : this.weather.city_info.longitude
+            };
+            this.dataCurrentService.setPosition(this.position)
+            
+          })
+        )
+        
       });
 
    
@@ -243,6 +266,21 @@ export class HomelogComponent implements OnInit {
  
     
     this.getUser();
+
+  }
+  ngOnDestroy(){
+    this.subscribeWeatherArray.forEach((s) => {
+      s.unsubscribe();
+    })
+    this.subscribeUserArray.forEach((s) => {
+      s.unsubscribe();
+    })
+    this.subscribePortfolioArray.forEach((s) => {
+      s.unsubscribe();
+    })
+    this.subscribeCountArray.forEach((s) => {
+      s.unsubscribe();
+    })
 
   }
 }

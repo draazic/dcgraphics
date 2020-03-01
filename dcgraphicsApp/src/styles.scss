@@ -36,6 +36,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
 }
 
+///portfolio
+.imagePortfolio{
+    height: 700px;
+    cursor: pointer;
+    opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+
+}
+.imagePortfolio:hover {
+    opacity: 0.5;
+    }
+
 
 ////map
 
@@ -237,6 +251,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
 /////HOME
 
+// .imgLogo{
+//     width: 30%;
+//     height: auto;
+// }
+// .contentCar{
+//     height: 900px;
+
+}
 .inHeadCard{
     position: absolute;
     top: 5%;
@@ -259,7 +281,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
 #divText{
     position:absolute;
-    top:35%;
+    top:25%;
     z-index: 1;
     left: 25%;
     right: 25%
@@ -369,7 +391,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
             max-width: 100%; 
         }
     
-    }
+    //}
     
     .containerIconFooter{
         height: 70px;
@@ -931,6 +953,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
     /////HOME
 
+    // .contentCar{
+    //     height: 940px;
+    
+    // }
+
     .inHeadCard{
         position: absolute;
         top: 5%;
@@ -953,7 +980,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
     #divText{
         position:absolute;
-        top:35%;
+        top:25%;
         z-index: 1;
         left: 25%;
         right: 25%
@@ -1591,6 +1618,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
     }
 
      /////HOME
+
+    //  .contentCar{
+    //     height: 800px;
+    
+    // }
      .inHeadCard{
         position: absolute;
         top: 5%;
@@ -1613,7 +1645,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
      #divText{
         position:absolute;
-        top:35%;
+        top:25%;
         z-index: 1;
         left: 25%;
         right: 25%
@@ -2274,10 +2306,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
         color:white;
         width: 13%;
     }
+    .imgLogo{
+        width: 30%;
+        height: auto;
+    }
 
     #divText{
         position:absolute;
-        top:35%;
+        top:20%;
         z-index: 1;
         left: 25%;
         right: 25%
@@ -2379,7 +2415,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
        left: 0;
        bottom: 0;
        width: 100%;
-       height: 300px;
+       height: 380px;
        //background-color: red;
        color: white;
        text-align: center;    
@@ -2965,7 +3001,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
 
     #divText{
         position:absolute;
-        top:35%;
+        top:12%;
         z-index: 1;
         left: 25%;
         right: 25%
@@ -3629,17 +3665,27 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
     .inContentCard{
         position: absolute;
         top: 25%;
-        left:10%;
+        left:9%;
         font-size: 18px;
         transform: translate(-50%, -50%);
         z-index: 1;
         color:white;
-        width: 16%;
+        width: 15%;
     }
-   
+
+    .imgLogo{
+        width: 26%;
+        height: auto;
+    }
+    #textHead{
+        margin-bottom: 0px;
+    }
+    #textHead2{
+        margin-bottom: 0px;
+    }
     #divText{
         position:absolute;
-        top:25%;
+        top:16%;
         z-index: 1;
         left: 25%;
         right: 25%
@@ -3712,7 +3758,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 100%;
+        //height: 100%;
         //background-color: red;
         color: white;
         text-align: center;    
@@ -4392,7 +4438,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 100%;
+        //height: 100%;
         //background-color: red;
         color: white;
         text-align: center;    
@@ -5666,6 +5712,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
     }
     /////HOME
 
+   
+
     .inHeadCard{
         position: absolute;
         top: 5%;
@@ -5684,6 +5732,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
         z-index: 1;
         color:white;
         width: 15%;
+    }
+    .imgLogo{
+        height: 140px;
+        width: auto;
     }
 
     #textHead {
@@ -5776,7 +5828,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;width:"100%"
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 100%;
+        //height: 125%;
         //background-color: red;
         color: white;
         text-align: center;    
@@ -6480,7 +6532,7 @@ and (device-height : 900px)
     
     }
     .DivIcon{
-        height: 730px; 
+        height: 3810px;        
         background-color: transparent
     
     }
@@ -6499,6 +6551,11 @@ and (device-height : 900px)
     .car{
         margin-top: 56px;
 
+    }
+
+    .imgLogo{
+        height: 65px;
+        width: auto;
     }
     #divText{
     position:absolute;
@@ -6556,6 +6613,11 @@ and (orientation : landscape) {
             height: auto;
             
         }
+
+        .imgLogo{
+            height: 75px;
+            width: auto;
+        }
         .packIcon{    
             padding-left: 10px;
             //margin-right: 10px;
@@ -6563,7 +6625,7 @@ and (orientation : landscape) {
         }
         #divText{
             position:absolute;
-            top:19%;
+            top:3%;
             z-index: 1;
             left: 15%;
             right: 15%
@@ -6588,7 +6650,7 @@ and (-webkit-device-pixel-ratio : 3) {
     
         }
         .DivIcon{
-            height: 760px; 
+            height: 3580px; 
             background-color: transparent
     
         }
@@ -6609,9 +6671,13 @@ and (-webkit-device-pixel-ratio : 3) {
             margin-top: 56px;
 
         }
+        .imgLogo{
+            height: 95px;
+            width: auto;
+        }
         #divText{
             position:absolute;
-            top:19%;
+            top:10%;
             z-index: 1;
             left: 15%;
             right: 15%
@@ -6919,9 +6985,14 @@ and (orientation : landscape){
         margin-right: 67px;
         width: 600px
     }
+
         .imgCar{
             height: 375px;
         }
+        .imgLogo{
+            height: 95px;
+            width: auto;
+        }    
         #divText{
             position:absolute;
             top:22%;
@@ -6965,7 +7036,7 @@ and (height : 736px) {
     
         }
         .DivIcon{
-            height: 760px; 
+            height: 3530px;            
             background-color: transparent
     
         }
@@ -6986,9 +7057,14 @@ and (height : 736px) {
             margin-top: 56px;
 
         }
+
+        .imgLogo{
+            height: 95px;
+            width: auto;
+        }
         #divText{
             position:absolute;
-            top:19%;
+            top:10%;
             z-index: 1;
             left: 15%;
             right: 15%
@@ -7027,7 +7103,7 @@ and (height : 667px) {
     
         }
         .DivIcon{
-            height: 760px; 
+            height: 3580px;
             background-color: transparent
     
         }
@@ -7048,9 +7124,13 @@ and (height : 667px) {
             margin-top: 56px;
 
         }
+        .imgLogo{
+            height: 95px;
+            width: auto;
+        }
         #divText{
             position:absolute;
-            top:19%;
+            top:1%;
             z-index: 1;
             left: 15%;
             right: 15%
@@ -7077,6 +7157,93 @@ and (height : 667px) {
             margin-left: 2%;
             margin-right: 2%
             }     
+
+    }
+
+
+@media only screen 
+and (width : 1366px) 
+and (height : 1024px) { 
+          /* Ipad pro land*/
+          .homeIcon{
+            //width: 25%;
+            height: auto;
+    
+        }
+        .DivIcon{
+            //height: 760px; 
+            background-color: transparent
+    
+        }
+        .iconHome{    
+            height: auto;
+        
+        }
+        .packIcon{    
+            padding-left: 60px;
+            //margin-right: 36px;
+            width: 360px
+        }
+        .imgCar{
+            //margin-top: 40px;
+            height: 1024px;
+        }
+        .car{
+            //margin-top: 56px;
+
+        }
+        // .contentCar {
+        //     height: 1024px;
+        // }
+        .imgLogo{
+            height: 250px;
+            width: auto;
+        }
+        #divText {
+            position: absolute;
+            top: 25%;
+            z-index: 1;
+            left: 25%;
+            right: 25%;
+        }
+        #buttonHead{
+            color: white; 
+            border: 1px solid white;                
+            margin: 2%;
+            position:absolute;
+            top:85%;
+            left: 35%;                
+            right: 50%;
+            //width: 15%;
+            }
+        #buttonHead2{
+            color: white; 
+            border: 1px solid white;
+            margin: 2%;
+            position:absolute;
+            top:85%;
+            }
+        .contentCard{
+            margin: 5%;
+            margin-top: 2%;
+            margin-left: 2%;
+            margin-right: 2%
+            } 
+            
+            /////contact
+            .back{
+                position: absolute;
+                margin:0;
+                //background-attachment:fixed;
+                background-image: url("./assets/img/Parallax-Background-Dark-08.jpg");
+                -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+                background-size: cover;
+                //height: 100%;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
 
     }
 @media only screen 
@@ -7217,7 +7384,7 @@ and (height : 667px) {
     
         }
         .DivIcon{
-            height: 760px; 
+            height: 3750px;
             background-color: transparent
     
         }
@@ -7237,6 +7404,11 @@ and (height : 667px) {
         .car{
             margin-top: 56px;
 
+        }
+
+        .imgLogo{
+            width: 26%;
+            height: auto;
         }
         #divText{
             position:absolute;
@@ -7457,7 +7629,7 @@ and (height : 667px) {
     
         }
         .DivIcon{
-            height: 760px; 
+            height: 3500px;            
             background-color: transparent
     
         }
@@ -7578,7 +7750,7 @@ and (height : 667px) {
     
         }
         .DivIcon{
-            height: 760px; 
+            height: 3500px;            
             background-color: transparent
     
         }
@@ -7715,6 +7887,7 @@ and (max-width: 699px)
 {
     .containerContact {
                 //max-width: 500px;
+                margin-top: 25px;
                 margin-left:20px;
                 margin-right:20px;
 
@@ -7929,7 +8102,9 @@ h1{
     }
 }
 
-@media (width: 1024px){
+
+
+@media (width: 1024px) and (height: 769px){
    
     .back{
         position: absolute;
@@ -8324,6 +8499,20 @@ and (device-width : 1280px)
         left: 0;
         top: 0;
     }
+    // .contentCar{
+    //     height: 700px;
+    
+    // }
+    .registerDiv{
+        margin-bottom: 0px;
+    }
+    // .carousel-inner {
+    //     position: relative;
+    //     width: 100%;
+    //     overflow: hidden;
+    //     height: 800px;
+    // }
+   
 
 
 }

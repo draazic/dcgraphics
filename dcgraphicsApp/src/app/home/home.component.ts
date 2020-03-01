@@ -9,6 +9,8 @@ import {
   query,
   stagger
 } from '@angular/animations';
+import { ScrollTopService } from '../service/scrolltop.service';
+
 declare function mymethod():any; 
   
 
@@ -36,9 +38,10 @@ declare function mymethod():any;
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scrollTopService : ScrollTopService) { }
 
   ngOnInit() {
+    this.scrollTopService.setScrollTop();
     
     mymethod();
 
