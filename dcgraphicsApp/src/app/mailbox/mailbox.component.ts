@@ -1,11 +1,13 @@
-import { Component,Inject, OnInit } from '@angular/core';
+import { Component,Inject, OnInit, OnDestroy } from '@angular/core';
 import {FormService} from '../form.service';
 import {MailService} from '../service/mail.service';
-
-//import {RandomService} from '../randomImages.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from  '@angular/material';
 import {Client}    from '../interface/client.interface';
 import {Mail}    from '../interface/mail.interface';
+import { ScrollTopService } from '../service/scrolltop.service';
+import { Subscription } from "rxjs";
+
+
 
 
 
@@ -18,19 +20,28 @@ import {Mail}    from '../interface/mail.interface';
   templateUrl: './mailbox.component.html',
   styleUrls: ['./mailbox.component.scss']
 })
-export class MailboxComponent implements OnInit {
+export class MailboxComponent implements OnInit,OnDestroy {
   private clients =[];
   private images =[];
+  private subscribeArray: Subscription[] = [];
+  private subscribeClientArray: Subscription[] = [];
 
-  constructor(private formService : FormService, private  dialog:  MatDialog) { }
+
+
+  constructor(private formService : FormService, private  dialog:  MatDialog,private scrollTopService : ScrollTopService) { }
 
   
 
   ngOnInit() {
-    this.formService.getClients().subscribe((res : any[])=>{
-      this.clients = res;
-      console.log(this.clients)
-  });
+    this.scrollTopService.setScrollTop();
+
+    this.subscribeArray.push(
+      this.formService.getClients().subscribe((res : any[])=>{
+        this.clients = res;
+        console.log(this.clients)
+      })
+    )
+  
 }
 
 
@@ -48,13 +59,25 @@ ModalSend(client:Client){
 }
 
 delCard(id){
-  this.formService.deleteClient(id).subscribe((res : any[])=>{
-    console.log(res);
-    this.formService.getClients().subscribe((res : any[])=>{
-      this.clients = res;
-    });
-  });
+  this.subscribeClientArray.push(
+    this.formService.deleteClient(id).subscribe((res : any[])=>{
+      console.log(res);
+      this.formService.getClients().subscribe((res : any[])=>{
+        this.clients = res;
+      });
+    })
+  )
+  
  }
+
+ ngOnDestroy() {
+  this.subscribeArray.forEach((s) => {
+    s.unsubscribe();
+  })
+  this.subscribeClientArray.forEach((s) => {
+    s.unsubscribe();
+  })
+}
 
 }
 
@@ -62,7 +85,10 @@ delCard(id){
   selector: 'dialog-send',
   templateUrl: 'dialog-send.html',
 })
-export class DialogSendMailDialog {
+export class DialogSendMailDialog implements OnDestroy{
+
+  private subscribeArray: Subscription[] = [];
+
 
   constructor(
     private mailService : MailService,
@@ -76,16 +102,25 @@ export class DialogSendMailDialog {
   }
 
   onSubmit(mail:Mail){
+    this.subscribeArray.push(
+      this.mailService.createMail(mail).subscribe(
+        (res)=>{
+        console.log('success');
+        console.log(res);
+          },
+        err=>{
+        console.log(" not Error..");
+          })
+    )
     
-    this.mailService.createMail(mail).subscribe(
-      (res)=>{
-      console.log('success');
-      console.log(res);
-        },
-      err=>{
-      console.log(" not Error..");
-        });
       this.dialogRef.close();
+  }
+
+  
+  ngOnDestroy(){
+    this.subscribeArray.forEach((s) => {
+      s.unsubscribe();
+    })
   }
 
 }

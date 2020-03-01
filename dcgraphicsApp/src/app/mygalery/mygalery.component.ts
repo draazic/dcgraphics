@@ -1,8 +1,12 @@
-import { Component, OnInit, ViewChild ,ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild ,ElementRef, OnDestroy } from '@angular/core';
 import {PortfolioService} from '../service/portfolio.service';
 import {Portfolio}    from '../interface/portfolio.interface';
 import{FormGroup, FormControl, Validators,FormBuilder,} from '@angular/forms'
 import { HttpClient, HttpEvent, HttpEventType, HttpResponse } from '@angular/common/http';
+import { ScrollTopService } from '../service/scrolltop.service';
+import { Subscription } from "rxjs";
+
+
 
 
 
@@ -15,7 +19,7 @@ import { HttpClient, HttpEvent, HttpEventType, HttpResponse } from '@angular/com
   styleUrls: ['./mygalery.component.scss']
 })
 
-export class MygaleryComponent implements OnInit {
+export class MygaleryComponent implements OnInit, OnDestroy {
 
 
 
@@ -26,11 +30,14 @@ export class MygaleryComponent implements OnInit {
   loading: boolean = false;
   private images =[];
   fileToUpload: File = null;
+  private subscribePortArray: Subscription[] = [];
+  private subscribePortDelArray: Subscription[] = [];
+
   
 
   @ViewChild('fileInput', {static: false}) fileInput: ElementRef;
 
-  constructor(private portfolioService : PortfolioService, private fb: FormBuilder) {
+  constructor(private portfolioService : PortfolioService, private fb: FormBuilder,private scrollTopService : ScrollTopService) {
     this.createForm();
   }
 
@@ -92,23 +99,40 @@ export class MygaleryComponent implements OnInit {
 
 
   delImage(id){
-    this.portfolioService.deletePortfolio(id).subscribe((res : any[])=>{
-      console.log(res);
-      this.portfolioService.getPortfolios().subscribe((res : any[])=>{
-        this.images = res;
-    });
-  });
+    this.subscribePortDelArray.push(
+      this.portfolioService.deletePortfolio(id).subscribe((res : any[])=>{
+        //console.log(res);
+        this.portfolioService.getPortfolios().subscribe((res : any[])=>{
+          this.images = res;
+      });
+    })
+  )
+   
   }
   
   
 
 
   ngOnInit() {
-    this.portfolioService.getPortfolios().subscribe((res : any[])=>{
-      this.images = res;
-      console.log(this.images)
-  });
+    this.scrollTopService.setScrollTop();
+
+    this.subscribePortArray.push(
+      this.portfolioService.getPortfolios().subscribe((res : any[])=>{
+        this.images = res;
+      })
+      
+    )
    
+   
+  }
+
+  ngOnDestroy() {
+    this.subscribePortArray.forEach((s) => {
+      s.unsubscribe();
+    })
+    this.subscribePortDelArray.forEach((s) => {
+      s.unsubscribe();
+    })
   }
 
 }
